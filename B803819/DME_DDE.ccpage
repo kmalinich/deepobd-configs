@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<fragment xmlns="http://www.holeschak.de/BmwDeepObd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.holeschak.de/BmwDeepObd BmwDeepObd.xsd">
+  <page name="!PAGE_NAME" display-mode="list" fontsize="small" gauges-portrait="2" gauges-landscape="4" logfile="DME_DDE.log">
+    <strings>
+      <string name="!PAGE_NAME">DME/DDE</string>
+      <string name="!JOB#STATUS_DIGITAL_3#STAT_KO_EIN">STAT_KO_EIN</string>
+      <string name="!JOB#STATUS_DIGITAL_4#STAT_LL_EIN">STAT_LL_EIN</string>
+      <string name="!JOB#STATUS_MOTORDREHZAHL#STAT_MOTORDREHZAHL_WERT">STAT_MOTORDREHZAHL_WERT</string>
+      <string name="!JOB#STATUS_MOTORDREHZAHL#STAT_MOTORDREHZAHL_SOLL_WERT">STAT_MOTORDREHZAHL_SOLL_WERT</string>
+      <string name="!JOB#STATUS_AN_LUFTTEMPERATUR#STAT_AN_LUFTTEMPERATUR_WERT">STAT_AN_LUFTTEMPERATUR_WERT</string>
+      <string name="!JOB#STATUS_MOTORTEMPERATUR#STAT_MOTORTEMPERATUR_WERT">STAT_MOTORTEMPERATUR_WERT</string>
+      <string name="!JOB#STATUS_DROSSELKLAPPE#STAT_DROSSELKLAPPE_WERT">STAT_DROSSELKLAPPE_WERT</string>
+      <string name="!JOB#STATUS_BETRIEBSSTUNDENZAEHLER#STAT_BSZ_WERT">STAT_BSZ_WERT</string>
+      <string name="!JOB#STATUS_BETRIEBSSTUNDENZAEHLER#STAT_TRT_WERT">STAT_TRT_WERT</string>
+      <string name="!JOB#STATUS_DIGITAL_1#STAT_KL15_EIN">STAT_KL15_EIN</string>
+      <string name="!JOB#STATUS_DIGITAL_1#STAT_MOTOR_AUS">STAT_MOTOR_AUS</string>
+      <string name="!JOB#STATUS_DIGITAL_1#STAT_KUPPL_EIN">STAT_KUPPL_EIN</string>
+      <string name="!JOB#STATUS_DIGITAL_1#STAT_BLS_EIN">STAT_BLS_EIN</string>
+      <string name="!JOB#STATUS_DIGITAL_1#STAT_BTS_EIN">STAT_BTS_EIN</string>
+      <string name="!JOB#STATUS_DIGITAL_1#STAT_KO_EIN">STAT_KO_EIN</string>
+      <string name="!JOB#STATUS_DIGITAL_1#STAT_AC_EIN">STAT_AC_EIN</string>
+      <string name="!JOB#STATUS_DIGITAL_0#STAT_LL_EIN">STAT_LL_EIN</string>
+      <string name="!JOB#STATUS_DIGITAL_0#STAT_SBBHK2">STAT_SBBHK2</string>
+      <string name="!JOB#STATUS_DIGITAL_0#STAT_SBBHK">STAT_SBBHK</string>
+      <string name="!JOB#STATUS_DIGITAL_0#STAT_SBBVK2">STAT_SBBVK2</string>
+      <string name="!JOB#STATUS_DIGITAL_0#STAT_SBBVK">STAT_SBBVK</string>
+      <string name="!JOB#STATUS_FUNKTIONS#STAT_LL_EIN">STAT_LL_EIN</string>
+      <string name="!JOB#STATUS_FUNKTIONS#STAT_TEILLAST_EIN">STAT_TEILLAST_EIN</string>
+      <string name="!JOB#STATUS_FUNKTIONS#STAT_VL_EIN">STAT_VL_EIN</string>
+      <string name="!JOB#STATUS_FUNKTIONS#STAT_LSHK2_EIN">STAT_LSHK2_EIN</string>
+      <string name="!JOB#STATUS_FUNKTIONS#STAT_LSHK1_EIN">STAT_LSHK1_EIN</string>
+      <string name="!JOB#STATUS_FUNKTIONS#STAT_LSVK2_EIN">STAT_LSVK2_EIN</string>
+      <string name="!JOB#STATUS_FUNKTIONS#STAT_LSVK1_EIN">STAT_LSVK1_EIN</string>
+      <string name="!JOB#STATUS_FUNKTIONS#STAT_LS2_REGELUNG">STAT_LS2_REGELUNG</string>
+      <string name="!JOB#STATUS_FUNKTIONS#STAT_LS1_REGELUNG">STAT_LS1_REGELUNG</string>
+      <string name="!JOB#STATUS_FUNKTIONS#STAT_KICKDOWN">STAT_KICKDOWN</string>
+      <string name="!JOB#STATUS_FUNKTIONS#STAT_FAHRSTUFE">STAT_FAHRSTUFE</string>
+      <string name="!JOB#STATUS_FUNKTIONS#STAT_SCHUBAB">STAT_SCHUBAB</string>
+      <string name="!JOB#STATUS_FUNKTIONS#STAT_DK_ABGLEICH">STAT_DK_ABGLEICH</string>
+      <string name="!JOB#STATUS_FUNKTIONS#STAT_DYN_LIM_1">STAT_DYN_LIM_1</string>
+      <string name="!JOB#STATUS_FUNKTIONS#STAT_DYN_LIM_2">STAT_DYN_LIM_2</string>
+      <string name="!JOB#STATUS_FUNKTIONS#STAT_FEHLER_CLSW">STAT_FEHLER_CLSW</string>
+      <string name="!JOB#STATUS_FUNKTIONS#STAT_FEHLER_MFL">STAT_FEHLER_MFL</string>
+      <string name="!JOB#STATUS_FUNKTIONS#STAT_TIMEOUT_EGS1">STAT_TIMEOUT_EGS1</string>
+      <string name="!JOB#STATUS_FUNKTIONS#STAT_FEHLER_BREMSE">STAT_FEHLER_BREMSE</string>
+      <string name="!JOB#STATUS_FUNKTIONS#STAT_MON_LEVEL2">STAT_MON_LEVEL2</string>
+      <string name="!JOB#STATUS_FUNKTIONS#STAT_V_PLAUSIBEL">STAT_V_PLAUSIBEL</string>
+      <string name="!JOB#STATUS_FUNKTIONS#STAT_NOTLAUF_LL">STAT_NOTLAUF_LL</string>
+      <string name="!JOB#STATUS_FUNKTIONS#STAT_NOTLAUF_DK">STAT_NOTLAUF_DK</string>
+      <string name="!JOB#STATUS_FUNKTIONS#STAT_FEHLER_VS">STAT_FEHLER_VS</string>
+      <string name="!JOB#STATUS_FUNKTIONS#STAT_ASR_TIMEOUT">STAT_ASR_TIMEOUT</string>
+      <string name="!JOB#STATUS_FUNKTIONS#STAT_EGAS_NOTLAUF">STAT_EGAS_NOTLAUF</string>
+      <string name="!JOB#STATUS_FUNKTIONS#STAT_VS_DIF_HOCH">STAT_VS_DIF_HOCH</string>
+      <string name="!JOB#STATUS_FUNKTIONS#STAT_UEBERN_LANG">STAT_UEBERN_LANG</string>
+      <string name="!JOB#STATUS_FUNKTIONS#STAT_VS_SP_MAX">STAT_VS_SP_MAX</string>
+      <string name="!JOB#STATUS_FUNKTIONS#STAT_EXT_MOMENT">STAT_EXT_MOMENT</string>
+      <string name="!JOB#STATUS_FUNKTIONS#STAT_MFL_AUS">STAT_MFL_AUS</string>
+      <string name="!JOB#STATUS_FUNKTIONS#STAT_VS_CAN_LANG">STAT_VS_CAN_LANG</string>
+      <string name="!JOB#STATUS_FUNKTIONS#STAT_BESCHL_MON">STAT_BESCHL_MON</string>
+      <string name="!JOB#STATUS_FUNKTIONS#STAT_HOCHDREH_S">STAT_HOCHDREH_S</string>
+      <string name="!JOB#STATUS_FUNKTIONS#STAT_TAKEOVER_VS">STAT_TAKEOVER_VS</string>
+      <string name="!JOB#STATUS_FUNKTIONS#STAT_VS_FIL_LOW">STAT_VS_FIL_LOW</string>
+      <string name="!JOB#STATUS_FUNKTIONS#STAT_DREHZAHL_BEG">STAT_DREHZAHL_BEG</string>
+      <string name="!JOB#STATUS_FUNKTIONS#STAT_BREMSE_AKTIV">STAT_BREMSE_AKTIV</string>
+      <string name="!JOB#STATUS_FUNKTIONS#STAT_MFL_HARD_OFF">STAT_MFL_HARD_OFF</string>
+    </strings>
+    <jobs sgbd="MS450DS0">
+      <job name="STATUS_DIGITAL_3">
+        <display name="!JOB#STATUS_DIGITAL_3#STAT_KO_EIN" result="STAT_KO_EIN" format="" log_tag="STAT_KO_EIN" />
+      </job>
+      <job name="STATUS_DIGITAL_4">
+        <display name="!JOB#STATUS_DIGITAL_4#STAT_LL_EIN" result="STAT_LL_EIN" format="" log_tag="STAT_LL_EIN" />
+      </job>
+      <job name="STATUS_MOTORDREHZAHL">
+        <display name="!JOB#STATUS_MOTORDREHZAHL#STAT_MOTORDREHZAHL_WERT" result="STAT_MOTORDREHZAHL_WERT" format="" log_tag="STAT_MOTORDREHZAHL_WERT" />
+        <display name="!JOB#STATUS_MOTORDREHZAHL#STAT_MOTORDREHZAHL_SOLL_WERT" result="STAT_MOTORDREHZAHL_SOLL_WERT" format="" log_tag="STAT_MOTORDREHZAHL_SOLL_WERT" />
+      </job>
+      <job name="STATUS_AN_LUFTTEMPERATUR">
+        <display name="!JOB#STATUS_AN_LUFTTEMPERATUR#STAT_AN_LUFTTEMPERATUR_WERT" result="STAT_AN_LUFTTEMPERATUR_WERT" format="" log_tag="STAT_AN_LUFTTEMPERATUR_WERT" />
+      </job>
+      <job name="STATUS_MOTORTEMPERATUR">
+        <display name="!JOB#STATUS_MOTORTEMPERATUR#STAT_MOTORTEMPERATUR_WERT" result="STAT_MOTORTEMPERATUR_WERT" format="" log_tag="STAT_MOTORTEMPERATUR_WERT" />
+      </job>
+      <job name="STATUS_DROSSELKLAPPE">
+        <display name="!JOB#STATUS_DROSSELKLAPPE#STAT_DROSSELKLAPPE_WERT" result="STAT_DROSSELKLAPPE_WERT" format="" log_tag="STAT_DROSSELKLAPPE_WERT" />
+      </job>
+      <job name="STATUS_BETRIEBSSTUNDENZAEHLER">
+        <display name="!JOB#STATUS_BETRIEBSSTUNDENZAEHLER#STAT_BSZ_WERT" result="STAT_BSZ_WERT" format="" log_tag="STAT_BSZ_WERT" />
+        <display name="!JOB#STATUS_BETRIEBSSTUNDENZAEHLER#STAT_TRT_WERT" result="STAT_TRT_WERT" format="" log_tag="STAT_TRT_WERT" />
+      </job>
+      <job name="STATUS_DIGITAL_1">
+        <display name="!JOB#STATUS_DIGITAL_1#STAT_KL15_EIN" result="STAT_KL15_EIN" format="" log_tag="STAT_KL15_EIN" />
+        <display name="!JOB#STATUS_DIGITAL_1#STAT_MOTOR_AUS" result="STAT_MOTOR_AUS" format="" log_tag="STAT_MOTOR_AUS" />
+        <display name="!JOB#STATUS_DIGITAL_1#STAT_KUPPL_EIN" result="STAT_KUPPL_EIN" format="" log_tag="STAT_KUPPL_EIN" />
+        <display name="!JOB#STATUS_DIGITAL_1#STAT_BLS_EIN" result="STAT_BLS_EIN" format="" log_tag="STAT_BLS_EIN" />
+        <display name="!JOB#STATUS_DIGITAL_1#STAT_BTS_EIN" result="STAT_BTS_EIN" format="" log_tag="STAT_BTS_EIN" />
+        <display name="!JOB#STATUS_DIGITAL_1#STAT_KO_EIN" result="STAT_KO_EIN" format="" log_tag="STAT_KO_EIN" />
+        <display name="!JOB#STATUS_DIGITAL_1#STAT_AC_EIN" result="STAT_AC_EIN" format="" log_tag="STAT_AC_EIN" />
+      </job>
+      <job name="STATUS_DIGITAL_0">
+        <display name="!JOB#STATUS_DIGITAL_0#STAT_LL_EIN" result="STAT_LL_EIN" format="" log_tag="STAT_LL_EIN" />
+        <display name="!JOB#STATUS_DIGITAL_0#STAT_SBBHK2" result="STAT_SBBHK2" format="" log_tag="STAT_SBBHK2" />
+        <display name="!JOB#STATUS_DIGITAL_0#STAT_SBBHK" result="STAT_SBBHK" format="" log_tag="STAT_SBBHK" />
+        <display name="!JOB#STATUS_DIGITAL_0#STAT_SBBVK2" result="STAT_SBBVK2" format="" log_tag="STAT_SBBVK2" />
+        <display name="!JOB#STATUS_DIGITAL_0#STAT_SBBVK" result="STAT_SBBVK" format="" log_tag="STAT_SBBVK" />
+      </job>
+      <job name="STATUS_FUNKTIONS">
+        <display name="!JOB#STATUS_FUNKTIONS#STAT_LL_EIN" result="STAT_LL_EIN" format="" log_tag="STAT_LL_EIN" />
+        <display name="!JOB#STATUS_FUNKTIONS#STAT_TEILLAST_EIN" result="STAT_TEILLAST_EIN" format="" log_tag="STAT_TEILLAST_EIN" />
+        <display name="!JOB#STATUS_FUNKTIONS#STAT_VL_EIN" result="STAT_VL_EIN" format="" log_tag="STAT_VL_EIN" />
+        <display name="!JOB#STATUS_FUNKTIONS#STAT_LSHK2_EIN" result="STAT_LSHK2_EIN" format="" log_tag="STAT_LSHK2_EIN" />
+        <display name="!JOB#STATUS_FUNKTIONS#STAT_LSHK1_EIN" result="STAT_LSHK1_EIN" format="" log_tag="STAT_LSHK1_EIN" />
+        <display name="!JOB#STATUS_FUNKTIONS#STAT_LSVK2_EIN" result="STAT_LSVK2_EIN" format="" log_tag="STAT_LSVK2_EIN" />
+        <display name="!JOB#STATUS_FUNKTIONS#STAT_LSVK1_EIN" result="STAT_LSVK1_EIN" format="" log_tag="STAT_LSVK1_EIN" />
+        <display name="!JOB#STATUS_FUNKTIONS#STAT_LS2_REGELUNG" result="STAT_LS2_REGELUNG" format="" log_tag="STAT_LS2_REGELUNG" />
+        <display name="!JOB#STATUS_FUNKTIONS#STAT_LS1_REGELUNG" result="STAT_LS1_REGELUNG" format="" log_tag="STAT_LS1_REGELUNG" />
+        <display name="!JOB#STATUS_FUNKTIONS#STAT_KICKDOWN" result="STAT_KICKDOWN" format="" log_tag="STAT_KICKDOWN" />
+        <display name="!JOB#STATUS_FUNKTIONS#STAT_FAHRSTUFE" result="STAT_FAHRSTUFE" format="" log_tag="STAT_FAHRSTUFE" />
+        <display name="!JOB#STATUS_FUNKTIONS#STAT_SCHUBAB" result="STAT_SCHUBAB" format="" log_tag="STAT_SCHUBAB" />
+        <display name="!JOB#STATUS_FUNKTIONS#STAT_DK_ABGLEICH" result="STAT_DK_ABGLEICH" format="" log_tag="STAT_DK_ABGLEICH" />
+        <display name="!JOB#STATUS_FUNKTIONS#STAT_DYN_LIM_1" result="STAT_DYN_LIM_1" format="" log_tag="STAT_DYN_LIM_1" />
+        <display name="!JOB#STATUS_FUNKTIONS#STAT_DYN_LIM_2" result="STAT_DYN_LIM_2" format="" log_tag="STAT_DYN_LIM_2" />
+        <display name="!JOB#STATUS_FUNKTIONS#STAT_FEHLER_CLSW" result="STAT_FEHLER_CLSW" format="" log_tag="STAT_FEHLER_CLSW" />
+        <display name="!JOB#STATUS_FUNKTIONS#STAT_FEHLER_MFL" result="STAT_FEHLER_MFL" format="" log_tag="STAT_FEHLER_MFL" />
+        <display name="!JOB#STATUS_FUNKTIONS#STAT_TIMEOUT_EGS1" result="STAT_TIMEOUT_EGS1" format="" log_tag="STAT_TIMEOUT_EGS1" />
+        <display name="!JOB#STATUS_FUNKTIONS#STAT_FEHLER_BREMSE" result="STAT_FEHLER_BREMSE" format="" log_tag="STAT_FEHLER_BREMSE" />
+        <display name="!JOB#STATUS_FUNKTIONS#STAT_MON_LEVEL2" result="STAT_MON_LEVEL2" format="" log_tag="STAT_MON_LEVEL2" />
+        <display name="!JOB#STATUS_FUNKTIONS#STAT_V_PLAUSIBEL" result="STAT_V_PLAUSIBEL" format="" log_tag="STAT_V_PLAUSIBEL" />
+        <display name="!JOB#STATUS_FUNKTIONS#STAT_NOTLAUF_LL" result="STAT_NOTLAUF_LL" format="" log_tag="STAT_NOTLAUF_LL" />
+        <display name="!JOB#STATUS_FUNKTIONS#STAT_NOTLAUF_DK" result="STAT_NOTLAUF_DK" format="" log_tag="STAT_NOTLAUF_DK" />
+        <display name="!JOB#STATUS_FUNKTIONS#STAT_FEHLER_VS" result="STAT_FEHLER_VS" format="" log_tag="STAT_FEHLER_VS" />
+        <display name="!JOB#STATUS_FUNKTIONS#STAT_ASR_TIMEOUT" result="STAT_ASR_TIMEOUT" format="" log_tag="STAT_ASR_TIMEOUT" />
+        <display name="!JOB#STATUS_FUNKTIONS#STAT_EGAS_NOTLAUF" result="STAT_EGAS_NOTLAUF" format="" log_tag="STAT_EGAS_NOTLAUF" />
+        <display name="!JOB#STATUS_FUNKTIONS#STAT_VS_DIF_HOCH" result="STAT_VS_DIF_HOCH" format="" log_tag="STAT_VS_DIF_HOCH" />
+        <display name="!JOB#STATUS_FUNKTIONS#STAT_UEBERN_LANG" result="STAT_UEBERN_LANG" format="" log_tag="STAT_UEBERN_LANG" />
+        <display name="!JOB#STATUS_FUNKTIONS#STAT_VS_SP_MAX" result="STAT_VS_SP_MAX" format="" log_tag="STAT_VS_SP_MAX" />
+        <display name="!JOB#STATUS_FUNKTIONS#STAT_EXT_MOMENT" result="STAT_EXT_MOMENT" format="" log_tag="STAT_EXT_MOMENT" />
+        <display name="!JOB#STATUS_FUNKTIONS#STAT_MFL_AUS" result="STAT_MFL_AUS" format="" log_tag="STAT_MFL_AUS" />
+        <display name="!JOB#STATUS_FUNKTIONS#STAT_VS_CAN_LANG" result="STAT_VS_CAN_LANG" format="" log_tag="STAT_VS_CAN_LANG" />
+        <display name="!JOB#STATUS_FUNKTIONS#STAT_BESCHL_MON" result="STAT_BESCHL_MON" format="" log_tag="STAT_BESCHL_MON" />
+        <display name="!JOB#STATUS_FUNKTIONS#STAT_HOCHDREH_S" result="STAT_HOCHDREH_S" format="" log_tag="STAT_HOCHDREH_S" />
+        <display name="!JOB#STATUS_FUNKTIONS#STAT_TAKEOVER_VS" result="STAT_TAKEOVER_VS" format="" log_tag="STAT_TAKEOVER_VS" />
+        <display name="!JOB#STATUS_FUNKTIONS#STAT_VS_FIL_LOW" result="STAT_VS_FIL_LOW" format="" log_tag="STAT_VS_FIL_LOW" />
+        <display name="!JOB#STATUS_FUNKTIONS#STAT_DREHZAHL_BEG" result="STAT_DREHZAHL_BEG" format="" log_tag="STAT_DREHZAHL_BEG" />
+        <display name="!JOB#STATUS_FUNKTIONS#STAT_BREMSE_AKTIV" result="STAT_BREMSE_AKTIV" format="" log_tag="STAT_BREMSE_AKTIV" />
+        <display name="!JOB#STATUS_FUNKTIONS#STAT_MFL_HARD_OFF" result="STAT_MFL_HARD_OFF" format="" log_tag="STAT_MFL_HARD_OFF" />
+      </job>
+    </jobs>
+  </page>
+</fragment>

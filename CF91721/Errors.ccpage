@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<fragment xmlns="http://www.holeschak.de/BmwDeepObd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.holeschak.de/BmwDeepObd BmwDeepObd.xsd">
+  <page name="!PAGE_NAME">
+    <strings>
+      <string name="!PAGE_NAME">Errors</string>
+      <string name="!ECU#MSS52DS1">MSS52DS1</string>
+      <string name="!ECU#BM_WIDE">BM_WIDE</string>
+      <string name="!ECU#DSC57">DSC57</string>
+      <string name="!ECU#DSP2">DSP2</string>
+      <string name="!ECU#DWS">DWS</string>
+      <string name="!ECU#EWS3">EWS3</string>
+      <string name="!ECU#IHKA39_5">IHKA39_5</string>
+      <string name="!ECU#IKI">IKI</string>
+      <string name="!ECU#LCM_IV">LCM_IV</string>
+      <string name="!ECU#LWS5_1B">LWS5_1B</string>
+      <string name="!ECU#MFL2">MFL2</string>
+      <string name="!ECU#MRS4">MRS4</string>
+      <string name="!ECU#PDCACT">PDCACT</string>
+      <string name="!ECU#RADIO">RADIO</string>
+      <string name="!ECU#RLS_DS2">RLS_DS2</string>
+      <string name="!ECU#SZM38">SZM38</string>
+      <string name="!ECU#ZKE3">ZKE3</string>
+      <string name="!ECU#ZKE3_GM1">ZKE3_GM1</string>
+    </strings>
+    <read_errors>
+      <ecu name="!ECU#MSS52DS1" sgbd="mss52ds1" />
+      <ecu name="!ECU#BM_WIDE" sgbd="bm_wide" />
+      <ecu name="!ECU#DSC57" sgbd="dsc57" />
+      <ecu name="!ECU#DSP2" sgbd="dsp2" />
+      <ecu name="!ECU#DWS" sgbd="dws" />
+      <ecu name="!ECU#EWS3" sgbd="ews3" />
+      <ecu name="!ECU#IHKA39_5" sgbd="ihka39_5" />
+      <ecu name="!ECU#IKI" sgbd="iki" />
+      <ecu name="!ECU#LCM_IV" sgbd="lcm_iv" />
+      <ecu name="!ECU#LWS5_1B" sgbd="lws5_1b" />
+      <ecu name="!ECU#MFL2" sgbd="mfl2" />
+      <ecu name="!ECU#MRS4" sgbd="mrs4" />
+      <ecu name="!ECU#PDCACT" sgbd="pdcact" />
+      <ecu name="!ECU#RADIO" sgbd="radio" />
+      <ecu name="!ECU#RLS_DS2" sgbd="rls_ds2" />
+      <ecu name="!ECU#SZM38" sgbd="szm38" />
+      <ecu name="!ECU#ZKE3" sgbd="zke3" />
+      <ecu name="!ECU#ZKE3_GM1" sgbd="zke3_gm1" />
+    </read_errors>
+  </page>
+</fragment>

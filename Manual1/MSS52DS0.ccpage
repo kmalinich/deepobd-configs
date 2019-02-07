@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<fragment xmlns="http://www.holeschak.de/BmwDeepObd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.holeschak.de/BmwDeepObd BmwDeepObd.xsd">
+  <page name="!PAGE_NAME" display-mode="list" fontsize="small" gauges-portrait="2" gauges-landscape="4" logfile="MSS52DS0.log">
+    <strings>
+      <string name="!PAGE_NAME">DME - MSS52</string>
+      <string name="!JOB#STATUS_DIGITAL#STAT_BA_EIN">STAT_BA_EIN</string>
+      <string name="!JOB#STATUS_DIGITAL#STAT_SA_EIN">Fuel cut</string>
+      <string name="!JOB#STATUS_DIGITAL#STAT_ELU_EIN">STAT_ELU_EIN</string>
+      <string name="!JOB#STATUS_DIGITAL#STAT_NOISE_EIN">STAT_NOISE_EIN</string>
+      <string name="!JOB#STATUS_DIGITAL#STAT_KLOPFREGELUNG_EIN">STAT_KLOPFREGELUNG_EIN</string>
+      <string name="!JOB#STATUS_DIGITAL#STAT_KLOPFREG_EIN">STAT_KLOPFREG_EIN</string>
+      <string name="!JOB#STATUS_DIGITAL#STAT_KRAFTSCHLUSS_EIN">STAT_KRAFTSCHLUSS_EIN</string>
+      <string name="!JOB#STATUS_DIGITAL#STAT_LDP_EIN">STAT_LDP_EIN</string>
+      <string name="!JOB#STATUS_DIGITAL#STAT_MOTOR_STEHT">STAT_MOTOR_STEHT</string>
+      <string name="!JOB#STATUS_DIGITAL#STAT_LL_EIN">STAT_LL_EIN</string>
+      <string name="!JOB#STATUS_DIGITAL#STATUS_LL_EIN">STATUS_LL_EIN</string>
+      <string name="!JOB#STATUS_DIGITAL#STAT_VL_EIN">STAT_VL_EIN</string>
+      <string name="!JOB#STATUS_DIGITAL#STATUS_VL_EIN">STATUS_VL_EIN</string>
+      <string name="!JOB#STATUS_DIGITAL#STAT_TL_EIN">STAT_TL_EIN</string>
+      <string name="!JOB#STATUS_DIGITAL#STAT_KATHEIZEN_EIN">STAT_KATHEIZEN_EIN</string>
+      <string name="!JOB#STATUS_DIGITAL#STAT_KUP_EIN">STAT_KUP_EIN</string>
+      <string name="!JOB#STATUS_DIGITAL#STAT_FDYN_EIN">STAT_FDYN_EIN</string>
+      <string name="!JOB#STATUS_DIGITAL#STAT_LLR_EIN">STAT_LLR_EIN</string>
+      <string name="!JOB#STATUS_DIGITAL#STAT_LDR1_EIN">STAT_LDR1_EIN</string>
+      <string name="!JOB#STATUS_DIGITAL#STAT_LDR2_EIN">STAT_LDR2_EIN</string>
+      <string name="!JOB#STATUS_RF#STAT_RF_WERT">STAT_RF_WERT</string>
+      <string name="!JOB#STATUS_AN_LUFTTEMPERATUR#STATUS_AN_LUFTTEMPERATUR_WERT">STATUS_AN_LUFTTEMPERATUR_WERT</string>
+      <string name="!JOB#STATUS_AN_LUFTTEMPERATUR#STAT_AN_LUFTTEMPERATUR_WERT">IAT °C</string>
+      <string name="!JOB#STATUS_TZ1#STAT_TZ1_WERT">STAT_TZ1_WERT</string>
+    </strings>
+    <jobs sgbd="mss52ds0">
+      <job name="STATUS_DIGITAL">
+        <display name="!JOB#STATUS_DIGITAL#STAT_BA_EIN" result="STAT_BA_EIN" format="" log_tag="STAT_BA_EIN" />
+        <display name="!JOB#STATUS_DIGITAL#STAT_SA_EIN" result="STAT_SA_EIN" format="" log_tag="STAT_SA_EIN" />
+        <display name="!JOB#STATUS_DIGITAL#STAT_ELU_EIN" result="STAT_ELU_EIN" format="" log_tag="STAT_ELU_EIN" />
+        <display name="!JOB#STATUS_DIGITAL#STAT_NOISE_EIN" result="STAT_NOISE_EIN" format="" log_tag="STAT_NOISE_EIN" />
+        <display name="!JOB#STATUS_DIGITAL#STAT_KLOPFREGELUNG_EIN" result="STAT_KLOPFREGELUNG_EIN" format="" log_tag="STAT_KLOPFREGELUNG_EIN" />
+        <display name="!JOB#STATUS_DIGITAL#STAT_KLOPFREG_EIN" result="STAT_KLOPFREG_EIN" format="" log_tag="STAT_KLOPFREG_EIN" />
+        <display name="!JOB#STATUS_DIGITAL#STAT_KRAFTSCHLUSS_EIN" result="STAT_KRAFTSCHLUSS_EIN" format="" log_tag="STAT_KRAFTSCHLUSS_EIN" />
+        <display name="!JOB#STATUS_DIGITAL#STAT_LDP_EIN" result="STAT_LDP_EIN" format="" log_tag="STAT_LDP_EIN" />
+        <display name="!JOB#STATUS_DIGITAL#STAT_MOTOR_STEHT" result="STAT_MOTOR_STEHT" format="" log_tag="STAT_MOTOR_STEHT" />
+        <display name="!JOB#STATUS_DIGITAL#STAT_LL_EIN" result="STAT_LL_EIN" format="" log_tag="STAT_LL_EIN" />
+        <display name="!JOB#STATUS_DIGITAL#STATUS_LL_EIN" result="STATUS_LL_EIN" format="" log_tag="STATUS_LL_EIN" />
+        <display name="!JOB#STATUS_DIGITAL#STAT_VL_EIN" result="STAT_VL_EIN" format="" log_tag="STAT_VL_EIN" />
+        <display name="!JOB#STATUS_DIGITAL#STATUS_VL_EIN" result="STATUS_VL_EIN" format="" log_tag="STATUS_VL_EIN" />
+        <display name="!JOB#STATUS_DIGITAL#STAT_TL_EIN" result="STAT_TL_EIN" format="" log_tag="STAT_TL_EIN" />
+        <display name="!JOB#STATUS_DIGITAL#STAT_KATHEIZEN_EIN" result="STAT_KATHEIZEN_EIN" format="" log_tag="STAT_KATHEIZEN_EIN" />
+        <display name="!JOB#STATUS_DIGITAL#STAT_KUP_EIN" result="STAT_KUP_EIN" format="" log_tag="STAT_KUP_EIN" />
+        <display name="!JOB#STATUS_DIGITAL#STAT_FDYN_EIN" result="STAT_FDYN_EIN" format="" log_tag="STAT_FDYN_EIN" />
+        <display name="!JOB#STATUS_DIGITAL#STAT_LLR_EIN" result="STAT_LLR_EIN" format="" log_tag="STAT_LLR_EIN" />
+        <display name="!JOB#STATUS_DIGITAL#STAT_LDR1_EIN" result="STAT_LDR1_EIN" format="" log_tag="STAT_LDR1_EIN" />
+        <display name="!JOB#STATUS_DIGITAL#STAT_LDR2_EIN" result="STAT_LDR2_EIN" format="" log_tag="STAT_LDR2_EIN" />
+      </job>
+      <job name="STATUS_RF">
+        <display name="!JOB#STATUS_RF#STAT_RF_WERT" result="STAT_RF_WERT" format="" log_tag="STAT_RF_WERT" />
+      </job>
+      <job name="STATUS_AN_LUFTTEMPERATUR">
+        <display name="!JOB#STATUS_AN_LUFTTEMPERATUR#STATUS_AN_LUFTTEMPERATUR_WERT" result="STATUS_AN_LUFTTEMPERATUR_WERT" format="" log_tag="STATUS_AN_LUFTTEMPERATUR_WERT" />
+        <display name="!JOB#STATUS_AN_LUFTTEMPERATUR#STAT_AN_LUFTTEMPERATUR_WERT" result="STAT_AN_LUFTTEMPERATUR_WERT" format="3.0R" log_tag="STAT_AN_LUFTTEMPERATUR_WERT" />
+      </job>
+      <job name="STATUS_TZ1">
+        <display name="!JOB#STATUS_TZ1#STAT_TZ1_WERT" result="STAT_TZ1_WERT" format="" log_tag="STAT_TZ1_WERT" />
+      </job>
+    </jobs>
+  </page>
+</fragment>

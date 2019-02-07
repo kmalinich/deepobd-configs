@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<fragment xmlns="http://www.holeschak.de/BmwDeepObd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.holeschak.de/BmwDeepObd BmwDeepObd.xsd">
+  <page name="!PAGE_NAME" display-mode="grid" fontsize="medium" gauges-portrait="2" gauges-landscape="4" logfile="MS450DS0.log">
+    <strings>
+      <string name="!PAGE_NAME">DME - MS45</string>
+      <string name="!JOB#STATUS_AN_LUFTTEMPERATUR#STAT_AN_LUFTTEMPERATUR_WERT">Intake air °C</string>
+      <string name="!JOB#STATUS_MOTORTEMPERATUR#STAT_MOTORTEMPERATUR_WERT">Coolant °C</string>
+      <string name="!JOB#STATUS_VANOS_IN#STAT_AUSGANG">VANOS intake</string>
+      <string name="!JOB#STATUS_VANOS_EX#STAT_AUSGANG">VANOS exhaust</string>
+      <string name="!JOB#STATUS_VIMDISA#STAT_AUSGANG">DISA output</string>
+      <string name="!JOB#STATUS_GLF#STAT_AUSGANG">GLF</string>
+      <string name="!JOB#STATUS_GLF#STAT_AUSGANG_TEXT">STAT_AUSGANG_TEXT</string>
+    </strings>
+    <jobs sgbd="ms450ds0">
+      <job name="STATUS_AN_LUFTTEMPERATUR">
+        <display name="!JOB#STATUS_AN_LUFTTEMPERATUR#STAT_AN_LUFTTEMPERATUR_WERT" result="STAT_AN_LUFTTEMPERATUR_WERT" format=".2R" grid-type="simple-gauge-round" min-value="0" max-value="50" log_tag="STAT_AN_LUFTTEMPERATUR_WERT" />
+      </job>
+      <job name="STATUS_MOTORTEMPERATUR">
+        <display name="!JOB#STATUS_MOTORTEMPERATUR#STAT_MOTORTEMPERATUR_WERT" result="STAT_MOTORTEMPERATUR_WERT" format=".2R" grid-type="simple-gauge-round" min-value="0" max-value="100" log_tag="STAT_MOTORTEMPERATUR_WERT" />
+      </job>
+      <job name="STATUS_VANOS_IN">
+        <display name="!JOB#STATUS_VANOS_IN#STAT_AUSGANG" result="STAT_AUSGANG" format=".0R" grid-type="simple-gauge-round" min-value="0" max-value="100" log_tag="STAT_AUSGANG" />
+      </job>
+      <job name="STATUS_VANOS_EX">
+        <display name="!JOB#STATUS_VANOS_EX#STAT_AUSGANG" result="STAT_AUSGANG" format=".0R" grid-type="simple-gauge-round" min-value="0" max-value="100" log_tag="STAT_AUSGANG" />
+      </job>
+      <job name="STATUS_VIMDISA">
+        <display name="!JOB#STATUS_VIMDISA#STAT_AUSGANG" result="STAT_AUSGANG" format="" grid-type="simple-gauge-square" min-value="0" max-value="1" log_tag="STAT_AUSGANG" />
+      </job>
+      <job name="STATUS_GLF">
+        <display name="!JOB#STATUS_GLF#STAT_AUSGANG" result="STAT_AUSGANG" format=".0R" grid-type="simple-gauge-square" min-value="0" max-value="1" log_tag="STAT_AUSGANG" />
+        <display name="!JOB#STATUS_GLF#STAT_AUSGANG_TEXT" result="STAT_AUSGANG_TEXT" format="" log_tag="STAT_AUSGANG_TEXT" />
+      </job>
+    </jobs>
+  </page>
+</fragment>

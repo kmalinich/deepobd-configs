@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<fragment xmlns="http://www.holeschak.de/BmwDeepObd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.holeschak.de/BmwDeepObd BmwDeepObd.xsd">
+	<pages>
+		<include filename="Errors.ccpage" />
+		<include filename="DDE.ccpage" />
+		<include filename="DSC.ccpage" />
+		<include filename="EGS.ccpage" />
+		<include filename="FRM.ccpage" />
+		<include filename="KLIMA.ccpage" />
+		<include filename="KOMBI.ccpage" />
+	</pages>
+</fragment>
