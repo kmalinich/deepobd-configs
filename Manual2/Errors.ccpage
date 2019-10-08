@@ -1,12 +1,12 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <fragment xmlns="http://www.holeschak.de/BmwDeepObd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.holeschak.de/BmwDeepObd BmwDeepObd.xsd">
   <page name="!PAGE_NAME">
     <strings>
       <string name="!PAGE_NAME">Errors</string>
-      <string name="!ECU#D73N57C0">d73n57c0</string>
+      <string name="!ECU#MSS52DS1">mss52ds1</string>
     </strings>
     <read_errors>
-      <ecu name="!ECU#D73N57C0" sgbd="d73n57c0" />
+      <ecu name="!ECU#MSS52DS1" sgbd="mss52ds1" />
     </read_errors>
   </page>
 </fragment>

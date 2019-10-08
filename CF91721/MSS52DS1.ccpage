@@ -1,91 +1,47 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <fragment xmlns="http://www.holeschak.de/BmwDeepObd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.holeschak.de/BmwDeepObd BmwDeepObd.xsd">
-  <page name="!PAGE_NAME" display-mode="list" fontsize="small" gauges-portrait="3" gauges-landscape="6" logfile="MSS52DS1.log">
+  <page name="!PAGE_NAME" display-mode="grid" fontsize="large" gauges-portrait="3" gauges-landscape="6" logfile="MSS52DS1.log">
     <strings>
       <string name="!PAGE_NAME">DME</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_BA_EIN">Accel enrich</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_SA_EIN">Fuel cut</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_ELU_EIN">Fan</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_NOISE_EIN">STAT_NOISE_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_SCHUTZ_EIN">STAT_SCHUTZ_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_KLOPFREGELUNG_EIN">STAT_KLOPFREGELUNG_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_KLOPFREG_EIN">STAT_KLOPFREG_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_KRAFTSCHLUSS_EIN">STAT_KRAFTSCHLUSS_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_MOTOR_STEHT">STAT_MOTOR_STEHT</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_MOTOR_START">STAT_MOTOR_START</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_VL_EIN">STAT_VL_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STATUS_VL_EIN">STATUS_VL_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_TL_EIN">STAT_TL_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_MOTOR_NACHLAUF">STAT_MOTOR_NACHLAUF</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_KATHEIZEN_EIN">STAT_KATHEIZEN_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_LDR1_EIN">STAT_LDR1_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_LDR2_EIN">STAT_LDR2_EIN</string>
-      <string name="!JOB#STATUS_ADD#STAT_ADD_WERT">STAT_ADD_WERT</string>
-      <string name="!JOB#STATUS_ADD_2#STAT_ADD_2_WERT">STAT_ADD_2_WERT</string>
+      <string name="!JOB#STATUS_ADD#STAT_ADD_WERT">O2 Add 1</string>
+      <string name="!JOB#STATUS_ADD_2#STAT_ADD_2_WERT">O2 Add 2</string>
       <string name="!JOB#STATUS_AQREL#STAT_AQREL_WERT">AQREL</string>
-      <string name="!JOB#STATUS_INT#STAT_INT_WERT">STAT_INT_WERT</string>
-      <string name="!JOB#STATUS_INT_2#STAT_INT_2_WERT">STAT_INT_2_WERT</string>
-      <string name="!JOB#STATUS_LMM_MASSE#STATUS_LMM_MASSE_WERT">STATUS_LMM_MASSE_WERT</string>
-      <string name="!JOB#STATUS_LMM_MASSE#STAT_LMM_MASSE_WERT">STAT_LMM_MASSE_WERT</string>
-      <string name="!JOB#STATUS_LMM#STATUS_LMM_WERT">MAF 1</string>
-      <string name="!JOB#STATUS_RF#STAT_RF_WERT">% RF</string>
-      <string name="!JOB#STATUS_TI_AUS_IST#STAT_TI_AUS_IST_WERT">Fuel off actual</string>
-      <string name="!JOB#STATUS_LAST#STAT_LAST_WERT">Load</string>
-      <string name="!JOB#STATUS_TZ1#STAT_TZ1_WERT">Ign °</string>
+      <string name="!JOB#STATUS_INT#STATUS_INT_WERT">STATUS_INT_WERT</string>
+      <string name="!JOB#STATUS_INT#STAT_INT_WERT">O2 Int 1</string>
+      <string name="!JOB#STATUS_INT_2#STAT_INT_2_WERT">O2 Int 2</string>
+      <string name="!JOB#STATUS_LAMBDA_MUL_1#STAT_LAMBDA_MUL_1_WERT">O2 Mul 1</string>
+      <string name="!JOB#STATUS_LAMBDA_MUL_2#STAT_LAMBDA_MUL_2_WERT">O2 Mul 2</string>
+      <string name="!JOB#STATUS_RF#STAT_RF_WERT">RF %</string>
+      <string name="!JOB#STATUS_KUEHLW_AUSL_TEMPERATUR#STAT_KUEHLW_AUSL_TEMPERATUR_WERT">Rad</string>
     </strings>
     <jobs sgbd="mss52ds1">
-      <job name="STATUS_DIGITAL">
-        <display name="!JOB#STATUS_DIGITAL#STAT_BA_EIN" result="STAT_BA_EIN" format="" log_tag="STAT_BA_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_SA_EIN" result="STAT_SA_EIN" format="" log_tag="STAT_SA_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_ELU_EIN" result="STAT_ELU_EIN" format="1.2R" log_tag="STAT_ELU_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_NOISE_EIN" result="STAT_NOISE_EIN" format="" log_tag="STAT_NOISE_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_SCHUTZ_EIN" result="STAT_SCHUTZ_EIN" format="" log_tag="STAT_SCHUTZ_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_KLOPFREGELUNG_EIN" result="STAT_KLOPFREGELUNG_EIN" format="" log_tag="STAT_KLOPFREGELUNG_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_KLOPFREG_EIN" result="STAT_KLOPFREG_EIN" format="" log_tag="STAT_KLOPFREG_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_KRAFTSCHLUSS_EIN" result="STAT_KRAFTSCHLUSS_EIN" format="" log_tag="STAT_KRAFTSCHLUSS_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_MOTOR_STEHT" result="STAT_MOTOR_STEHT" format="" log_tag="STAT_MOTOR_STEHT" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_MOTOR_START" result="STAT_MOTOR_START" format="" log_tag="STAT_MOTOR_START" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_VL_EIN" result="STAT_VL_EIN" format="" log_tag="STAT_VL_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STATUS_VL_EIN" result="STATUS_VL_EIN" format="" log_tag="STATUS_VL_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_TL_EIN" result="STAT_TL_EIN" format="" log_tag="STAT_TL_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_MOTOR_NACHLAUF" result="STAT_MOTOR_NACHLAUF" format="" log_tag="STAT_MOTOR_NACHLAUF" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_KATHEIZEN_EIN" result="STAT_KATHEIZEN_EIN" format="" log_tag="STAT_KATHEIZEN_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_LDR1_EIN" result="STAT_LDR1_EIN" format="" log_tag="STAT_LDR1_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_LDR2_EIN" result="STAT_LDR2_EIN" format="" log_tag="STAT_LDR2_EIN" />
-      </job>
       <job name="STATUS_ADD">
-        <display name="!JOB#STATUS_ADD#STAT_ADD_WERT" result="STAT_ADD_WERT" format="R" log_tag="STAT_ADD_WERT" />
+        <display name="!JOB#STATUS_ADD#STAT_ADD_WERT" result="STAT_ADD_WERT" format=".3R" grid-type="simple-gauge-square" min-value="0" max-value="132" log_tag="STAT_ADD_WERT" />
       </job>
       <job name="STATUS_ADD_2">
-        <display name="!JOB#STATUS_ADD_2#STAT_ADD_2_WERT" result="STAT_ADD_2_WERT" format="R" log_tag="STAT_ADD_2_WERT" />
+        <display name="!JOB#STATUS_ADD_2#STAT_ADD_2_WERT" result="STAT_ADD_2_WERT" format=".3R" grid-type="simple-gauge-square" min-value="0" max-value="132" log_tag="STAT_ADD_2_WERT" />
       </job>
       <job name="STATUS_AQREL">
-        <display name="!JOB#STATUS_AQREL#STAT_AQREL_WERT" result="STAT_AQREL_WERT" format="2.6R" log_tag="STAT_AQREL_WERT" />
+        <display name="!JOB#STATUS_AQREL#STAT_AQREL_WERT" result="STAT_AQREL_WERT" format="1.3R" grid-type="simple-gauge-square" min-value="0" max-value="1" log_tag="STAT_AQREL_WERT" />
       </job>
       <job name="STATUS_INT">
-        <display name="!JOB#STATUS_INT#STAT_INT_WERT" result="STAT_INT_WERT" format="R" log_tag="STAT_INT_WERT" />
+        <display name="!JOB#STATUS_INT#STATUS_INT_WERT" result="STATUS_INT_WERT" format="" log_tag="STATUS_INT_WERT" />
+        <display name="!JOB#STATUS_INT#STAT_INT_WERT" result="STAT_INT_WERT" format="1.2R" grid-type="simple-gauge-square" min-value="0.5" max-value="1.5" log_tag="STAT_INT_WERT" />
       </job>
       <job name="STATUS_INT_2">
-        <display name="!JOB#STATUS_INT_2#STAT_INT_2_WERT" result="STAT_INT_2_WERT" format="R" log_tag="STAT_INT_2_WERT" />
+        <display name="!JOB#STATUS_INT_2#STAT_INT_2_WERT" result="STAT_INT_2_WERT" format="1.2R" grid-type="simple-gauge-square" min-value="0.5" max-value="1.5" log_tag="STAT_INT_2_WERT" />
       </job>
-      <job name="STATUS_LMM_MASSE">
-        <display name="!JOB#STATUS_LMM_MASSE#STATUS_LMM_MASSE_WERT" result="STATUS_LMM_MASSE_WERT" format="" log_tag="STATUS_LMM_MASSE_WERT" />
-        <display name="!JOB#STATUS_LMM_MASSE#STAT_LMM_MASSE_WERT" result="STAT_LMM_MASSE_WERT" format="3.0R" log_tag="STAT_LMM_MASSE_WERT" />
+      <job name="STATUS_LAMBDA_MUL_1">
+        <display name="!JOB#STATUS_LAMBDA_MUL_1#STAT_LAMBDA_MUL_1_WERT" result="STAT_LAMBDA_MUL_1_WERT" format="1.3R" grid-type="simple-gauge-square" min-value="0.75" max-value="1.25" log_tag="STAT_LAMBDA_MUL_1_WERT" />
       </job>
-      <job name="STATUS_LMM">
-        <display name="!JOB#STATUS_LMM#STATUS_LMM_WERT" result="STATUS_LMM_WERT" format="3.2R" log_tag="STATUS_LMM_WERT" />
+      <job name="STATUS_LAMBDA_MUL_2">
+        <display name="!JOB#STATUS_LAMBDA_MUL_2#STAT_LAMBDA_MUL_2_WERT" result="STAT_LAMBDA_MUL_2_WERT" format="1.3R" grid-type="simple-gauge-square" min-value="0.75" max-value="1.25" log_tag="STAT_LAMBDA_MUL_2_WERT" />
       </job>
       <job name="STATUS_RF">
-        <display name="!JOB#STATUS_RF#STAT_RF_WERT" result="STAT_RF_WERT" format="3.0R" log_tag="STAT_RF_WERT" />
+        <display name="!JOB#STATUS_RF#STAT_RF_WERT" result="STAT_RF_WERT" format="3.1R" grid-type="simple-gauge-square" min-value="0" max-value="160" log_tag="STAT_RF_WERT" />
       </job>
-      <job name="STATUS_TI_AUS_IST">
-        <display name="!JOB#STATUS_TI_AUS_IST#STAT_TI_AUS_IST_WERT" result="STAT_TI_AUS_IST_WERT" format="1.1R" log_tag="STAT_TI_AUS_IST_WERT" />
-      </job>
-      <job name="STATUS_LAST">
-        <display name="!JOB#STATUS_LAST#STAT_LAST_WERT" result="STAT_LAST_WERT" format="3.3R" log_tag="STAT_LAST_WERT" />
-      </job>
-      <job name="STATUS_TZ1">
-        <display name="!JOB#STATUS_TZ1#STAT_TZ1_WERT" result="STAT_TZ1_WERT" format="2.0D" log_tag="STAT_TZ1_WERT" />
+      <job name="STATUS_KUEHLW_AUSL_TEMPERATUR">
+        <display name="!JOB#STATUS_KUEHLW_AUSL_TEMPERATUR#STAT_KUEHLW_AUSL_TEMPERATUR_WERT" result="STAT_KUEHLW_AUSL_TEMPERATUR_WERT" format="3.0L" grid-type="simple-gauge-square" min-value="0" max-value="100" log_tag="Rad" />
       </job>
     </jobs>
   </page>

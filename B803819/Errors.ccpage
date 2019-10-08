@@ -1,13 +1,13 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <fragment xmlns="http://www.holeschak.de/BmwDeepObd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.holeschak.de/BmwDeepObd BmwDeepObd.xsd">
   <page name="!PAGE_NAME">
     <strings>
       <string name="!PAGE_NAME">Errors</string>
+      <string name="!ECU#DME/DDE">MS45.1</string>
       <string name="!ECU#ALC">ALC</string>
       <string name="!ECU#BFS">BFS</string>
       <string name="!ECU#BZM/SZM">BZM/SZM</string>
       <string name="!ECU#CAS">CAS</string>
-      <string name="!ECU#DME/DDE">DME/DDE</string>
       <string name="!ECU#DSC">DSC</string>
       <string name="!ECU#DWA">DWA</string>
       <string name="!ECU#EGS">EGS</string>
@@ -30,11 +30,11 @@
       <string name="!ECU#ZGM">ZGM</string>
     </strings>
     <read_errors sgbd_functional="e60">
+      <ecu name="!ECU#DME/DDE" sgbd="MS450DS0" />
       <ecu name="!ECU#ALC" sgbd="ALC_60" />
       <ecu name="!ECU#BFS" sgbd="BFS_PLX" />
       <ecu name="!ECU#BZM/SZM" sgbd="SZM_60" />
       <ecu name="!ECU#CAS" sgbd="CAS" />
-      <ecu name="!ECU#DME/DDE" sgbd="MS450DS0" />
       <ecu name="!ECU#DSC" sgbd="DSC_60" />
       <ecu name="!ECU#DWA" sgbd="DWA_E65" />
       <ecu name="!ECU#EGS" sgbd="GS19A" />

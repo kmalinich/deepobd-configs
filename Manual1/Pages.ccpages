@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <fragment xmlns="http://www.holeschak.de/BmwDeepObd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.holeschak.de/BmwDeepObd BmwDeepObd.xsd">
   <pages>
-    <include filename="MSS52DS0.ccpage" />
+    <include filename="MSS52DS1-main.ccpage" />
+    <include filename="MSS52DS1-O2-volt.ccpage" />
     <include filename="Errors.ccpage" />
   </pages>
 </fragment>

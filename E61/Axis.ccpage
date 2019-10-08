@@ -1,46 +1,44 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<fragment xmlns="http://www.holeschak.de/BmwDeepObd"
-          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-          xsi:schemaLocation="http://www.holeschak.de/BmwDeepObd ../BmwDeepObd.xsd">
-  <page name ="tab_axis">
-    <display name="label_axis_mode" result="MODE_CTRL_LESEN_WERT" />
-    <display name="label_axis_left" result="ORGFASTFILTER_RL" />
-    <display name="label_axis_right" result="ORGFASTFILTER_RR" />
-    <display name="label_axis_bat_volt" result="ANALOG_U_KL30" />
-    <display name="label_axis_speed" result="STATE_SPEED" format="4L" />
-    <display name="label_axis_valve_state" result="STATUS_SIGNALE_NUMERISCH" />
-    <strings>
-      <string name="tab_axis">Axis</string>
-      <string name="button_axis_up">Up</string>
-      <string name="button_axis_down">Down</string>
-      <string name="axis_mode_conveyor">Conveyor</string>
-      <string name="axis_mode_garage">Garage</string>
-      <string name="axis_mode_normal">Normal</string>
-      <string name="axis_mode_transport">Transport</string>
-      <string name="label_axis_mode">Axis mode:</string>
-      <string name="label_axis_left">Axis left:</string>
-      <string name="label_axis_right">Axis right:</string>
-      <string name="label_axis_bat_volt">Battery voltage [V]:</string>
-      <string name="label_axis_speed">Speed [km/h]:</string>
-      <string name="label_axis_valve_state">Output states:</string>
-    </strings>
-    <strings lang="de">
-      <string name="tab_axis">Achse</string>
-      <string name="button_axis_up">Aufwärts</string>
-      <string name="button_axis_down">Abwärts</string>
-      <string name="axis_mode_conveyor">Band</string>
-      <string name="axis_mode_garage">Werkstatt</string>
-      <string name="axis_mode_normal">Normal</string>
-      <string name="axis_mode_transport">Transport</string>
-      <string name="label_axis_mode">Achsenmodus:</string>
-      <string name="label_axis_left">Achse links:</string>
-      <string name="label_axis_right">Achse rechts:</string>
-      <string name="label_axis_bat_volt">Batteriespannung [V]:</string>
-      <string name="label_axis_speed">Geschwindigkeit [km/h]:</string>
-      <string name="label_axis_valve_state">Zustand Ausgänge:</string>
-    </strings>
-    <jobs sgbd="d_ehc" />
-    <code show_warnings="true">
+<?xml version="1.0" encoding="utf-8" ?>
+<fragment xmlns="http://www.holeschak.de/BmwDeepObd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.holeschak.de/BmwDeepObd BmwDeepObd.xsd">
+	<page name ="tab_axis">
+		<display name="label_axis_mode" result="MODE_CTRL_LESEN_WERT" />
+		<display name="label_axis_left" result="ORGFASTFILTER_RL" />
+		<display name="label_axis_right" result="ORGFASTFILTER_RR" />
+		<display name="label_axis_bat_volt" result="ANALOG_U_KL30" />
+		<display name="label_axis_speed" result="STATE_SPEED" format="4L" />
+		<display name="label_axis_valve_state" result="STATUS_SIGNALE_NUMERISCH" />
+		<strings>
+			<string name="tab_axis">Axis</string>
+			<string name="button_axis_up">Up</string>
+			<string name="button_axis_down">Down</string>
+			<string name="axis_mode_conveyor">Conveyor</string>
+			<string name="axis_mode_garage">Garage</string>
+			<string name="axis_mode_normal">Normal</string>
+			<string name="axis_mode_transport">Transport</string>
+			<string name="label_axis_mode">Axis mode:</string>
+			<string name="label_axis_left">Axis left:</string>
+			<string name="label_axis_right">Axis right:</string>
+			<string name="label_axis_bat_volt">Battery voltage [V]:</string>
+			<string name="label_axis_speed">Speed [km/h]:</string>
+			<string name="label_axis_valve_state">Output states:</string>
+		</strings>
+		<strings lang="de">
+			<string name="tab_axis">Achse</string>
+			<string name="button_axis_up">Aufwärts</string>
+			<string name="button_axis_down">Abwärts</string>
+			<string name="axis_mode_conveyor">Band</string>
+			<string name="axis_mode_garage">Werkstatt</string>
+			<string name="axis_mode_normal">Normal</string>
+			<string name="axis_mode_transport">Transport</string>
+			<string name="label_axis_mode">Achsenmodus:</string>
+			<string name="label_axis_left">Achse links:</string>
+			<string name="label_axis_right">Achse rechts:</string>
+			<string name="label_axis_bat_volt">Batteriespannung [V]:</string>
+			<string name="label_axis_speed">Geschwindigkeit [km/h]:</string>
+			<string name="label_axis_valve_state">Zustand Ausgänge:</string>
+		</strings>
+		<jobs sgbd="d_ehc" />
+		<code show_warnings="true">
       <![CDATA[
     class PageClass
     {
@@ -403,7 +401,7 @@
             }
         }
     }
-      ]]>
-    </code>
-  </page>
+			]]>
+		</code>
+	</page>
 </fragment>
