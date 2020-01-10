@@ -1,72 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <fragment xmlns="http://www.holeschak.de/BmwDeepObd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.holeschak.de/BmwDeepObd BmwDeepObd.xsd">
-	<page name="!PAGE_NAME">
-		<strings>
-			<string name="!PAGE_NAME">Errors</string>
-			<string name="!ECU#BFS">BFS</string>
-			<string name="!ECU#CAS">CAS</string>
-			<string name="!ECU#CCC">CCC</string>
-			<string name="!ECU#CID">CID</string>
-			<string name="!ECU#DME/DDE">DME/DDE</string>
-			<string name="!ECU#DSC">DSC</string>
-			<string name="!ECU#EGS">EGS</string>
-			<string name="!ECU#EKP">EKP</string>
-			<string name="!ECU#EMF">EMF</string>
-			<string name="!ECU#FAS">FAS</string>
-			<string name="!ECU#FBI">FBI</string>
-			<string name="!ECU#FRM">FRM</string>
-			<string name="!ECU#FZD">FZD</string>
-			<string name="!ECU#GWS">GWS</string>
-			<string name="!ECU#HKL">HKL</string>
-			<string name="!ECU#JBBF">JBBF</string>
-			<string name="!ECU#KLIMA">KLIMA</string>
-			<string name="!ECU#KLIMA2">KLIMA2</string>
-			<string name="!ECU#KOMBI">KOMBI</string>
-			<string name="!ECU#MASK/CCC">MASK/CCC</string>
-			<string name="!ECU#MOSTGW">MOSTGW</string>
-			<string name="!ECU#MRS">MRS</string>
-			<string name="!ECU#PDC">PDC</string>
-			<string name="!ECU#PGS">PGS</string>
-			<string name="!ECU#RDC">RDC</string>
-			<string name="!ECU#RLS">RLS</string>
-			<string name="!ECU#SINE">SINE</string>
-			<string name="!ECU#STVR/TEBF">STVR/TEBF</string>
-			<string name="!ECU#TEL/MULF">TEL/MULF</string>
-			<string name="!ECU#VGSG">VGSG</string>
-			<string name="!ECU#ZBE">ZBE</string>
-		</strings>
-		<read_errors sgbd_functional="e70">
-			<ecu name="!ECU#BFS" sgbd="BFS_PLX" />
-			<ecu name="!ECU#CAS" sgbd="CAS" />
-			<ecu name="!ECU#CCC" sgbd="CICR_HD" />
-			<ecu name="!ECU#CID" sgbd="CIDR_70" />
-			<ecu name="!ECU#DME/DDE" sgbd="MEVD176K" />
-			<ecu name="!ECU#DSC" sgbd="DXC_70" />
-			<ecu name="!ECU#EGS" sgbd="GSB233" />
-			<ecu name="!ECU#EKP" sgbd="EKP360" />
-			<ecu name="!ECU#EMF" sgbd="EMF_70" />
-			<ecu name="!ECU#FAS" sgbd="FAS_PLX" />
-			<ecu name="!ECU#FBI" sgbd="CECALLR" />
-			<ecu name="!ECU#FRM" sgbd="FRM_70" />
-			<ecu name="!ECU#FZD" sgbd="FZD_70" />
-			<ecu name="!ECU#GWS" sgbd="GWS_70" />
-			<ecu name="!ECU#HKL" sgbd="HKL_70" />
-			<ecu name="!ECU#JBBF" sgbd="JBBF70" />
-			<ecu name="!ECU#KLIMA" sgbd="IHKA70" />
-			<ecu name="!ECU#KLIMA2" sgbd="FKA_70" />
-			<ecu name="!ECU#KOMBI" sgbd="KOMB70" />
-			<ecu name="!ECU#MASK/CCC" sgbd="CICR" />
-			<ecu name="!ECU#MOSTGW" sgbd="CICR_GW" />
-			<ecu name="!ECU#MRS" sgbd="ACSM2" />
-			<ecu name="!ECU#PDC" sgbd="PDCR3" />
-			<ecu name="!ECU#PGS" sgbd="PGS_65_2" />
-			<ecu name="!ECU#RDC" sgbd="RDCKWP" />
-			<ecu name="!ECU#RLS" sgbd="RLSS70" />
-			<ecu name="!ECU#SINE" sgbd="SINE_65" />
-			<ecu name="!ECU#STVR/TEBF" sgbd="TRSVC70" />
-			<ecu name="!ECU#TEL/MULF" sgbd="CMEDIAR" />
-			<ecu name="!ECU#VGSG" sgbd="LMV_84" />
-			<ecu name="!ECU#ZBE" sgbd="ZBE_60_2" />
-		</read_errors>
-	</page>
+  <page name="!PAGE_NAME">
+    <strings>
+      <string name="!PAGE_NAME">Errors</string>
+      <string name="!ECU#BFS">BFS</string>
+      <string name="!ECU#CAS">CAS</string>
+      <string name="!ECU#CCC">CCC</string>
+      <string name="!ECU#CID">CID</string>
+      <string name="!ECU#DME/DDE">DME/DDE</string>
+      <string name="!ECU#DSC">DSC</string>
+      <string name="!ECU#EGS">EGS</string>
+      <string name="!ECU#EKP">EKP</string>
+      <string name="!ECU#EMF">EMF</string>
+      <string name="!ECU#FAS">FAS</string>
+      <string name="!ECU#FBI">FBI</string>
+      <string name="!ECU#FRM">FRM</string>
+      <string name="!ECU#FZD">FZD</string>
+      <string name="!ECU#GWS">GWS</string>
+      <string name="!ECU#HKL">HKL</string>
+      <string name="!ECU#JBBF">JBBF</string>
+      <string name="!ECU#KLIMA">KLIMA</string>
+      <string name="!ECU#KLIMA2">KLIMA2</string>
+      <string name="!ECU#KOMBI">KOMBI</string>
+      <string name="!ECU#MASK/CCC">MASK/CCC</string>
+      <string name="!ECU#MOSTGW">MOSTGW</string>
+      <string name="!ECU#MRS">MRS</string>
+      <string name="!ECU#PDC">PDC</string>
+      <string name="!ECU#PGS">PGS</string>
+      <string name="!ECU#RDC">RDC</string>
+      <string name="!ECU#RLS">RLS</string>
+      <string name="!ECU#SINE">SINE</string>
+      <string name="!ECU#STVR/TEBF">STVR/TEBF</string>
+      <string name="!ECU#TEL/MULF">TEL/MULF</string>
+      <string name="!ECU#VGSG">VGSG</string>
+      <string name="!ECU#ZBE">ZBE</string>
+    </strings>
+    <read_errors sgbd_functional="e70">
+      <ecu name="!ECU#BFS" sgbd="BFS_PLX" />
+      <ecu name="!ECU#CAS" sgbd="CAS" />
+      <ecu name="!ECU#CCC" sgbd="CICR_HD" />
+      <ecu name="!ECU#CID" sgbd="CIDR_70" />
+      <ecu name="!ECU#DME/DDE" sgbd="MEVD176K" />
+      <ecu name="!ECU#DSC" sgbd="DXC_70" />
+      <ecu name="!ECU#EGS" sgbd="GSB233" />
+      <ecu name="!ECU#EKP" sgbd="EKP360" />
+      <ecu name="!ECU#EMF" sgbd="EMF_70" />
+      <ecu name="!ECU#FAS" sgbd="FAS_PLX" />
+      <ecu name="!ECU#FBI" sgbd="CECALLR" />
+      <ecu name="!ECU#FRM" sgbd="FRM_70" />
+      <ecu name="!ECU#FZD" sgbd="FZD_70" />
+      <ecu name="!ECU#GWS" sgbd="GWS_70" />
+      <ecu name="!ECU#HKL" sgbd="HKL_70" />
+      <ecu name="!ECU#JBBF" sgbd="JBBF70" />
+      <ecu name="!ECU#KLIMA" sgbd="IHKA70" />
+      <ecu name="!ECU#KLIMA2" sgbd="FKA_70" />
+      <ecu name="!ECU#KOMBI" sgbd="KOMB70" />
+      <ecu name="!ECU#MASK/CCC" sgbd="CICR" />
+      <ecu name="!ECU#MOSTGW" sgbd="CICR_GW" />
+      <ecu name="!ECU#MRS" sgbd="ACSM2" />
+      <ecu name="!ECU#PDC" sgbd="PDCR3" />
+      <ecu name="!ECU#PGS" sgbd="PGS_65_2" />
+      <ecu name="!ECU#RDC" sgbd="RDCKWP" />
+      <ecu name="!ECU#RLS" sgbd="RLSS70" />
+      <ecu name="!ECU#SINE" sgbd="SINE_65" />
+      <ecu name="!ECU#STVR/TEBF" sgbd="TRSVC70" />
+      <ecu name="!ECU#TEL/MULF" sgbd="CMEDIAR" />
+      <ecu name="!ECU#VGSG" sgbd="LMV_84" />
+      <ecu name="!ECU#ZBE" sgbd="ZBE_60_2" />
+    </read_errors>
+  </page>
 </fragment>

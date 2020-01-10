@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <fragment xmlns="http://www.holeschak.de/BmwDeepObd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.holeschak.de/BmwDeepObd BmwDeepObd.xsd">
-	<page name="!PAGE_NAME" display-mode="grid" fontsize="small" gauges-portrait="2" gauges-landscape="4" logfile="DDE.log" no_update="true">
+	<page name="!PAGE_NAME" display-mode="grid" fontsize="small" gauges-portrait="2" gauges-landscape="4" logfile="DDE.log">
 		<strings>
 			<string name="!PAGE_NAME">DDE</string>
 
@@ -44,10 +44,10 @@
 				<display name="label_motor_ambient_temp"          result="STAT_UMGEBUNGSTEMPERATUR_WERT"                     grid-type="simple-gauge-square" min-value="0"    max-value="50"     />
 				<display name="label_motor_fuel_temp"             result="STAT_KRAFTSTOFFTEMPERATUR_WERT"                    grid-type="simple-gauge-square" min-value="0"    max-value="50"     />
 
-				<display name="label_motor_boost_press_act"       result="STAT_LADEDRUCK_WERT"                               grid-type="simple-gauge-square" min-value="963"  max-value="4084"   />
-				<display name="label_motor_boost_press_set"       result="STAT_LADEDRUCK_SOLL_WERT"                          grid-type="simple-gauge-square" min-value="963"  max-value="4084"   />
-				<display name="label_motor_ambient_press"         result="STAT_UMGEBUNGSDRUCK_WERT"                          grid-type="simple-gauge-square" min-value="963"  max-value="1063"   />
-				<display name="label_motor_exhaust_press"         result="STAT_DIFFERENZDRUCK_UEBER_PARTIKELFILTER_WERT"     grid-type="simple-gauge-square" min-value="963"  max-value="4084"   />
+				<display name="label_motor_boost_press_act"       result="STAT_LADEDRUCK_WERT"                               grid-type="simple-gauge-square" min-value="500"  max-value="4045"   />
+				<display name="label_motor_boost_press_set"       result="STAT_LADEDRUCK_SOLL_WERT"                          grid-type="simple-gauge-square" min-value="500"  max-value="4045"   />
+				<display name="label_motor_ambient_press"         result="STAT_UMGEBUNGSDRUCK_WERT"                          grid-type="simple-gauge-square" min-value="900"  max-value="1100"   />
+				<display name="label_motor_exhaust_press"         result="STAT_DIFFERENZDRUCK_UEBER_PARTIKELFILTER_WERT"     grid-type="simple-gauge-square" min-value="500"  max-value="3045"   />
 
 				<display name="label_motor_rail_press_act"        result="STAT_RAILDRUCK_WERT"                               grid-type="simple-gauge-square" min-value="0"    max-value="500"    />
 				<display name="label_motor_rail_press_set"        result="STAT_RAILDRUCK_SOLL_WERT"                          grid-type="simple-gauge-square" min-value="0"    max-value="500"    />
@@ -155,21 +155,6 @@ class PageClass {
 				if (value > 20) textColor = Android.Graphics.Color.Green;
 				if (value > 30) textColor = Android.Graphics.Color.Yellow;
 				if (value > 40) textColor = Android.Graphics.Color.Red;
-				break;
-
-			// Ambient air pressure
-			case "STATUS_MESSWERTBLOCK_LESEN#STAT_UMGEBUNGSDRUCK_WERT":
-				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
-				result = string.Format(ActivityMain.Culture, "{0,7:0.00}", (value / hpa2psi));
-
-				if (!found) { result = string.Empty; break; }
-
-				textColor = Android.Graphics.Color.Red;
-				if ((value / hpa2psi) > 13)   textColor = Android.Graphics.Color.Yellow;
-				if ((value / hpa2psi) > 14)   textColor = Android.Graphics.Color.White;
-				if ((value / hpa2psi) > 14.5) textColor = Android.Graphics.Color.Green;
-				if ((value / hpa2psi) > 15)   textColor = Android.Graphics.Color.Yellow;
-				if ((value / hpa2psi) > 16)   textColor = Android.Graphics.Color.Red;
 				break;
 
 			// Intake air temp

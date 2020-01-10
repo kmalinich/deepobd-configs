@@ -12,7 +12,6 @@
 			<string name="!JOB#STATUS_SENSOREN#STAT_DRUCKSENSOR_HL_WERT">Pressure RL</string>
 			<string name="!JOB#STATUS_SENSOREN#STAT_DRUCKSENSOR_HR_WERT">Pressure RR</string>
 		</strings>
-
 		<jobs sgbd="DSC_87">
 			<job name="STATUS_F_CAN_LW">
 				<display name="!JOB#STATUS_F_CAN_LW#STAT_LW_OBEN_WERT" result="STAT_LW_OBEN_WERT" format="3.2R" grid-type="simple-gauge-dot" min-value="-450" max-value="450" log_tag="STAT_LW_OBEN_WERT" />

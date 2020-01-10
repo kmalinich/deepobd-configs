@@ -81,21 +81,6 @@ class PageClass {
 				if (value > 40) textColor = Android.Graphics.Color.Red;
 				break;
 
-			// Ambient air pressure
-			case "STATUS_MESSWERTBLOCK_LESEN#STAT_UMGEBUNGSDRUCK_WERT":
-				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
-				result = string.Format(ActivityMain.Culture, "{0,7:0.00}", (value / hpa2psi));
-
-				if (!found) { result = string.Empty; break; }
-
-				textColor = Android.Graphics.Color.Red;
-				if ((value / hpa2psi) > 13)   textColor = Android.Graphics.Color.Yellow;
-				if ((value / hpa2psi) > 14)   textColor = Android.Graphics.Color.White;
-				if ((value / hpa2psi) > 14.5) textColor = Android.Graphics.Color.Green;
-				if ((value / hpa2psi) > 15)   textColor = Android.Graphics.Color.Yellow;
-				if ((value / hpa2psi) > 16)   textColor = Android.Graphics.Color.Red;
-				break;
-
 			// Intake air temp
 			case "STATUS_MESSWERTBLOCK_LESEN#STAT_LADELUFTTEMPERATUR_WERT":
 				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);

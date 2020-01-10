@@ -1,1 +1,78 @@
-../A778780/KLIMA.ccpage
+<?xml version="1.0" encoding="utf-8"?>
+<fragment xmlns="http://www.holeschak.de/BmwDeepObd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.holeschak.de/BmwDeepObd BmwDeepObd.xsd">
+	<page name="!PAGE_NAME" display-mode="list" fontsize="medium" gauges-portrait="3" gauges-landscape="6" logfile="KLIMA.log">
+		<strings>
+			<string name="!PAGE_NAME">Climate</string>
+			<string name="!JOB#STATUS_SENSOREN_ANALOG_PORT#STAT_TEMP_DISPLAY_WERT">Display temp</string>
+			<string name="!JOB#STATUS_SENSOREN_ANALOG_PORT#STAT_TEMP_ML_RECHTS_WERT">Mixing flap right</string>
+			<string name="!JOB#STATUS_SENSOREN_ANALOG_PORT#STAT_TEMP_ML_LINKS_WERT">Mixing flap left</string>
+			<string name="!JOB#STATUS_SENSOREN_ANALOG_PORT#STAT_TEMP_FUSSR_RECHTS_WERT">Footwell temp right</string>
+			<string name="!JOB#STATUS_SENSOREN_ANALOG_PORT#STAT_TEMP_FUSSR_LINKS_WERT">Footwell temp left</string>
+			<string name="!JOB#STATUS_SENSOREN_ANALOG_PORT#STAT_TEMP_VERDAMPFER_WERT">Evaporator temp</string>
+			<string name="!JOB#STATUS_SENSOREN_ANALOG_PORT#STAT_TEMP_INNEN_WERT">Interior temp</string>
+			<string name="!JOB#STATUS_UIF_SENSOR#STAT_TEMP_INNEN_WERT">Interior temp (calc)</string>
+			<string name="!JOB#STATUS_UIF_SENSOR#STAT_TEMP_INNEN_NTC1_WERT">Interior temp NTC1</string>
+			<string name="!JOB#STATUS_UIF_SENSOR#STAT_TEMP_INNEN_NTC2_WERT">Interior temp NTC2</string>
+			<string name="!JOB#STATUS_UIF_SENSOR#STAT_TEMP_INNEN_SOLAR_WERT">Interior solar sensor</string>
+			<string name="!JOB#STATUS_SENSOREN_ANALOG_PORT#STAT_SOLARSENSOR_WERT">Solar sensor</string>
+
+			<string name="!JOB#STATUS_MOTOR_KLAPPENPOSITION#STAT_DEFROST_WERT">Defrost</string>
+			<string name="!JOB#STATUS_MOTOR_KLAPPENPOSITION#STAT_FRISCHLUFT_UMLUFT_WERT">Fresh air reverse</string>
+			<string name="!JOB#STATUS_MOTOR_KLAPPENPOSITION#STAT_FRONT_SCHICHTUNG_WERT">Front stratification</string>
+			<string name="!JOB#STATUS_MOTOR_KLAPPENPOSITION#STAT_FUSSRAUM_WERT">Footwell</string>
+			<string name="!JOB#STATUS_MOTOR_KLAPPENPOSITION#STAT_MISCHLUFT_LINKS_WERT">Mixed air left</string>
+			<string name="!JOB#STATUS_MOTOR_KLAPPENPOSITION#STAT_MISCHLUFT_RECHTS_WERT">Mixed air right</string>
+			<string name="!JOB#STATUS_MOTOR_KLAPPENPOSITION#STAT_PTC_WERT">PTC</string>
+			<string name="!JOB#STATUS_MOTOR_KLAPPENPOSITION#STAT_FOND_WERT">Rear</string>
+			<string name="!JOB#STATUS_MOTOR_KLAPPENPOSITION#STAT_BELUEFTUNG_WERT">Ventilation</string>
+
+			<string name="!JOB#STATUS_MOTOR_KLAPPENPOSITION#STAT_DEFROST_IST_WERT">Defrost (target)</string>
+			<string name="!JOB#STATUS_MOTOR_KLAPPENPOSITION#STAT_FRISCHLUFT_UMLUFT_IST_WERT">Fresh air reverse (target)</string>
+			<string name="!JOB#STATUS_MOTOR_KLAPPENPOSITION#STAT_FRONT_SCHICHTUNG_IST_WERT">Front stratification (target)</string>
+			<string name="!JOB#STATUS_MOTOR_KLAPPENPOSITION#STAT_FUSSRAUM_IST_WERT">Footwell (target)</string>
+			<string name="!JOB#STATUS_MOTOR_KLAPPENPOSITION#STAT_MISCHLUFT_LINKS_IST_WERT">Mixed air left (target)</string>
+			<string name="!JOB#STATUS_MOTOR_KLAPPENPOSITION#STAT_MISCHLUFT_RECHTS_IST_WERT">Mixed air right (target)</string>
+			<string name="!JOB#STATUS_MOTOR_KLAPPENPOSITION#STAT_PTC_IST_WERT">PTC (target)</string>
+			<string name="!JOB#STATUS_MOTOR_KLAPPENPOSITION#STAT_FOND_IST_WERT">Rear (target)</string>
+			<string name="!JOB#STATUS_MOTOR_KLAPPENPOSITION#STAT_BELUEFTUNG_IST_WERT">Ventilation (target)</string>
+		</strings>
+		<jobs sgbd="IHKA87_2">
+			<job name="STATUS_SENSOREN_ANALOG_PORT">
+				<display name="!JOB#STATUS_SENSOREN_ANALOG_PORT#STAT_TEMP_ML_RECHTS_WERT" result="STAT_TEMP_ML_RECHTS_WERT" format="L" log_tag="STAT_TEMP_ML_RECHTS_WERT" />
+				<display name="!JOB#STATUS_SENSOREN_ANALOG_PORT#STAT_TEMP_ML_LINKS_WERT" result="STAT_TEMP_ML_LINKS_WERT" format="L" log_tag="STAT_TEMP_ML_LINKS_WERT" />
+				<display name="!JOB#STATUS_SENSOREN_ANALOG_PORT#STAT_TEMP_FUSSR_RECHTS_WERT" result="STAT_TEMP_FUSSR_RECHTS_WERT" format="L" log_tag="STAT_TEMP_FUSSR_RECHTS_WERT" />
+				<display name="!JOB#STATUS_SENSOREN_ANALOG_PORT#STAT_TEMP_FUSSR_LINKS_WERT" result="STAT_TEMP_FUSSR_LINKS_WERT" format="L" log_tag="STAT_TEMP_FUSSR_LINKS_WERT" />
+				<display name="!JOB#STATUS_SENSOREN_ANALOG_PORT#STAT_TEMP_VERDAMPFER_WERT" result="STAT_TEMP_VERDAMPFER_WERT" format="L" log_tag="STAT_TEMP_VERDAMPFER_WERT" />
+				<display name="!JOB#STATUS_SENSOREN_ANALOG_PORT#STAT_TEMP_INNEN_WERT" result="STAT_TEMP_INNEN_WERT" format="L" log_tag="STAT_TEMP_INNEN_WERT" />
+				<display name="!JOB#STATUS_SENSOREN_ANALOG_PORT#STAT_SOLARSENSOR_WERT" result="STAT_SOLARSENSOR_WERT" format="L" log_tag="STAT_SOLARSENSOR_WERT" />
+				<display name="!JOB#STATUS_SENSOREN_ANALOG_PORT#STAT_TEMP_DISPLAY_WERT" result="STAT_TEMP_DISPLAY_WERT" format="L" log_tag="STAT_TEMP_DISPLAY_WERT" />
+			</job>
+			<job name="STATUS_MOTOR_KLAPPENPOSITION">
+				<display name="!JOB#STATUS_MOTOR_KLAPPENPOSITION#STAT_PTC_WERT" result="STAT_PTC_WERT" format="" log_tag="STAT_PTC_WERT" />
+				<display name="!JOB#STATUS_MOTOR_KLAPPENPOSITION#STAT_DEFROST_WERT" result="STAT_DEFROST_WERT" format="" log_tag="STAT_DEFROST_WERT" />
+				<display name="!JOB#STATUS_MOTOR_KLAPPENPOSITION#STAT_FRISCHLUFT_UMLUFT_WERT" result="STAT_FRISCHLUFT_UMLUFT_WERT" format="" log_tag="STAT_FRISCHLUFT_UMLUFT_WERT" />
+				<display name="!JOB#STATUS_MOTOR_KLAPPENPOSITION#STAT_MISCHLUFT_RECHTS_WERT" result="STAT_MISCHLUFT_RECHTS_WERT" format="" log_tag="STAT_MISCHLUFT_RECHTS_WERT" />
+				<display name="!JOB#STATUS_MOTOR_KLAPPENPOSITION#STAT_FUSSRAUM_WERT" result="STAT_FUSSRAUM_WERT" format="" log_tag="STAT_FUSSRAUM_WERT" />
+				<display name="!JOB#STATUS_MOTOR_KLAPPENPOSITION#STAT_BELUEFTUNG_WERT" result="STAT_BELUEFTUNG_WERT" format="" log_tag="STAT_BELUEFTUNG_WERT" />
+				<display name="!JOB#STATUS_MOTOR_KLAPPENPOSITION#STAT_MISCHLUFT_LINKS_WERT" result="STAT_MISCHLUFT_LINKS_WERT" format="" log_tag="STAT_MISCHLUFT_LINKS_WERT" />
+				<display name="!JOB#STATUS_MOTOR_KLAPPENPOSITION#STAT_FOND_WERT" result="STAT_FOND_WERT" format="" log_tag="STAT_FOND_WERT" />
+				<display name="!JOB#STATUS_MOTOR_KLAPPENPOSITION#STAT_FRONT_SCHICHTUNG_WERT" result="STAT_FRONT_SCHICHTUNG_WERT" format="" log_tag="STAT_FRONT_SCHICHTUNG_WERT" />
+				<display name="!JOB#STATUS_MOTOR_KLAPPENPOSITION#STAT_PTC_IST_WERT" result="STAT_PTC_IST_WERT" format="" log_tag="STAT_PTC_IST_WERT" />
+				<display name="!JOB#STATUS_MOTOR_KLAPPENPOSITION#STAT_DEFROST_IST_WERT" result="STAT_DEFROST_IST_WERT" format="" log_tag="STAT_DEFROST_IST_WERT" />
+				<display name="!JOB#STATUS_MOTOR_KLAPPENPOSITION#STAT_FRISCHLUFT_UMLUFT_IST_WERT" result="STAT_FRISCHLUFT_UMLUFT_IST_WERT" format="" log_tag="STAT_FRISCHLUFT_UMLUFT_IST_WERT" />
+				<display name="!JOB#STATUS_MOTOR_KLAPPENPOSITION#STAT_MISCHLUFT_RECHTS_IST_WERT" result="STAT_MISCHLUFT_RECHTS_IST_WERT" format="" log_tag="STAT_MISCHLUFT_RECHTS_IST_WERT" />
+				<display name="!JOB#STATUS_MOTOR_KLAPPENPOSITION#STAT_FUSSRAUM_IST_WERT" result="STAT_FUSSRAUM_IST_WERT" format="" log_tag="STAT_FUSSRAUM_IST_WERT" />
+				<display name="!JOB#STATUS_MOTOR_KLAPPENPOSITION#STAT_BELUEFTUNG_IST_WERT" result="STAT_BELUEFTUNG_IST_WERT" format="" log_tag="STAT_BELUEFTUNG_IST_WERT" />
+				<display name="!JOB#STATUS_MOTOR_KLAPPENPOSITION#STAT_MISCHLUFT_LINKS_IST_WERT" result="STAT_MISCHLUFT_LINKS_IST_WERT" format="" log_tag="STAT_MISCHLUFT_LINKS_IST_WERT" />
+				<display name="!JOB#STATUS_MOTOR_KLAPPENPOSITION#STAT_FOND_IST_WERT" result="STAT_FOND_IST_WERT" format="" log_tag="STAT_FOND_IST_WERT" />
+				<display name="!JOB#STATUS_MOTOR_KLAPPENPOSITION#STAT_FRONT_SCHICHTUNG_IST_WERT" result="STAT_FRONT_SCHICHTUNG_IST_WERT" format="" log_tag="STAT_FRONT_SCHICHTUNG_IST_WERT" />
+			</job>
+			<job name="STATUS_UIF_SENSOR">
+				<display name="!JOB#STATUS_UIF_SENSOR#STAT_TEMP_INNEN_WERT" result="STAT_TEMP_INNEN_WERT" format="L" log_tag="STAT_TEMP_INNEN_WERT" />
+				<display name="!JOB#STATUS_UIF_SENSOR#STAT_TEMP_INNEN_NTC1_WERT" result="STAT_TEMP_INNEN_NTC1_WERT" format="L" log_tag="STAT_TEMP_INNEN_NTC1_WERT" />
+				<display name="!JOB#STATUS_UIF_SENSOR#STAT_TEMP_INNEN_NTC2_WERT" result="STAT_TEMP_INNEN_NTC2_WERT" format="L" log_tag="STAT_TEMP_INNEN_NTC2_WERT" />
+				<display name="!JOB#STATUS_UIF_SENSOR#STAT_TEMP_INNEN_SOLAR_WERT" result="STAT_TEMP_INNEN_SOLAR_WERT" format="L" log_tag="STAT_TEMP_INNEN_SOLAR_WERT" />
+			</job>
+		</jobs>
+	</page>
+</fragment>

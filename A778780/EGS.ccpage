@@ -15,7 +15,6 @@
 			<string name="!JOB#STATUS_GEAR#STAT_SA_WERT">Gear</string>
 			<string name="!JOB#STATUS_ISTGANG#STAT_ISTGANG_WERT">Gear (actual)</string>
 		</strings>
-
 		<jobs sgbd="GS19D">
 			<job name="STATUS_GETRIEBETEMPERATUR">
 				<display name="!JOB#STATUS_GETRIEBETEMPERATUR#STAT_GETRIEBETEMPERATUR_WERT" result="STAT_GETRIEBETEMPERATUR_WERT" format="2.2R" grid-type="simple-gauge-square" min-value="0" max-value="100" log_tag="STAT_GETRIEBETEMPERATUR_WERT" />

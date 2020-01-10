@@ -1,1 +1,46 @@
-../A778780/Errors.ccpage
+<?xml version="1.0" encoding="utf-8"?>
+<fragment xmlns="http://www.holeschak.de/BmwDeepObd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.holeschak.de/BmwDeepObd BmwDeepObd.xsd">
+	<page name="!PAGE_NAME">
+		<strings>
+			<string name="!PAGE_NAME">Errors</string>
+			<string name="!ECU#CAS">CAS</string>
+			<string name="!ECU#DDE">DDE</string>
+			<string name="!ECU#DSC">DSC</string>
+			<string name="!ECU#EGS">EGS</string>
+			<string name="!ECU#EKP">EKP</string>
+			<string name="!ECU#FAS">FAS</string>
+			<string name="!ECU#FBI">FBI</string>
+			<string name="!ECU#FRM">FRM</string>
+			<string name="!ECU#FZD">FZD</string>
+			<string name="!ECU#JBBF">JBBF</string>
+			<string name="!ECU#KLIMA">KLIMA</string>
+			<string name="!ECU#KOMBI">KOMBI</string>
+			<string name="!ECU#MRS">MRS</string>
+			<string name="!ECU#RAD">RAD</string>
+			<string name="!ECU#RAD/GW">RAD/GW</string>
+			<string name="!ECU#RAD/SAT">RAD/SAT</string>
+			<string name="!ECU#RDC">RDC</string>
+			<string name="!ECU#TEL">TEL/MULF</string>
+		</strings>
+		<read_errors sgbd_functional="e89x">
+			<ecu name="!ECU#CAS"     sgbd="CAS" />
+			<ecu name="!ECU#DDE"     sgbd="D73N57C0" />
+			<ecu name="!ECU#DSC"     sgbd="DSC_87" />
+			<ecu name="!ECU#EGS"     sgbd="GS19D" />
+			<ecu name="!ECU#EKP"     sgbd="EKP360" />
+			<ecu name="!ECU#FAS"     sgbd="FAS_PLX" />
+			<ecu name="!ECU#FBI"     sgbd="CECALLR" />
+			<ecu name="!ECU#FRM"     sgbd="FRM_70" />
+			<ecu name="!ECU#FZD"     sgbd="FZD_87" />
+			<ecu name="!ECU#JBBF"    sgbd="JBBF70" />
+			<ecu name="!ECU#KLIMA"   sgbd="IHKA87_2" />
+			<ecu name="!ECU#KOMBI"   sgbd="KOMB87" />
+			<ecu name="!ECU#MRS"     sgbd="MRS5" />
+			<ecu name="!ECU#RAD"     sgbd="RAD2" />
+			<ecu name="!ECU#RAD/GW"  sgbd="RAD2_GW" />
+			<ecu name="!ECU#RAD/SAT" sgbd="SAT_RAD2" />
+			<ecu name="!ECU#RDC"     sgbd="RDCKWP" />
+			<ecu name="!ECU#TEL"     sgbd="CMEDIAR" />
+		</read_errors>
+	</page>
+</fragment>

@@ -1,1 +1,52 @@
-../A778780/EGS.ccpage
+<?xml version="1.0" encoding="utf-8"?>
+<fragment xmlns="http://www.holeschak.de/BmwDeepObd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.holeschak.de/BmwDeepObd BmwDeepObd.xsd">
+	<page name="!PAGE_NAME" display-mode="grid" fontsize="large" gauges-portrait="2" gauges-landscape="4" logfile="EGS.log">
+		<strings>
+			<string name="!PAGE_NAME">Trans</string>
+			<string name="!JOB#STATUS_GETRIEBETEMPERATUR#STAT_GETRIEBETEMPERATUR_WERT">Trans temp</string>
+			<string name="!JOB#STATUS_TURBINENDREHZAHL#STAT_TURBINENDREHZAHL_WERT">Turbine speed</string>
+			<string name="!JOB#STATUS_MOTORDREHZAHL#STAT_MOTORDREHZAHL_WERT">Input speed</string>
+			<string name="!JOB#STATUS_ABTRIEBSDREHZAHL#STAT_ABTRIEBSDREHZAHL_WERT">Output speed</string>
+			<string name="!JOB#STATUS_RADGESCHWINDIGKEITEN#STAT_RADGESCHWINDIGKEITEN_WERT">Wheel speed avg</string>
+			<string name="!JOB#STATUS_MOTORISTMOMENT#STAT_MOTORISTMOMENT_WERT">Torque (actual)</string>
+			<string name="!JOB#STATUS_MOTORSOLLMOMENT#STAT_MOTORSOLLMOMENT_WERT">Torque (target)</string>
+			<string name="!JOB#STATUS_GETRIEBEPOSITION#STAT_GETRIEBEPOSITION_WERT">Position</string>
+			<string name="!JOB#STATUS_GEAR#STAT_WK_WERT">Torque converter</string>
+			<string name="!JOB#STATUS_GEAR#STAT_SA_WERT">Gear</string>
+			<string name="!JOB#STATUS_ISTGANG#STAT_ISTGANG_WERT">Gear (actual)</string>
+		</strings>
+		<jobs sgbd="GS19D">
+			<job name="STATUS_GETRIEBETEMPERATUR">
+				<display name="!JOB#STATUS_GETRIEBETEMPERATUR#STAT_GETRIEBETEMPERATUR_WERT" result="STAT_GETRIEBETEMPERATUR_WERT" format="2.2R" grid-type="simple-gauge-square" min-value="0" max-value="100" log_tag="STAT_GETRIEBETEMPERATUR_WERT" />
+			</job>
+			<job name="STATUS_TURBINENDREHZAHL">
+				<display name="!JOB#STATUS_TURBINENDREHZAHL#STAT_TURBINENDREHZAHL_WERT" result="STAT_TURBINENDREHZAHL_WERT" format="2.2R" grid-type="simple-gauge-dot" min-value="0" max-value="8160" log_tag="STAT_TURBINENDREHZAHL_WERT" />
+			</job>
+			<job name="STATUS_MOTORDREHZAHL">
+				<display name="!JOB#STATUS_MOTORDREHZAHL#STAT_MOTORDREHZAHL_WERT" result="STAT_MOTORDREHZAHL_WERT" format="2.2R" grid-type="simple-gauge-square" min-value="0" max-value="6000" log_tag="STAT_MOTORDREHZAHL_WERT" />
+			</job>
+			<job name="STATUS_ABTRIEBSDREHZAHL">
+				<display name="!JOB#STATUS_ABTRIEBSDREHZAHL#STAT_ABTRIEBSDREHZAHL_WERT" result="STAT_ABTRIEBSDREHZAHL_WERT" format="2.2R" grid-type="simple-gauge-square" min-value="0" max-value="8160" log_tag="STAT_ABTRIEBSDREHZAHL_WERT" />
+			</job>
+			<job name="STATUS_RADGESCHWINDIGKEITEN">
+				<display name="!JOB#STATUS_RADGESCHWINDIGKEITEN#STAT_RADGESCHWINDIGKEITEN_WERT" result="STAT_RADGESCHWINDIGKEITEN_WERT" format="2.2R" grid-type="simple-gauge-square" min-value="0" max-value="250" log_tag="STAT_RADGESCHWINDIGKEITEN_WERT" />
+			</job>
+			<job name="STATUS_MOTORISTMOMENT">
+				<display name="!JOB#STATUS_MOTORISTMOMENT#STAT_MOTORISTMOMENT_WERT" result="STAT_MOTORISTMOMENT_WERT" format="2.2R" grid-type="simple-gauge-dot" min-value="-100" max-value="1000" log_tag="STAT_MOTORISTMOMENT_WERT" />
+			</job>
+			<job name="STATUS_MOTORSOLLMOMENT">
+				<display name="!JOB#STATUS_MOTORSOLLMOMENT#STAT_MOTORSOLLMOMENT_WERT" result="STAT_MOTORSOLLMOMENT_WERT" format="2.2R" grid-type="simple-gauge-dot" min-value="-100" max-value="1000" log_tag="STAT_MOTORSOLLMOMENT_WERT" />
+			</job>
+			<job name="STATUS_GETRIEBEPOSITION">
+				<display name="!JOB#STATUS_GETRIEBEPOSITION#STAT_GETRIEBEPOSITION_WERT" result="STAT_GETRIEBEPOSITION_WERT" format="2.2R" grid-type="simple-gauge-square" min-value="0" max-value="9" log_tag="STAT_GETRIEBEPOSITION_WERT" />
+			</job>
+			<job name="STATUS_GEAR">
+				<display name="!JOB#STATUS_GEAR#STAT_WK_WERT" result="STAT_WK_WERT" format="1.0R" log_tag="STAT_WK_WERT" />
+				<display name="!JOB#STATUS_GEAR#STAT_SA_WERT" result="STAT_SA_WERT" format="1.0R" grid-type="simple-gauge-square" min-value="0" max-value="6" log_tag="STAT_SA_WERT" />
+			</job>
+			<job name="STATUS_ISTGANG">
+				<display name="!JOB#STATUS_ISTGANG#STAT_ISTGANG_WERT" result="STAT_ISTGANG_WERT" format="2.2R" grid-type="simple-gauge-square" min-value="0" max-value="7" log_tag="STAT_ISTGANG_WERT" />
+			</job>
+		</jobs>
+	</page>
+</fragment>

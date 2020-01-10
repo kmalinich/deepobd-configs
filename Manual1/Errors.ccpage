@@ -3,7 +3,7 @@
   <page name="!PAGE_NAME">
     <strings>
       <string name="!PAGE_NAME">Errors</string>
-      <string name="!ECU#MSS52DS1">MSS52DS1</string>
+      <string name="!ECU#MSS52DS1">MSS52DS1-main</string>
     </strings>
     <read_errors>
       <ecu name="!ECU#MSS52DS1" sgbd="mss52ds1" />
