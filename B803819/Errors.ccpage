@@ -1,60 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <fragment xmlns="http://www.holeschak.de/BmwDeepObd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.holeschak.de/BmwDeepObd BmwDeepObd.xsd">
-  <page name="!PAGE_NAME">
-    <strings>
-      <string name="!PAGE_NAME">Errors</string>
-      <string name="!ECU#DME/DDE">MS45.1</string>
-      <string name="!ECU#ALC">ALC</string>
-      <string name="!ECU#BFS">BFS</string>
-      <string name="!ECU#BZM/SZM">BZM/SZM</string>
-      <string name="!ECU#CAS">CAS</string>
-      <string name="!ECU#DSC">DSC</string>
-      <string name="!ECU#DWA">DWA</string>
-      <string name="!ECU#EGS">EGS</string>
-      <string name="!ECU#FAS">FAS</string>
-      <string name="!ECU#KBM">KBM</string>
-      <string name="!ECU#KLIMA">KLIMA</string>
-      <string name="!ECU#KOMBI">KOMBI</string>
-      <string name="!ECU#LM">LM</string>
-      <string name="!ECU#POW">POW</string>
-      <string name="!ECU#RLS">RLS</string>
-      <string name="!ECU#SBSL">SBSL</string>
-      <string name="!ECU#SBSR">SBSR</string>
-      <string name="!ECU#SFZ">SFZ</string>
-      <string name="!ECU#SHD/MDS">SHD/MDS</string>
-      <string name="!ECU#SIM/SGM">SIM/SGM</string>
-      <string name="!ECU#SINE">SINE</string>
-      <string name="!ECU#STVL/TEFA">STVL/TEFA</string>
-      <string name="!ECU#STVR/TEBF">STVR/TEBF</string>
-      <string name="!ECU#SZL">SZL</string>
-      <string name="!ECU#ZGM">ZGM</string>
-    </strings>
-    <read_errors sgbd_functional="e60">
-      <ecu name="!ECU#DME/DDE" sgbd="MS450DS0" />
-      <ecu name="!ECU#ALC" sgbd="ALC_60" />
-      <ecu name="!ECU#BFS" sgbd="BFS_PLX" />
-      <ecu name="!ECU#BZM/SZM" sgbd="SZM_60" />
-      <ecu name="!ECU#CAS" sgbd="CAS" />
-      <ecu name="!ECU#DSC" sgbd="DSC_60" />
-      <ecu name="!ECU#DWA" sgbd="DWA_E65" />
-      <ecu name="!ECU#EGS" sgbd="GS19A" />
-      <ecu name="!ECU#FAS" sgbd="FAS_PLX" />
-      <ecu name="!ECU#KBM" sgbd="KBM_60" />
-      <ecu name="!ECU#KLIMA" sgbd="IHKA60_2" />
-      <ecu name="!ECU#KOMBI" sgbd="KOMB60" />
-      <ecu name="!ECU#LM" sgbd="LM_AHL_2" />
-      <ecu name="!ECU#POW" sgbd="MPM_60" />
-      <ecu name="!ECU#RLS" sgbd="RLS_E65" />
-      <ecu name="!ECU#SBSL" sgbd="SBSL85" />
-      <ecu name="!ECU#SBSR" sgbd="SBSR85" />
-      <ecu name="!ECU#SFZ" sgbd="SFZ60" />
-      <ecu name="!ECU#SHD/MDS" sgbd="SD_KWP" />
-      <ecu name="!ECU#SIM/SGM" sgbd="SGM_60_2" />
-      <ecu name="!ECU#SINE" sgbd="SINE_65" />
-      <ecu name="!ECU#STVL/TEFA" sgbd="TEFA60" />
-      <ecu name="!ECU#STVR/TEBF" sgbd="TEBF60" />
-      <ecu name="!ECU#SZL" sgbd="SZL" />
-      <ecu name="!ECU#ZGM" sgbd="ZGM_E65" />
-    </read_errors>
-  </page>
+	<page name="!PAGE_NAME">
+		<strings>
+			<string name="!PAGE_NAME">Errors</string>
+			<string name="!ECU#DME/DDE">MS45.1</string>
+			<string name="!ECU#ALC">ALC</string>
+			<string name="!ECU#BFS">BFS</string>
+			<string name="!ECU#BZM/SZM">BZM/SZM</string>
+			<string name="!ECU#CAS">CAS</string>
+			<string name="!ECU#DSC">DSC</string>
+			<string name="!ECU#DWA">DWA</string>
+			<string name="!ECU#EGS">EGS</string>
+			<string name="!ECU#FAS">FAS</string>
+			<string name="!ECU#KBM">KBM</string>
+			<string name="!ECU#KLIMA">KLIMA</string>
+			<string name="!ECU#KOMBI">KOMBI</string>
+			<string name="!ECU#LM">LM</string>
+			<string name="!ECU#POW">POW</string>
+			<string name="!ECU#RLS">RLS</string>
+			<string name="!ECU#SBSL">SBSL</string>
+			<string name="!ECU#SBSR">SBSR</string>
+			<string name="!ECU#SFZ">SFZ</string>
+			<string name="!ECU#SHD/MDS">SHD/MDS</string>
+			<string name="!ECU#SIM/SGM">SIM/SGM</string>
+			<string name="!ECU#SINE">SINE</string>
+			<string name="!ECU#STVL/TEFA">STVL/TEFA</string>
+			<string name="!ECU#STVR/TEBF">STVR/TEBF</string>
+			<string name="!ECU#SZL">SZL</string>
+			<string name="!ECU#ZGM">ZGM</string>
+		</strings>
+
+		<read_errors sgbd_functional="e60">
+			<ecu name="!ECU#DME/DDE" sgbd="MS450DS0" />
+			<ecu name="!ECU#ALC" sgbd="ALC_60" />
+			<ecu name="!ECU#BFS" sgbd="BFS_PLX" />
+			<ecu name="!ECU#BZM/SZM" sgbd="SZM_60" />
+			<ecu name="!ECU#CAS" sgbd="CAS" />
+			<ecu name="!ECU#DSC" sgbd="DSC_60" />
+			<ecu name="!ECU#DWA" sgbd="DWA_E65" />
+			<ecu name="!ECU#EGS" sgbd="GS19A" />
+			<ecu name="!ECU#FAS" sgbd="FAS_PLX" />
+			<ecu name="!ECU#KBM" sgbd="KBM_60" />
+			<ecu name="!ECU#KLIMA" sgbd="IHKA60_2" />
+			<ecu name="!ECU#KOMBI" sgbd="KOMB60" />
+			<ecu name="!ECU#LM" sgbd="LM_AHL_2" />
+			<ecu name="!ECU#POW" sgbd="MPM_60" />
+			<ecu name="!ECU#RLS" sgbd="RLS_E65" />
+			<ecu name="!ECU#SBSL" sgbd="SBSL85" />
+			<ecu name="!ECU#SBSR" sgbd="SBSR85" />
+			<ecu name="!ECU#SFZ" sgbd="SFZ60" />
+			<ecu name="!ECU#SHD/MDS" sgbd="SD_KWP" />
+			<ecu name="!ECU#SIM/SGM" sgbd="SGM_60_2" />
+			<ecu name="!ECU#SINE" sgbd="SINE_65" />
+			<ecu name="!ECU#STVL/TEFA" sgbd="TEFA60" />
+			<ecu name="!ECU#STVR/TEBF" sgbd="TEBF60" />
+			<ecu name="!ECU#SZL" sgbd="SZL" />
+			<ecu name="!ECU#ZGM" sgbd="ZGM_E65" />
+		</read_errors>
+	</page>
 </fragment>

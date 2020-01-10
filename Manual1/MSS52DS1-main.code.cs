@@ -1,73 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<fragment xmlns="http://www.holeschak.de/BmwDeepObd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.holeschak.de/BmwDeepObd BmwDeepObd.xsd">
-	<page name="!PAGE_NAME" display-mode="grid" fontsize="large" gauges-portrait="2" gauges-landscape="2" logfile="MSS52DS1.log">
-		<strings>
-			<string name="!PAGE_NAME">DME main</string>
-
-			<string name="!JOB#STATUS_ADD#STAT_ADD_WERT"                                      >O2 Add 1</string>
-			<string name="!JOB#STATUS_ADD_2#STAT_ADD_2_WERT"                                  >O2 Add 2</string>
-			<string name="!JOB#STATUS_INT#STAT_INT_WERT"                                      >O2 Int 1</string>
-			<string name="!JOB#STATUS_INT_2#STAT_INT_2_WERT"                                  >O2 Int 2</string>
-			<string name="!JOB#STATUS_KUEHLW_AUSL_TEMPERATUR#STAT_KUEHLW_AUSL_TEMPERATUR_WERT">Rad outlet</string>
-			<string name="!JOB#STATUS_LAMBDA_MUL_1#STAT_LAMBDA_MUL_1_WERT"                    >O2 Mul 1</string>
-			<string name="!JOB#STATUS_LAMBDA_MUL_2#STAT_LAMBDA_MUL_2_WERT"                    >O2 Mul 2</string>
-			<string name="!JOB#STATUS_L_SONDE#STAT_L_SONDE_WERT"                              >O2 V 1</string>
-			<string name="!JOB#STATUS_L_SONDE_2#STAT_L_SONDE_2_WERT"                          >O2 V 2</string>
-			<string name="!JOB#STATUS_RF#STAT_RF_WERT"                                        >RF %</string>
-		</strings>
-
-
-		<jobs sgbd="mss52ds1">
-
-			<job name="STATUS_L_SONDE">
-				<display name="!JOB#STATUS_L_SONDE#STAT_L_SONDE_WERT" result="STAT_L_SONDE_WERT" format="1.3R" grid-type="simple-gauge-square" min-value="0" max-value="1" log_tag="STAT_L_SONDE_WERT" />
-			</job>
-
-			<!--
-			<job name="STATUS_L_SONDE_2">
-				<display name="!JOB#STATUS_L_SONDE_2#STAT_L_SONDE_2_WERT" result="STAT_L_SONDE_2_WERT" format="1.3R" grid-type="simple-gauge-square" min-value="0" max-value="1" log_tag="STAT_L_SONDE_2_WERT" />
-			</job>
-			-->
-
-			<job name="STATUS_ADD">
-				<display name="!JOB#STATUS_ADD#STAT_ADD_WERT" result="STAT_ADD_WERT" format=".3R" grid-type="simple-gauge-square" min-value="0" max-value="1" log_tag="STAT_ADD_WERT" />
-			</job>
-
-			<!--
-			<job name="STATUS_ADD_2">
-				<display name="!JOB#STATUS_ADD_2#STAT_ADD_2_WERT" result="STAT_ADD_2_WERT" format="3.3R" grid-type="simple-gauge-square" min-value="0" max-value="1" log_tag="STAT_ADD_2_WERT" />
-			</job>
-			-->
-
-			<job name="STATUS_INT">
-				<display name="!JOB#STATUS_INT#STAT_INT_WERT" result="STAT_INT_WERT" format="1.2R" grid-type="simple-gauge-square" min-value="0.5" max-value="1.5" log_tag="STAT_INT_WERT" />
-			</job>
-
-			<!--
-			<job name="STATUS_INT_2">
-				<display name="!JOB#STATUS_INT_2#STAT_INT_2_WERT" result="STAT_INT_2_WERT" format="1.2R" grid-type="simple-gauge-square" min-value="0.5" max-value="1.5" log_tag="STAT_INT_2_WERT" />
-			</job>
-			-->
-
-			<job name="STATUS_LAMBDA_MUL_1">
-				<display name="!JOB#STATUS_LAMBDA_MUL_1#STAT_LAMBDA_MUL_1_WERT" result="STAT_LAMBDA_MUL_1_WERT" format="1.3R" grid-type="simple-gauge-square" min-value="0.75" max-value="1.25" log_tag="STAT_LAMBDA_MUL_1_WERT" />
-			</job>
-
-			<!--
-			<job name="STATUS_LAMBDA_MUL_2">
-				<display name="!JOB#STATUS_LAMBDA_MUL_2#STAT_LAMBDA_MUL_2_WERT" result="STAT_LAMBDA_MUL_2_WERT" format="1.3R" grid-type="simple-gauge-square" min-value="0.75" max-value="1.25" log_tag="STAT_LAMBDA_MUL_2_WERT" />
-			</job>
-			-->
-
-			<job name="STATUS_KUEHLW_AUSL_TEMPERATUR">
-				<display name="!JOB#STATUS_KUEHLW_AUSL_TEMPERATUR#STAT_KUEHLW_AUSL_TEMPERATUR_WERT" result="STAT_KUEHLW_AUSL_TEMPERATUR_WERT" format="3.0L" grid-type="simple-gauge-square" min-value="0" max-value="100" log_tag="STAT_KUEHLW_AUSL_TEMPERATUR_WERT" />
-			</job>
-
-		</jobs>
-
-		<code show_warnings="true">
-			<![CDATA[
-				class PageClass {
+class PageClass {
 	public string FormatResult(JobReader.PageInfo pageInfo, MultiMap<string, EdiabasNet.ResultData> resultDict, string resultName, ref Android.Graphics.Color? textColor) {
 		bool found;
 		double value;
@@ -475,7 +406,3 @@
 		return result;
 	}
 }
-			]]>
-		</code>
-	</page>
-</fragment>

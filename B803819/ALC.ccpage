@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <fragment xmlns="http://www.holeschak.de/BmwDeepObd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.holeschak.de/BmwDeepObd BmwDeepObd.xsd">
-  <page name="!PAGE_NAME" display-mode="grid" fontsize="small" gauges-portrait="2" gauges-landscape="4" logfile="ALC.log">
-    <strings>
-      <string name="!PAGE_NAME">ALC</string>
-      <string name="!JOB#STATUS_ANALOG_INPUTS#STAT_SPANNUNG_BELADUNGSSENSOR_VORN_WERT">Level sensor V, front</string>
-      <string name="!JOB#STATUS_ANALOG_INPUTS#STAT_SPANNUNG_BELADUNGSSENSOR_HINTEN_WERT">Level sensor V, rear</string>
-    </strings>
-    <jobs sgbd="ALC_60">
-      <job name="STATUS_ANALOG_INPUTS">
-        <display name="!JOB#STATUS_ANALOG_INPUTS#STAT_SPANNUNG_BELADUNGSSENSOR_VORN_WERT" result="STAT_SPANNUNG_BELADUNGSSENSOR_VORN_WERT" format="1.2R" grid-type="simple-gauge-round" min-value="0" max-value="5" log_tag="STAT_SPANNUNG_BELADUNGSSENSOR_VORN_WERT" />
-        <display name="!JOB#STATUS_ANALOG_INPUTS#STAT_SPANNUNG_BELADUNGSSENSOR_HINTEN_WERT" result="STAT_SPANNUNG_BELADUNGSSENSOR_HINTEN_WERT" format="1.2R" grid-type="simple-gauge-round" min-value="0" max-value="5" log_tag="STAT_SPANNUNG_BELADUNGSSENSOR_HINTEN_WERT" />
-      </job>
-    </jobs>
-  </page>
+	<page name="!PAGE_NAME" display-mode="grid" fontsize="small" gauges-portrait="2" gauges-landscape="4" logfile="ALC.log">
+		<strings>
+			<string name="!PAGE_NAME">ALC</string>
+			<string name="!JOB#STATUS_ANALOG_INPUTS#STAT_SPANNUNG_BELADUNGSSENSOR_VORN_WERT">Level sensor V, front</string>
+			<string name="!JOB#STATUS_ANALOG_INPUTS#STAT_SPANNUNG_BELADUNGSSENSOR_HINTEN_WERT">Level sensor V, rear</string>
+		</strings>
+		<jobs sgbd="ALC_60">
+			<job name="STATUS_ANALOG_INPUTS">
+				<display name="!JOB#STATUS_ANALOG_INPUTS#STAT_SPANNUNG_BELADUNGSSENSOR_VORN_WERT" result="STAT_SPANNUNG_BELADUNGSSENSOR_VORN_WERT" format="1.2R" grid-type="simple-gauge-round" min-value="0" max-value="5" log_tag="STAT_SPANNUNG_BELADUNGSSENSOR_VORN_WERT" />
+				<display name="!JOB#STATUS_ANALOG_INPUTS#STAT_SPANNUNG_BELADUNGSSENSOR_HINTEN_WERT" result="STAT_SPANNUNG_BELADUNGSSENSOR_HINTEN_WERT" format="1.2R" grid-type="simple-gauge-round" min-value="0" max-value="5" log_tag="STAT_SPANNUNG_BELADUNGSSENSOR_HINTEN_WERT" />
+			</job>
+		</jobs>
+	</page>
 </fragment>
