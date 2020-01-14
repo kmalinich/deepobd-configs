@@ -39,7 +39,11 @@
 
 		<code show_warnings="true">
 			<![CDATA[
-class PageClass {
+				class PageClass {
+	public static Android.Graphics.Color intRgb(double r, double g, double b) {
+		return Android.Graphics.Color.Rgb((int) r, (int) g, (int) b);
+	}
+
 	public string FormatResult(JobReader.PageInfo pageInfo, MultiMap<string, EdiabasNet.ResultData> resultDict, string resultName, ref Android.Graphics.Color? textColor) {
 		bool found;
 		double value;
@@ -51,49 +55,57 @@ class PageClass {
 		string result = string.Empty;
 
 		switch (resultName) {
-			// RF %
-			case "STATUS_RF#STAT_RF_WERT":
+			case "STATUS_TZ1#STAT_TZ1_WERT": // Ignition timing
+				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
+				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
+
+				if (value > 64) {
+					value = value - 6553;
+				}
+
+				textColor = intRgb(241, 196, 15);
+				break;
+
+			case "STATUS_RF#STAT_RF_WERT": // RF %
 				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
 				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
 
 				if (!found) break;
 
-				if (value > 100) { textColor = Android.Graphics.Color.rgb(255,   0,   0); break; }
-				if (value == 50) { textColor = Android.Graphics.Color.rgb(0,   255,   0); break; }
-				if (value ==  0) { textColor = Android.Graphics.Color.rgb(0,     0, 255); break; }
+				if (value > 100) { textColor = intRgb(255,   0,   0); break; }
+				if (value == 50) { textColor = intRgb(0,   255,   0); break; }
+				if (value ==  0) { textColor = intRgb(0,     0, 255); break; }
 
 				if (value < 50) {
-					textColor = Android.Graphics.Color.rgb(0, (value * 5.1), (255 - (value * 5.1)));
+					textColor = intRgb(0, (value * 5.1), (255 - (value * 5.1)));
 					break;
 				}
 
-				textColor = Android.Graphics.Color.rgb((value * 5.1), (255 - (value * 5.1)), 0);
+				textColor = intRgb((value * 5.1), (255 - (value * 5.1)), 0);
 				break;
 
 
-			// Lambda sensor voltage
 			case "STATUS_L_SONDE#STAT_L_SONDE_WERT":
-			case "STATUS_L_SONDE_2#STAT_L_SONDE_2_WERT":
+			case "STATUS_L_SONDE_2#STAT_L_SONDE_2_WERT": // Lambda sensor voltage
 				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
 				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
 
 				if (!found) break;
 
-				if (value  > 1.00) { textColor = Android.Graphics.Color.rgb(255,   0,   0); break; }
-				if (value == 0.50) { textColor = Android.Graphics.Color.rgb(0,   255,   0); break; }
-				if (value == 0.00) { textColor = Android.Graphics.Color.rgb(0,     0, 255); break; }
+				if (value  > 1.00) { textColor = intRgb(255,   0,   0); break; }
+				if (value == 0.50) { textColor = intRgb(0,   255,   0); break; }
+				if (value == 0.00) { textColor = intRgb(0,     0, 255); break; }
 
 				if (value < 0.50) {
-					textColor = Android.Graphics.Color.rgb(0, (value * 510), (255 - (value * 510)));
+					textColor = intRgb(0, (value * 510), (255 - (value * 510)));
 					break;
 				}
 
-				textColor = Android.Graphics.Color.rgb((value * 510), (255 - (value * 510)), 0);
+				textColor = intRgb((value * 510), (255 - (value * 510)), 0);
 				break;
 
-			// Lambda additive
 			case "STATUS_ADD#STAT_ADD_WERT":
-			case "STATUS_ADD_2#STAT_ADD_2_WERT":
+			case "STATUS_ADD_2#STAT_ADD_2_WERT": // Lambda additive
 				value = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
 
 				if (value > 64) {
@@ -114,9 +126,8 @@ class PageClass {
 				textColor = Android.Graphics.Color.Red;
 				break;
 
-			// Lambda integral
 			case "STATUS_INT#STAT_INT_WERT":
-			case "STATUS_INT_2#STAT_INT_2_WERT":
+			case "STATUS_INT_2#STAT_INT_2_WERT": // Lambda integral
 				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
 				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
 
@@ -130,9 +141,8 @@ class PageClass {
 				textColor = Android.Graphics.Color.Red;
 				break;
 
-			// Lambda multiplicative
 			case "STATUS_LAMBDA_MUL_1#STAT_LAMBDA_MUL_1_WERT":
-			case "STATUS_LAMBDA_MUL_2#STAT_LAMBDA_MUL_2_WERT":
+			case "STATUS_LAMBDA_MUL_2#STAT_LAMBDA_MUL_2_WERT": // Lambda multiplicative
 				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
 				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
 
@@ -147,50 +157,47 @@ class PageClass {
 				break;
 
 
-			// Radiator outlet temp
-			case "STATUS_KUEHLW_AUSL_TEMPERATUR#STAT_KUEHLW_AUSL_TEMPERATUR_WERT":
+			case "STATUS_KUEHLW_AUSL_TEMPERATUR#STAT_KUEHLW_AUSL_TEMPERATUR_WERT": // Radiator outlet temp
 				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
 				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
 
 				if (!found) break;
 
-				if (value > 100) { textColor = Android.Graphics.Color.rgb(255,   0,   0); break; }
-				if (value == 50) { textColor = Android.Graphics.Color.rgb(0,   255,   0); break; }
-				if (value ==  0) { textColor = Android.Graphics.Color.rgb(0,     0, 255); break; }
+				if (value > 100) { textColor = intRgb(255,   0,   0); break; }
+				if (value == 50) { textColor = intRgb(0,   255,   0); break; }
+				if (value ==  0) { textColor = intRgb(0,     0, 255); break; }
 
 				if (value < 50) {
-					textColor = Android.Graphics.Color.rgb(0, (value * 5.1), (255 - (value * 5.1)));
+					textColor = intRgb(0, (value * 5.1), (255 - (value * 5.1)));
 					break;
 				}
 
-				textColor = Android.Graphics.Color.rgb((value * 5.1), (255 - (value * 5.1)), 0);
+				textColor = intRgb((value * 5.1), (255 - (value * 5.1)), 0);
 				break;
 
-			// Coolant/oil/refrigerant temp
 			case "STATUS_MESSWERTBLOCK_LESEN#STAT_MOTORTEMPERATUR_WERT":
 			case "STATUS_MESSWERTBLOCK_LESEN#STAT_MOTOROEL_TEMPERATUR_WERT":
-			case "STATUS_MESSWERTBLOCK_LESEN#STAT_CEngDsT_tSens_WERT":
+			case "STATUS_MESSWERTBLOCK_LESEN#STAT_CEngDsT_tSens_WERT": // Coolant/oil/refrigerant temp
 				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
 				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
 
 				if (!found) break;
 
-				if (value > 100) { textColor = Android.Graphics.Color.rgb(255,   0,   0); break; }
-				if (value == 50) { textColor = Android.Graphics.Color.rgb(0,   255,   0); break; }
-				if (value ==  0) { textColor = Android.Graphics.Color.rgb(0,     0, 255); break; }
+				if (value > 100) { textColor = intRgb(255,   0,   0); break; }
+				if (value == 50) { textColor = intRgb(0,   255,   0); break; }
+				if (value ==  0) { textColor = intRgb(0,     0, 255); break; }
 
 				if (value < 50) {
-					textColor = Android.Graphics.Color.rgb(0, (value * 5.1), (255 - (value * 5.1)));
+					textColor = intRgb(0, (value * 5.1), (255 - (value * 5.1)));
 					break;
 				}
 
-				textColor = Android.Graphics.Color.rgb((value * 5.1), (255 - (value * 5.1)), 0);
+				textColor = intRgb((value * 5.1), (255 - (value * 5.1)), 0);
 				break;
 
-			// Ambient air/intake air/fuel temp
 			case "STATUS_MESSWERTBLOCK_LESEN#STAT_KRAFTSTOFFTEMPERATUR_WERT":
 			case "STATUS_MESSWERTBLOCK_LESEN#STAT_UMGEBUNGSTEMPERATUR_WERT":
-			case "STATUS_MESSWERTBLOCK_LESEN#STAT_LADELUFTTEMPERATUR_WERT":
+			case "STATUS_MESSWERTBLOCK_LESEN#STAT_LADELUFTTEMPERATUR_WERT": // Ambient air/intake air/fuel temp
 				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
 				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
 
@@ -201,21 +208,20 @@ class PageClass {
 				// 40 / 0.4 = 100
 				// 5.1 / 0.4 = 12.75
 
-				if (value >  40) { textColor = Android.Graphics.Color.rgb(255,   0,   0); break; }
-				if (value == 20) { textColor = Android.Graphics.Color.rgb(0,   255,   0); break; }
-				if (value ==  0) { textColor = Android.Graphics.Color.rgb(0,     0, 255); break; }
+				if (value >  40) { textColor = intRgb(255,   0,   0); break; }
+				if (value == 20) { textColor = intRgb(0,   255,   0); break; }
+				if (value ==  0) { textColor = intRgb(0,     0, 255); break; }
 
 				if (value < 20) {
-					textColor = Android.Graphics.Color.rgb(0, (value * 12.75), (255 - (value * 12.75)));
+					textColor = intRgb(0, (value * 12.75), (255 - (value * 12.75)));
 					break;
 				}
 
-				textColor = Android.Graphics.Color.rgb((value * 12.75), (255 - (value * 12.75)), 0);
+				textColor = intRgb((value * 12.75), (255 - (value * 12.75)), 0);
 				break;
 
-			// Exhaust temp
 			case "STATUS_MESSWERTBLOCK_LESEN#STAT_ABGASTEMPERATUR_VOR_KATALYSATOR_WERT":
-			case "STATUS_MESSWERTBLOCK_LESEN#STAT_ABGASTEMPERATUR_VOR_PARTIKELFILTER_1_WERT":
+			case "STATUS_MESSWERTBLOCK_LESEN#STAT_ABGASTEMPERATUR_VOR_PARTIKELFILTER_1_WERT": // Exhaust temp
 				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
 				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
 
@@ -228,10 +234,9 @@ class PageClass {
 				if (value > 700) textColor = Android.Graphics.Color.Red;
 				break;
 
-			// Air mass
 			case "STATUS_MESSWERTBLOCK_LESEN#STAT_AFS_dmSens_WERT":
 			case "STATUS_MESSWERTBLOCK_LESEN#STAT_LUFTMASSE_PRO_HUB_WERT":
-			case "STATUS_MESSWERTBLOCK_LESEN#STAT_LUFTMASSE_SOLL_WERT":
+			case "STATUS_MESSWERTBLOCK_LESEN#STAT_LUFTMASSE_SOLL_WERT": // Air mass
 				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
 				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
 
@@ -244,9 +249,8 @@ class PageClass {
 				if (value > 1200) textColor = Android.Graphics.Color.Red;
 				break;
 
-			// Fuel rail pressure
 			case "STATUS_MESSWERTBLOCK_LESEN#STAT_RAILDRUCK_WERT":
-			case "STATUS_MESSWERTBLOCK_LESEN#STAT_RAILDRUCK_SOLL_WERT":
+			case "STATUS_MESSWERTBLOCK_LESEN#STAT_RAILDRUCK_SOLL_WERT": // Fuel rail pressure
 				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
 				result = string.Format(ActivityMain.Culture, "{0,7:0.00}", (value / bar2psi));
 
@@ -259,10 +263,9 @@ class PageClass {
 				if ((value / bar2psi) > 400) textColor = Android.Graphics.Color.Red;
 				break;
 
-			// Boost pressure/exhaust back pressure
 			case "STATUS_MESSWERTBLOCK_LESEN#STAT_LADEDRUCK_WERT":
 			case "STATUS_MESSWERTBLOCK_LESEN#STAT_LADEDRUCK_SOLL_WERT":
-			case "STATUS_MESSWERTBLOCK_LESEN#STAT_DIFFERENZDRUCK_UEBER_PARTIKELFILTER_WERT":
+			case "STATUS_MESSWERTBLOCK_LESEN#STAT_DIFFERENZDRUCK_UEBER_PARTIKELFILTER_WERT": // Boost pressure/exhaust back pressure
 				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
 				result = string.Format(ActivityMain.Culture, "{0,7:0.00}", ((value - ambient_offset) / hpa2psi));
 
@@ -275,8 +278,7 @@ class PageClass {
 				if (((value - ambient_offset) / hpa2psi) > 40) textColor = Android.Graphics.Color.Red;
 				break;
 
-			// Battery voltage
-			case "STATUS_MESSWERTBLOCK_LESEN#STAT_UBATT2_WERT":
+			case "STATUS_MESSWERTBLOCK_LESEN#STAT_UBATT2_WERT": // Battery voltage
 				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
 				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value / 1000);
 
@@ -290,8 +292,7 @@ class PageClass {
 				if ((value / 1000) > 16) textColor = Android.Graphics.Color.Red;
 				break;
 
-			// Oil pressure switch
-			case "STATUS_MESSWERTBLOCK_LESEN#STAT_OELDRUCKSCHALTER_EIN_WERT":
+			case "STATUS_MESSWERTBLOCK_LESEN#STAT_OELDRUCKSCHALTER_EIN_WERT": // Oil pressure switch
 				result = ((ActivityMain.GetResultDouble(resultDict, resultName, 0, out found) > 0.5) && found) ? "1" : "0";
 
 				if (!found) break;
@@ -302,8 +303,7 @@ class PageClass {
 				break;
 
 
-			// DPF distance since regeneration
-			case "STATUS_MESSWERTBLOCK_LESEN#STAT_STRECKE_SEIT_ERFOLGREICHER_REGENERATION_WERT":
+			case "STATUS_MESSWERTBLOCK_LESEN#STAT_STRECKE_SEIT_ERFOLGREICHER_REGENERATION_WERT": // DPF distance since regeneration
 				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
 				result = string.Format(ActivityMain.Culture, "{0,6:0.0}", value / 1000.0);
 
@@ -311,8 +311,7 @@ class PageClass {
 
 				break;
 
-			// DPF regeneration request
-			case "STATUS_MESSWERTBLOCK_LESEN#STAT_PFltRgn_numRgn_WERT":
+			case "STATUS_MESSWERTBLOCK_LESEN#STAT_PFltRgn_numRgn_WERT": // DPF regeneration request
 				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
 				result = ((value > 3.5) && (value < 6.5) && found) ? "1" : "0";
 
@@ -320,8 +319,7 @@ class PageClass {
 
 				break;
 
-			// DPF regeneration status
-			case "STATUS_MESSWERTBLOCK_LESEN#STAT_CoEOM_stOpModeAct_WERT":
+			case "STATUS_MESSWERTBLOCK_LESEN#STAT_CoEOM_stOpModeAct_WERT": // DPF regeneration status
 				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
 				result = ((((int) (value + 0.5) & 0x02) != 0) && found) ? "1" : "0";
 
@@ -329,8 +327,7 @@ class PageClass {
 
 				break;
 
-			// DPF unblocked
-			case "STATUS_MESSWERTBLOCK_LESEN#STAT_REGENERATION_BLOCKIERUNG_UND_FREIGABE_WERT":
+			case "STATUS_MESSWERTBLOCK_LESEN#STAT_REGENERATION_BLOCKIERUNG_UND_FREIGABE_WERT": // DPF unblocked
 				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
 				result = ((value < 0.5) && found) ? "1" : "0";
 
