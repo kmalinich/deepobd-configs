@@ -10,57 +10,48 @@ class PageClass {
 		string result = string.Empty;
 
 		switch (resultName) {
-			// O2 sensor #1 voltage
-			case "STATUS_L_SONDE_1#STAT_L_SONDE_1_WERT":
+			// RF %
+			case "STATUS_RF#STAT_RF_WERT":
 				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
 				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
 
-				if (!found) { result = string.Empty; break; }
+				if (!found) break;
 
-				textColor = Android.Graphics.Color.Red;
-				if (value > 0.25) textColor = Android.Graphics.Color.Yellow;
-				if (value > 0.50) textColor = Android.Graphics.Color.Green;
-				if (value > 0.75) textColor = Android.Graphics.Color.Yellow;
-				if (value > 1.00) textColor = Android.Graphics.Color.Red;
+				if (value > 100) { textColor = Android.Graphics.Color.rgb(255,   0,   0); break; }
+				if (value == 50) { textColor = Android.Graphics.Color.rgb(0,   255,   0); break; }
+				if (value ==  0) { textColor = Android.Graphics.Color.rgb(0,     0, 255); break; }
+
+				if (value < 50) {
+					textColor = Android.Graphics.Color.rgb(0, (value * 5.1), (255 - (value * 5.1)));
+					break;
+				}
+
+				textColor = Android.Graphics.Color.rgb((value * 5.1), (255 - (value * 5.1)), 0);
 				break;
 
-			// O2 sensor #2 voltage
+
+			// Lambda sensor voltage
+			case "STATUS_L_SONDE#STAT_L_SONDE_WERT":
 			case "STATUS_L_SONDE_2#STAT_L_SONDE_2_WERT":
 				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
 				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
 
-				if (!found) { result = string.Empty; break; }
+				if (!found) break;
 
-				textColor = Android.Graphics.Color.Red;
-				if (value > 0.25) textColor = Android.Graphics.Color.Yellow;
-				if (value > 0.50) textColor = Android.Graphics.Color.Green;
-				if (value > 0.75) textColor = Android.Graphics.Color.Yellow;
-				if (value > 1.00) textColor = Android.Graphics.Color.Red;
-				break;
+				if (value  > 1.00) { textColor = Android.Graphics.Color.rgb(255,   0,   0); break; }
+				if (value == 0.50) { textColor = Android.Graphics.Color.rgb(0,   255,   0); break; }
+				if (value == 0.00) { textColor = Android.Graphics.Color.rgb(0,     0, 255); break; }
 
-
-			// Lambda add #1
-			case "STATUS_ADD#STAT_ADD_WERT":
-				value = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
-
-				if (value > 64) {
-					value = value - 131.072;
+				if (value < 0.50) {
+					textColor = Android.Graphics.Color.rgb(0, (value * 510), (255 - (value * 510)));
+					break;
 				}
 
-				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
-
-				if (!found) { result = string.Empty; break; }
-
-				textColor = Android.Graphics.Color.Red;
-				if (value > -20) textColor = Android.Graphics.Color.Yellow;
-				if (value > -10) textColor = Android.Graphics.Color.Green;
-				if (value >   0) textColor = Android.Graphics.Color.White;
-				if (value >  10) textColor = Android.Graphics.Color.Green;
-				if (value >  20) textColor = Android.Graphics.Color.Yellow;
-				if (value >  30) textColor = Android.Graphics.Color.Red;
+				textColor = Android.Graphics.Color.rgb((value * 510), (255 - (value * 510)), 0);
 				break;
 
-			// Lambda add #2
+			// Lambda additive
+			case "STATUS_ADD#STAT_ADD_WERT":
 			case "STATUS_ADD_2#STAT_ADD_2_WERT":
 				value = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
 
@@ -70,44 +61,48 @@ class PageClass {
 
 				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
 
-				if (!found) { result = string.Empty; break; }
+				if (!found) break;
+
+				if (value >  30) { textColor = Android.Graphics.Color.Red;    break; }
+				if (value >  20) { textColor = Android.Graphics.Color.Yellow; break; }
+				if (value >  10) { textColor = Android.Graphics.Color.Green;  break; }
+				if (value >   0) { textColor = Android.Graphics.Color.White;  break; }
+				if (value > -10) { textColor = Android.Graphics.Color.Green;  break; }
+				if (value > -20) { textColor = Android.Graphics.Color.Yellow; break; }
 
 				textColor = Android.Graphics.Color.Red;
-				if (value > -20) textColor = Android.Graphics.Color.Yellow;
-				if (value > -10) textColor = Android.Graphics.Color.Green;
-				if (value >   0) textColor = Android.Graphics.Color.White;
-				if (value >  10) textColor = Android.Graphics.Color.Green;
-				if (value >  20) textColor = Android.Graphics.Color.Yellow;
-				if (value >  30) textColor = Android.Graphics.Color.Red;
 				break;
 
-
-			// Lambda multip #1
-			case "STATUS_LAMBDA_MUL_1#STAT_LAMBDA_MUL_1_WERT":
+			// Lambda integral
+			case "STATUS_INT#STAT_INT_WERT":
+			case "STATUS_INT_2#STAT_INT_2_WERT":
 				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
 				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
 
-				if (!found) { result = string.Empty; break; }
+				if (!found) break;
+
+				if (value > 0.90) { textColor = Android.Graphics.Color.Yellow; break; }
+				if (value > 0.99) { textColor = Android.Graphics.Color.Green;  break; }
+				if (value > 1.10) { textColor = Android.Graphics.Color.Yellow; break; }
+				if (value > 1.20) { textColor = Android.Graphics.Color.Red;    break; }
 
 				textColor = Android.Graphics.Color.Red;
-				if (value > 0.90) textColor = Android.Graphics.Color.Yellow;
-				if (value > 0.99) textColor = Android.Graphics.Color.Green;
-				if (value > 1.10) textColor = Android.Graphics.Color.Yellow;
-				if (value > 1.20) textColor = Android.Graphics.Color.Red;
 				break;
 
-			// Lambda multip #2
+			// Lambda multiplicative
+			case "STATUS_LAMBDA_MUL_1#STAT_LAMBDA_MUL_1_WERT":
 			case "STATUS_LAMBDA_MUL_2#STAT_LAMBDA_MUL_2_WERT":
 				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
 				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
 
-				if (!found) { result = string.Empty; break; }
+				if (!found) break;
+
+				if (value > 0.90) { textColor = Android.Graphics.Color.Yellow; break; }
+				if (value > 0.99) { textColor = Android.Graphics.Color.Green;  break; }
+				if (value > 1.10) { textColor = Android.Graphics.Color.Yellow; break; }
+				if (value > 1.20) { textColor = Android.Graphics.Color.Red;    break; }
 
 				textColor = Android.Graphics.Color.Red;
-				if (value > 0.90) textColor = Android.Graphics.Color.Yellow;
-				if (value > 0.99) textColor = Android.Graphics.Color.Green;
-				if (value > 1.10) textColor = Android.Graphics.Color.Yellow;
-				if (value > 1.20) textColor = Android.Graphics.Color.Red;
 				break;
 
 
@@ -116,13 +111,127 @@ class PageClass {
 				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
 				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
 
-				if (!found) { result = string.Empty; break; }
+				if (!found) break;
+
+				if (value > 100) { textColor = Android.Graphics.Color.rgb(255,   0,   0); break; }
+				if (value == 50) { textColor = Android.Graphics.Color.rgb(0,   255,   0); break; }
+				if (value ==  0) { textColor = Android.Graphics.Color.rgb(0,     0, 255); break; }
+
+				if (value < 50) {
+					textColor = Android.Graphics.Color.rgb(0, (value * 5.1), (255 - (value * 5.1)));
+					break;
+				}
+
+				textColor = Android.Graphics.Color.rgb((value * 5.1), (255 - (value * 5.1)), 0);
+				break;
+
+			// Coolant/oil/refrigerant temp
+			case "STATUS_MESSWERTBLOCK_LESEN#STAT_MOTORTEMPERATUR_WERT":
+			case "STATUS_MESSWERTBLOCK_LESEN#STAT_MOTOROEL_TEMPERATUR_WERT":
+			case "STATUS_MESSWERTBLOCK_LESEN#STAT_CEngDsT_tSens_WERT":
+				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
+				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
+
+				if (!found) break;
+
+				if (value > 100) { textColor = Android.Graphics.Color.rgb(255,   0,   0); break; }
+				if (value == 50) { textColor = Android.Graphics.Color.rgb(0,   255,   0); break; }
+				if (value ==  0) { textColor = Android.Graphics.Color.rgb(0,     0, 255); break; }
+
+				if (value < 50) {
+					textColor = Android.Graphics.Color.rgb(0, (value * 5.1), (255 - (value * 5.1)));
+					break;
+				}
+
+				textColor = Android.Graphics.Color.rgb((value * 5.1), (255 - (value * 5.1)), 0);
+				break;
+
+			// Ambient air/intake air/fuel temp
+			case "STATUS_MESSWERTBLOCK_LESEN#STAT_KRAFTSTOFFTEMPERATUR_WERT":
+			case "STATUS_MESSWERTBLOCK_LESEN#STAT_UMGEBUNGSTEMPERATUR_WERT":
+			case "STATUS_MESSWERTBLOCK_LESEN#STAT_LADELUFTTEMPERATUR_WERT":
+				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
+				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
+
+				if (!found) break;
+
+				// 12.75 RGB multiplier reasoning:
+				// Max temp = 40
+				// 40 / 0.4 = 100
+				// 5.1 / 0.4 = 12.75
+
+				if (value >  40) { textColor = Android.Graphics.Color.rgb(255,   0,   0); break; }
+				if (value == 20) { textColor = Android.Graphics.Color.rgb(0,   255,   0); break; }
+				if (value ==  0) { textColor = Android.Graphics.Color.rgb(0,     0, 255); break; }
+
+				if (value < 20) {
+					textColor = Android.Graphics.Color.rgb(0, (value * 12.75), (255 - (value * 12.75)));
+					break;
+				}
+
+				textColor = Android.Graphics.Color.rgb((value * 12.75), (255 - (value * 12.75)), 0);
+				break;
+
+			// Exhaust temp
+			case "STATUS_MESSWERTBLOCK_LESEN#STAT_ABGASTEMPERATUR_VOR_KATALYSATOR_WERT":
+			case "STATUS_MESSWERTBLOCK_LESEN#STAT_ABGASTEMPERATUR_VOR_PARTIKELFILTER_1_WERT":
+				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
+				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
+
+				if (!found) break;
 
 				textColor = Android.Graphics.Color.Blue;
-				if (value > 30) textColor = Android.Graphics.Color.White;
-				if (value > 50) textColor = Android.Graphics.Color.Green;
-				if (value > 70) textColor = Android.Graphics.Color.Yellow;
-				if (value > 90) textColor = Android.Graphics.Color.Red;
+				if (value > 100) textColor = Android.Graphics.Color.White;
+				if (value > 300) textColor = Android.Graphics.Color.Green;
+				if (value > 500) textColor = Android.Graphics.Color.Yellow;
+				if (value > 700) textColor = Android.Graphics.Color.Red;
+				break;
+
+			// Air mass
+			case "STATUS_MESSWERTBLOCK_LESEN#STAT_AFS_dmSens_WERT":
+			case "STATUS_MESSWERTBLOCK_LESEN#STAT_LUFTMASSE_PRO_HUB_WERT":
+			case "STATUS_MESSWERTBLOCK_LESEN#STAT_LUFTMASSE_SOLL_WERT":
+				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
+				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
+
+				if (!found) break;
+
+				textColor = Android.Graphics.Color.Blue;
+				if (value >  300) textColor = Android.Graphics.Color.White;
+				if (value >  600) textColor = Android.Graphics.Color.Green;
+				if (value >  900) textColor = Android.Graphics.Color.Yellow;
+				if (value > 1200) textColor = Android.Graphics.Color.Red;
+				break;
+
+			// Fuel rail pressure
+			case "STATUS_MESSWERTBLOCK_LESEN#STAT_RAILDRUCK_WERT":
+			case "STATUS_MESSWERTBLOCK_LESEN#STAT_RAILDRUCK_SOLL_WERT":
+				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
+				result = string.Format(ActivityMain.Culture, "{0,7:0.00}", (value / bar2psi));
+
+				if (!found) break;
+
+				textColor = Android.Graphics.Color.White;
+				if ((value / bar2psi) > 100) textColor = Android.Graphics.Color.Blue;
+				if ((value / bar2psi) > 200) textColor = Android.Graphics.Color.Green;
+				if ((value / bar2psi) > 300) textColor = Android.Graphics.Color.Yellow;
+				if ((value / bar2psi) > 400) textColor = Android.Graphics.Color.Red;
+				break;
+
+			// Boost pressure/exhaust back pressure
+			case "STATUS_MESSWERTBLOCK_LESEN#STAT_LADEDRUCK_WERT":
+			case "STATUS_MESSWERTBLOCK_LESEN#STAT_LADEDRUCK_SOLL_WERT":
+			case "STATUS_MESSWERTBLOCK_LESEN#STAT_DIFFERENZDRUCK_UEBER_PARTIKELFILTER_WERT":
+				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
+				result = string.Format(ActivityMain.Culture, "{0,7:0.00}", ((value - ambient_offset) / hpa2psi));
+
+				if (!found) break;
+
+				textColor = Android.Graphics.Color.White;
+				if (((value - ambient_offset) / hpa2psi) > 10) textColor = Android.Graphics.Color.Blue;
+				if (((value - ambient_offset) / hpa2psi) > 20) textColor = Android.Graphics.Color.Green;
+				if (((value - ambient_offset) / hpa2psi) > 30) textColor = Android.Graphics.Color.Yellow;
+				if (((value - ambient_offset) / hpa2psi) > 40) textColor = Android.Graphics.Color.Red;
 				break;
 
 			// Battery voltage
@@ -130,7 +239,7 @@ class PageClass {
 				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
 				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value / 1000);
 
-				if (!found) { result = string.Empty; break; }
+				if (!found) break;
 
 				textColor = Android.Graphics.Color.Red;
 				if ((value / 1000) > 10) textColor = Android.Graphics.Color.Yellow;
@@ -140,245 +249,25 @@ class PageClass {
 				if ((value / 1000) > 16) textColor = Android.Graphics.Color.Red;
 				break;
 
-			// Coolant temp
-			case "STATUS_MESSWERTBLOCK_LESEN#STAT_MOTORTEMPERATUR_WERT":
-				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
-				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
-
-				if (!found) { result = string.Empty; break; }
-
-				textColor = Android.Graphics.Color.Blue;
-				if (value > 50)  textColor = Android.Graphics.Color.White;
-				if (value > 70)  textColor = Android.Graphics.Color.Green;
-				if (value > 85)  textColor = Android.Graphics.Color.Yellow;
-				if (value > 100) textColor = Android.Graphics.Color.Red;
-				break;
-
-			// Oil temp
-			case "STATUS_MESSWERTBLOCK_LESEN#STAT_MOTOROEL_TEMPERATUR_WERT":
-				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
-				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
-
-				if (!found) { result = string.Empty; break; }
-
-				textColor = Android.Graphics.Color.Blue;
-				if (value > 50)  textColor = Android.Graphics.Color.White;
-				if (value > 70)  textColor = Android.Graphics.Color.Green;
-				if (value > 85)  textColor = Android.Graphics.Color.Yellow;
-				if (value > 100) textColor = Android.Graphics.Color.Red;
-				break;
-
-			// Fuel temp
-			case "STATUS_MESSWERTBLOCK_LESEN#STAT_KRAFTSTOFFTEMPERATUR_WERT":
-				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
-				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
-
-				if (!found) { result = string.Empty; break; }
-
-				textColor = Android.Graphics.Color.Blue;
-				if (value > 10) textColor = Android.Graphics.Color.White;
-				if (value > 20) textColor = Android.Graphics.Color.Green;
-				if (value > 30) textColor = Android.Graphics.Color.Yellow;
-				if (value > 40) textColor = Android.Graphics.Color.Red;
-				break;
-
-			// Ambient air temp
-			case "STATUS_MESSWERTBLOCK_LESEN#STAT_UMGEBUNGSTEMPERATUR_WERT":
-				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
-				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
-
-				if (!found) { result = string.Empty; break; }
-
-				textColor = Android.Graphics.Color.Blue;
-				if (value > 10) textColor = Android.Graphics.Color.White;
-				if (value > 20) textColor = Android.Graphics.Color.Green;
-				if (value > 30) textColor = Android.Graphics.Color.Yellow;
-				if (value > 40) textColor = Android.Graphics.Color.Red;
-				break;
-
-			// Intake air temp
-			case "STATUS_MESSWERTBLOCK_LESEN#STAT_LADELUFTTEMPERATUR_WERT":
-				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
-				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
-
-				if (!found) { result = string.Empty; break; }
-
-				textColor = Android.Graphics.Color.Blue;
-				if (value > 10) textColor = Android.Graphics.Color.White;
-				if (value > 20) textColor = Android.Graphics.Color.Green;
-				if (value > 30) textColor = Android.Graphics.Color.Yellow;
-				if (value > 40) textColor = Android.Graphics.Color.Red;
-				break;
-
-			// Exhaust temp before catalyst
-			case "STATUS_MESSWERTBLOCK_LESEN#STAT_ABGASTEMPERATUR_VOR_KATALYSATOR_WERT":
-				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
-				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
-
-				if (!found) { result = string.Empty; break; }
-
-				textColor = Android.Graphics.Color.Blue;
-				if (value > 100) textColor = Android.Graphics.Color.White;
-				if (value > 300) textColor = Android.Graphics.Color.Green;
-				if (value > 500) textColor = Android.Graphics.Color.Yellow;
-				if (value > 700) textColor = Android.Graphics.Color.Red;
-				break;
-
-			// Exhaust temp before filter
-			case "STATUS_MESSWERTBLOCK_LESEN#STAT_ABGASTEMPERATUR_VOR_PARTIKELFILTER_1_WERT":
-				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
-				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
-
-				if (!found) { result = string.Empty; break; }
-
-				textColor = Android.Graphics.Color.Blue;
-				if (value > 100) textColor = Android.Graphics.Color.White;
-				if (value > 300) textColor = Android.Graphics.Color.Green;
-				if (value > 500) textColor = Android.Graphics.Color.Yellow;
-				if (value > 700) textColor = Android.Graphics.Color.Red;
-				break;
-
-			// Engine refrigerant temp
-			case "STATUS_MESSWERTBLOCK_LESEN#STAT_CEngDsT_tSens_WERT":
-				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
-				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
-
-				if (!found) { result = string.Empty; break; }
-
-				textColor = Android.Graphics.Color.Blue;
-				if (value > 20) textColor = Android.Graphics.Color.White;
-				if (value > 40) textColor = Android.Graphics.Color.Green;
-				if (value > 60) textColor = Android.Graphics.Color.Yellow;
-				if (value > 80) textColor = Android.Graphics.Color.Red;
-				break;
-
-			// Air mass
-			case "STATUS_MESSWERTBLOCK_LESEN#STAT_AFS_dmSens_WERT":
-				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
-				result = string.Format(ActivityMain.Culture, "{0,7:0.00}", value);
-
-				if (!found) { result = string.Empty; break; }
-
-				textColor = Android.Graphics.Color.Blue;
-				if (value >  300) textColor = Android.Graphics.Color.White;
-				if (value >  600) textColor = Android.Graphics.Color.Green;
-				if (value >  900) textColor = Android.Graphics.Color.Yellow;
-				if (value > 1200) textColor = Android.Graphics.Color.Red;
-				break;
-
-			// Air mass actual
-			case "STATUS_MESSWERTBLOCK_LESEN#STAT_LUFTMASSE_PRO_HUB_WERT":
-				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
-				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
-
-				if (!found) { result = string.Empty; break; }
-
-				textColor = Android.Graphics.Color.Blue;
-				if (value >  300) textColor = Android.Graphics.Color.White;
-				if (value >  600) textColor = Android.Graphics.Color.Green;
-				if (value >  900) textColor = Android.Graphics.Color.Yellow;
-				if (value > 1200) textColor = Android.Graphics.Color.Red;
-				break;
-
-			// Air mass set point
-			case "STATUS_MESSWERTBLOCK_LESEN#STAT_LUFTMASSE_SOLL_WERT":
-				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
-				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
-
-				if (!found) { result = string.Empty; break; }
-
-				textColor = Android.Graphics.Color.Blue;
-				if (value >  300) textColor = Android.Graphics.Color.White;
-				if (value >  600) textColor = Android.Graphics.Color.Green;
-				if (value >  900) textColor = Android.Graphics.Color.Yellow;
-				if (value > 1200) textColor = Android.Graphics.Color.Red;
-				break;
-
-			// Fuel rail pressure actual
-			case "STATUS_MESSWERTBLOCK_LESEN#STAT_RAILDRUCK_WERT":
-				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
-				result = string.Format(ActivityMain.Culture, "{0,7:0.00}", (value / bar2psi));
-
-				if (!found) { result = string.Empty; break; }
-
-				textColor = Android.Graphics.Color.White;
-				if ((value / bar2psi) > 100) textColor = Android.Graphics.Color.Blue;
-				if ((value / bar2psi) > 200) textColor = Android.Graphics.Color.Green;
-				if ((value / bar2psi) > 300) textColor = Android.Graphics.Color.Yellow;
-				if ((value / bar2psi) > 400) textColor = Android.Graphics.Color.Red;
-				break;
-
-			// Fuel rail pressure target
-			case "STATUS_MESSWERTBLOCK_LESEN#STAT_RAILDRUCK_SOLL_WERT":
-				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
-				result = string.Format(ActivityMain.Culture, "{0,7:0.00}", (value / bar2psi));
-
-				if (!found) { result = string.Empty; break; }
-
-				textColor = Android.Graphics.Color.White;
-				if ((value / bar2psi) > 100) textColor = Android.Graphics.Color.Blue;
-				if ((value / bar2psi) > 200) textColor = Android.Graphics.Color.Green;
-				if ((value / bar2psi) > 300) textColor = Android.Graphics.Color.Yellow;
-				if ((value / bar2psi) > 400) textColor = Android.Graphics.Color.Red;
-				break;
-
-			// Boost pressure actual
-			case "STATUS_MESSWERTBLOCK_LESEN#STAT_LADEDRUCK_WERT":
-				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
-				result = string.Format(ActivityMain.Culture, "{0,7:0.00}", ((value - ambient_offset) / hpa2psi));
-
-				if (!found) { result = string.Empty; break; }
-
-				textColor = Android.Graphics.Color.White;
-				if (((value - ambient_offset) / hpa2psi) > 10) textColor = Android.Graphics.Color.Blue;
-				if (((value - ambient_offset) / hpa2psi) > 20) textColor = Android.Graphics.Color.Green;
-				if (((value - ambient_offset) / hpa2psi) > 30) textColor = Android.Graphics.Color.Yellow;
-				if (((value - ambient_offset) / hpa2psi) > 40) textColor = Android.Graphics.Color.Red;
-				break;
-
-			// Boost pressure target
-			case "STATUS_MESSWERTBLOCK_LESEN#STAT_LADEDRUCK_SOLL_WERT":
-				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
-				result = string.Format(ActivityMain.Culture, "{0,7:0.00}", ((value - ambient_offset) / hpa2psi));
-
-				if (!found) { result = string.Empty; break; }
-
-				textColor = Android.Graphics.Color.White;
-				if (((value - ambient_offset) / hpa2psi) > 10) textColor = Android.Graphics.Color.Blue;
-				if (((value - ambient_offset) / hpa2psi) > 20) textColor = Android.Graphics.Color.Green;
-				if (((value - ambient_offset) / hpa2psi) > 30) textColor = Android.Graphics.Color.Yellow;
-				if (((value - ambient_offset) / hpa2psi) > 40) textColor = Android.Graphics.Color.Red;
-				break;
-
-			// Exhaust back pressure
-			case "STATUS_MESSWERTBLOCK_LESEN#STAT_DIFFERENZDRUCK_UEBER_PARTIKELFILTER_WERT":
-				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
-				result = string.Format(ActivityMain.Culture, "{0,7:0.00}", ((value - ambient_offset) / hpa2psi));
-
-				if (!found) { result = string.Empty; break; }
-
-				textColor = Android.Graphics.Color.White;
-				if (((value - ambient_offset) / hpa2psi) > 10) textColor = Android.Graphics.Color.Blue;
-				if (((value - ambient_offset) / hpa2psi) > 20) textColor = Android.Graphics.Color.Green;
-				if (((value - ambient_offset) / hpa2psi) > 30) textColor = Android.Graphics.Color.Yellow;
-				if (((value - ambient_offset) / hpa2psi) > 40) textColor = Android.Graphics.Color.Red;
-				break;
-
 			// Oil pressure switch
 			case "STATUS_MESSWERTBLOCK_LESEN#STAT_OELDRUCKSCHALTER_EIN_WERT":
 				result = ((ActivityMain.GetResultDouble(resultDict, resultName, 0, out found) > 0.5) && found) ? "1" : "0";
 
-				if (!found) { result = string.Empty; break; }
+				if (!found) break;
 
 				textColor = Android.Graphics.Color.White;
 				if (result == "1") textColor = Android.Graphics.Color.Red;
+
 				break;
+
 
 			// DPF distance since regeneration
 			case "STATUS_MESSWERTBLOCK_LESEN#STAT_STRECKE_SEIT_ERFOLGREICHER_REGENERATION_WERT":
-				result = string.Format(ActivityMain.Culture, "{0,6:0.0}", ActivityMain.GetResultDouble(resultDict, resultName, 0, out found) / 1000.0);
+				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
+				result = string.Format(ActivityMain.Culture, "{0,6:0.0}", value / 1000.0);
 
 				if (!found) break;
+
 				break;
 
 			// DPF regeneration request
@@ -386,20 +275,26 @@ class PageClass {
 				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
 				result = ((value > 3.5) && (value < 6.5) && found) ? "1" : "0";
 
-				if (!found) { result = string.Empty; break; }
+				if (!found) break;
+
 				break;
 
 			// DPF regeneration status
 			case "STATUS_MESSWERTBLOCK_LESEN#STAT_CoEOM_stOpModeAct_WERT":
 				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
-				result = ((((int)(value + 0.5) & 0x02) != 0) && found) ? "1" : "0";
-				if (!found) { result = string.Empty; break; }
+				result = ((((int) (value + 0.5) & 0x02) != 0) && found) ? "1" : "0";
+
+				if (!found) break;
+
 				break;
 
 			// DPF unblocked
 			case "STATUS_MESSWERTBLOCK_LESEN#STAT_REGENERATION_BLOCKIERUNG_UND_FREIGABE_WERT":
-				result = ((ActivityMain.GetResultDouble(resultDict, resultName, 0, out found) < 0.5) && found) ? "1" : "0";
-				if (!found) { result = string.Empty; break; }
+				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
+				result = ((value < 0.5) && found) ? "1" : "0";
+
+				if (!found) break;
+
 				break;
 		}
 
