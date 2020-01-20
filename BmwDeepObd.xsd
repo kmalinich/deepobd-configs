@@ -520,6 +520,7 @@ public void UpdateResultList(JobReader.PageInfo pageInfo, MultiMap<string, Ediab
 ]]>
 			</xs:documentation>
 		</xs:annotation>
+
 		<xs:attribute name="show_warnings" type="xs:boolean" default="false" use="optional">
 			<xs:annotation>
 				<xs:documentation>

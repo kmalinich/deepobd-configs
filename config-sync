@@ -2,7 +2,7 @@
 
 DIR_DEVICE="/sdcard/Android/data/de.holeschak.bmw_deep_obd/files/Configurations"
 
-mapfile -t ARRAY_FILES < <(find . -type f -iname '*.cccfg' -o -iname '*.ccpage' -o -iname '*.xsd' -o -iname '*.xml' | sort | sed 's/^\.\///g')
+mapfile -t ARRAY_FILES < <(find . -type f -iname '*.cccfg' -o -iname '*.ccpage' -o -iname '*.ccpages' -o -iname '*.cs' -o -iname '*.xsd' -o -iname '*.xml' | sort | sed 's/^\.\///g')
 
 
 pull() {

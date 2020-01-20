@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fragment xmlns="http://www.holeschak.de/BmwDeepObd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.holeschak.de/BmwDeepObd ../BmwDeepObd.xsd">
 <code show_warnings="true">
 <![CDATA[
 class PageClass {
@@ -286,3 +288,4 @@ class PageClass {
 }
 ]]>
 </code>
+</fragment>
