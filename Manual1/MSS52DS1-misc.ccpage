@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<fragment xmlns="http://www.holeschak.de/BmwDeepObd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.holeschak.de/BmwDeepObd BmwDeepObd.xsd">
+<fragment xmlns="http://www.holeschak.de/BmwDeepObd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.holeschak.de/BmwDeepObd../BmwDeepObd.xsd">
 	<page name="!PAGE_NAME" display-mode="grid" fontsize="large" gauges-portrait="1" gauges-landscape="2" logfile="MSS52DS1.log">
 		<strings>
 			<string name="!PAGE_NAME">DME MISC</string>
@@ -48,11 +48,10 @@
 		switch (resultName) {
 			case "STATUS_TZ1#STAT_TZ1_WERT": // Ignition timing
 				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
-				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
 
-				if (value > 64) {
-					value = value - 6553;
-				}
+				if (value > 64) { value = value - 6553; }
+
+result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
 
 				textColor = intRgb(241, 196, 15);
 				break;

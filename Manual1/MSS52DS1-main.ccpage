@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<fragment xmlns="http://www.holeschak.de/BmwDeepObd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.holeschak.de/BmwDeepObd BmwDeepObd.xsd">
+<fragment xmlns="http://www.holeschak.de/BmwDeepObd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.holeschak.de/BmwDeepObd../BmwDeepObd.xsd">
 	<page name="!PAGE_NAME" display-mode="grid" fontsize="large" gauges-portrait="2" gauges-landscape="2" logfile="MSS52DS1.log">
 		<strings>
 			<string name="!PAGE_NAME">DME main</string>
@@ -117,7 +117,7 @@
 			case "STATUS_L_SONDE#STAT_L_SONDE_WERT":
 			case "STATUS_L_SONDE_2#STAT_L_SONDE_2_WERT": // Lambda sensor voltage
 				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
-				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
+				result = string.Format(ActivityMain.Culture, "{0,6:0.000}", value);
 
 				if (!found) break;
 
@@ -141,7 +141,7 @@
 					value = value - 131.072;
 				}
 
-				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
+				result = string.Format(ActivityMain.Culture, "{0,6:0.000}", value);
 
 				if (!found) break;
 
@@ -158,7 +158,7 @@
 			case "STATUS_INT#STAT_INT_WERT":
 			case "STATUS_INT_2#STAT_INT_2_WERT": // Lambda integral
 				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
-				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
+				result = string.Format(ActivityMain.Culture, "{0,6:0.000}", value);
 
 				if (!found) break;
 
@@ -173,7 +173,7 @@
 			case "STATUS_LAMBDA_MUL_1#STAT_LAMBDA_MUL_1_WERT":
 			case "STATUS_LAMBDA_MUL_2#STAT_LAMBDA_MUL_2_WERT": // Lambda multiplicative
 				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
-				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
+				result = string.Format(ActivityMain.Culture, "{0,6:0.000}", value);
 
 				if (!found) break;
 
@@ -188,7 +188,7 @@
 
 			case "STATUS_KUEHLW_AUSL_TEMPERATUR#STAT_KUEHLW_AUSL_TEMPERATUR_WERT": // Radiator outlet temp
 				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
-				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
+				result = string.Format(ActivityMain.Culture, "{0,3:0}", value);
 
 				if (!found) break;
 
@@ -208,7 +208,7 @@
 			case "STATUS_MESSWERTBLOCK_LESEN#STAT_MOTOROEL_TEMPERATUR_WERT":
 			case "STATUS_MESSWERTBLOCK_LESEN#STAT_CEngDsT_tSens_WERT": // Coolant/oil/refrigerant temp
 				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
-				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
+				result = string.Format(ActivityMain.Culture, "{0,6:0}", value);
 
 				if (!found) break;
 
@@ -228,7 +228,7 @@
 			case "STATUS_MESSWERTBLOCK_LESEN#STAT_UMGEBUNGSTEMPERATUR_WERT":
 			case "STATUS_MESSWERTBLOCK_LESEN#STAT_LADELUFTTEMPERATUR_WERT": // Ambient air/intake air/fuel temp
 				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
-				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
+				result = string.Format(ActivityMain.Culture, "{0,6:0}", value);
 
 				if (!found) break;
 

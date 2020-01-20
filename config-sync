@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+DIR_DEVICE="/sdcard/Android/data/de.holeschak.bmw_deep_obd/files/Configurations"
+
+mapfile -t ARRAY_FILES < <(find . -type f -iname '*.cccfg' -o -iname '*.ccpage' -o -iname '*.cs' -o -iname '*.xsd' | sort | sed 's/^\.\///g')
+
+
+pull() {
+	for FILE in "${ARRAY_FILES[@]}"; do
+		adb pull "${DIR_DEVICE}/${FILE}" "${FILE}"
+	done
+}
+
+push() {
+	for FILE in "${ARRAY_FILES[@]}"; do
+		adb push "${FILE}" "${DIR_DEVICE}/${FILE}"
+	done
+}
+
+
+"${1-pull}"

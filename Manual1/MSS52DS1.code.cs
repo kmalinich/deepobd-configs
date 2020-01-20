@@ -16,18 +16,16 @@ class PageClass {
 		switch (resultName) {
 			case "STATUS_TZ1#STAT_TZ1_WERT": // Ignition timing
 				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
-				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
+				if (value > 64) value = value - 6553;
 
-				if (value > 64) {
-					value = value - 6553;
-				}
+				result = string.Format(ActivityMain.Culture, "{0,4:0.0}", value);
 
 				textColor = intRgb(241, 196, 15);
 				break;
 
 			case "STATUS_RF#STAT_RF_WERT": // RF %
 				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
-				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
+				result = string.Format(ActivityMain.Culture, "{0,3:0.0}", value);
 
 				if (!found) break;
 
@@ -47,7 +45,7 @@ class PageClass {
 			case "STATUS_L_SONDE#STAT_L_SONDE_WERT":
 			case "STATUS_L_SONDE_2#STAT_L_SONDE_2_WERT": // Lambda sensor voltage
 				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
-				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
+				result = string.Format(ActivityMain.Culture, "{0,5:0.000}", value);
 
 				if (!found) break;
 
@@ -67,11 +65,9 @@ class PageClass {
 			case "STATUS_ADD_2#STAT_ADD_2_WERT": // Lambda additive
 				value = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
 
-				if (value > 64) {
-					value = value - 131.072;
-				}
+				if (value > 64) value = value - 131.072;
 
-				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
+				result = string.Format(ActivityMain.Culture, "{0,5:0.000}", value);
 
 				if (!found) break;
 
@@ -88,7 +84,7 @@ class PageClass {
 			case "STATUS_INT#STAT_INT_WERT":
 			case "STATUS_INT_2#STAT_INT_2_WERT": // Lambda integral
 				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
-				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
+				result = string.Format(ActivityMain.Culture, "{0,5:0.000}", value);
 
 				if (!found) break;
 
@@ -103,7 +99,7 @@ class PageClass {
 			case "STATUS_LAMBDA_MUL_1#STAT_LAMBDA_MUL_1_WERT":
 			case "STATUS_LAMBDA_MUL_2#STAT_LAMBDA_MUL_2_WERT": // Lambda multiplicative
 				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
-				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
+				result = string.Format(ActivityMain.Culture, "{0,6:0.000}", value);
 
 				if (!found) break;
 
@@ -116,29 +112,12 @@ class PageClass {
 				break;
 
 
-			case "STATUS_KUEHLW_AUSL_TEMPERATUR#STAT_KUEHLW_AUSL_TEMPERATUR_WERT": // Radiator outlet temp
-				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
-				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
-
-				if (!found) break;
-
-				if (value > 100) { textColor = intRgb(255,   0,   0); break; }
-				if (value == 50) { textColor = intRgb(0,   255,   0); break; }
-				if (value ==  0) { textColor = intRgb(0,     0, 255); break; }
-
-				if (value < 50) {
-					textColor = intRgb(0, (value * 5.1), (255 - (value * 5.1)));
-					break;
-				}
-
-				textColor = intRgb((value * 5.1), (255 - (value * 5.1)), 0);
-				break;
-
-			case "STATUS_MESSWERTBLOCK_LESEN#STAT_MOTORTEMPERATUR_WERT":
+			case "STATUS_KUEHLW_AUSL_TEMPERATUR#STAT_KUEHLW_AUSL_TEMPERATUR_WERT":
+			case "STATUS_MESSWERTBLOCK_LESEN#STAT_CEngDsT_tSens_WERT":
 			case "STATUS_MESSWERTBLOCK_LESEN#STAT_MOTOROEL_TEMPERATUR_WERT":
-			case "STATUS_MESSWERTBLOCK_LESEN#STAT_CEngDsT_tSens_WERT": // Coolant/oil/refrigerant temp
+			case "STATUS_MESSWERTBLOCK_LESEN#STAT_MOTORTEMPERATUR_WERT": // Radiator outlet/coolant/oil/refrigerant temp
 				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
-				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
+				result = string.Format(ActivityMain.Culture, "{0,3:0}", value);
 
 				if (!found) break;
 
@@ -158,7 +137,7 @@ class PageClass {
 			case "STATUS_MESSWERTBLOCK_LESEN#STAT_UMGEBUNGSTEMPERATUR_WERT":
 			case "STATUS_MESSWERTBLOCK_LESEN#STAT_LADELUFTTEMPERATUR_WERT": // Ambient air/intake air/fuel temp
 				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
-				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
+				result = string.Format(ActivityMain.Culture, "{0,3:0}", value);
 
 				if (!found) break;
 
@@ -182,7 +161,7 @@ class PageClass {
 			case "STATUS_MESSWERTBLOCK_LESEN#STAT_ABGASTEMPERATUR_VOR_KATALYSATOR_WERT":
 			case "STATUS_MESSWERTBLOCK_LESEN#STAT_ABGASTEMPERATUR_VOR_PARTIKELFILTER_1_WERT": // Exhaust temp
 				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
-				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
+				result = string.Format(ActivityMain.Culture, "{0,3:0}", value);
 
 				if (!found) break;
 
@@ -197,7 +176,7 @@ class PageClass {
 			case "STATUS_MESSWERTBLOCK_LESEN#STAT_LUFTMASSE_PRO_HUB_WERT":
 			case "STATUS_MESSWERTBLOCK_LESEN#STAT_LUFTMASSE_SOLL_WERT": // Air mass
 				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
-				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value);
+				result = string.Format(ActivityMain.Culture, "{0,4:0}", value);
 
 				if (!found) break;
 
@@ -211,7 +190,7 @@ class PageClass {
 			case "STATUS_MESSWERTBLOCK_LESEN#STAT_RAILDRUCK_WERT":
 			case "STATUS_MESSWERTBLOCK_LESEN#STAT_RAILDRUCK_SOLL_WERT": // Fuel rail pressure
 				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
-				result = string.Format(ActivityMain.Culture, "{0,7:0.00}", (value / bar2psi));
+				result = string.Format(ActivityMain.Culture, "{0,4:0}", (value / bar2psi));
 
 				if (!found) break;
 
@@ -226,7 +205,7 @@ class PageClass {
 			case "STATUS_MESSWERTBLOCK_LESEN#STAT_LADEDRUCK_SOLL_WERT":
 			case "STATUS_MESSWERTBLOCK_LESEN#STAT_DIFFERENZDRUCK_UEBER_PARTIKELFILTER_WERT": // Boost pressure/exhaust back pressure
 				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
-				result = string.Format(ActivityMain.Culture, "{0,7:0.00}", ((value - ambient_offset) / hpa2psi));
+				result = string.Format(ActivityMain.Culture, "{0,5:0.00}", ((value - ambient_offset) / hpa2psi));
 
 				if (!found) break;
 
@@ -239,7 +218,7 @@ class PageClass {
 
 			case "STATUS_MESSWERTBLOCK_LESEN#STAT_UBATT2_WERT": // Battery voltage
 				value  = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
-				result = string.Format(ActivityMain.Culture, "{0,6:0.00}", value / 1000);
+				result = string.Format(ActivityMain.Culture, "{0,5:0.00}", value / 1000);
 
 				if (!found) break;
 
