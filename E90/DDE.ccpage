@@ -55,7 +55,7 @@
 				<display name="label_motor_part_filt_request" result="STAT_PFltRgn_numRgn_WERT" log_tag="part_filt_requ" />
 				<display name="label_motor_part_filt_status" result="STAT_CoEOM_stOpModeAct_WERT" log_tag="part_filt_status" />
 				<display name="label_motor_part_filt_unblocked" result="STAT_REGENERATION_BLOCKIERUNG_UND_FREIGABE_WERT" log_tag="part_filt_unblocked" />
-				<display name="label_motor_part_filt_dist_remain" result="STAT_PCBS_lDistanceOut_WERT" format="6.0R"/>
+				<display name="label_motor_part_filt_dist_remain" result="STAT_PCBS_lDistanceOut_WERT" format="6.0R" />
 			</job>
 		</jobs>
 		<code show_warnings="true">

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<fragment xmlns="http://www.holeschak.de/BmwDeepObd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.holeschak.de/BmwDeepObd BmwDeepObd.xsd">
+<fragment xmlns="http://www.holeschak.de/BmwDeepObd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.holeschak.de/BmwDeepObd ../BmwDeepObd.xsd">
 	<page name="!PAGE_NAME" display-mode="grid" fontsize="small" gauges-portrait="2" gauges-landscape="4" logfile="DSC.log">
 		<strings>
 			<string name="!PAGE_NAME">DSC</string>
