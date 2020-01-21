@@ -3,35 +3,30 @@
 <code show_warnings="true">
 <![CDATA[
 class PageClass {
-	public static Android.Graphics.Color intRgb(double r, double g, double b) {
-		return Android.Graphics.Color.Rgb((int) r, (int) g, (int) b);
-	}
-
-	public static Android.Graphics.Color val2Rgb(double value, int max, int offset) {
+	public static Android.Graphics.Color val2Rgb(double value, double max, double offset) {
 		if (value < 0) value = 0;
 
-		// Actual minimum is -20 and actual max is 50
-		// Adding offset to value for RGB calculations so min is 0 and max is (max + offset)
+		// Add offset or RGB calculations so min is 0 and max is (max + offset)
 		max   += offset;
 		value += offset;
 
 		if (value > max) value = max;
 
 		// RGB multiplier calculation
-		value = value * (255 / max)
+		value = value * (255 / max);
 
 		double value1 = value * 2;
 		double value2 = 255 - value1;
 
-		if (value >= 255.0) { return intRgb(255,   0,   0); }
-		if (value == 127.5) { return intRgb(0,   255,   0); }
-		if (value <=   0.0) { return intRgb(0,     0, 255); }
+		if (value >= 255.0) { return Android.Graphics.Color.Rgb(255,   0,   0); }
+		if (value == 127.5) { return Android.Graphics.Color.Rgb(0,   255,   0); }
+		if (value <=   0.0) { return Android.Graphics.Color.Rgb(0,     0, 255); }
 
 		if (value < 127.5) {
-			return intRgb(0, value1, value2);
+			return Android.Graphics.Color.Rgb(0, (int) value1, (int) value2);
 		}
 
-		return intRgb(value1, value2, 0);
+		return Android.Graphics.Color.Rgb((int) value1, (int) value2, 0);
 	}
 
 
@@ -192,7 +187,7 @@ class PageClass {
 				if (!found) break;
 
 				// Convert km to mi
-				value = (value / 1000) * km2mi);
+				value = (value / 1000) * km2mi;
 
 				result = string.Format(ActivityMain.Culture, "{0,6:0.0}", value);
 				break;
