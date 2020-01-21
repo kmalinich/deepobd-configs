@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <fragment xmlns="http://www.holeschak.de/BmwDeepObd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.holeschak.de/BmwDeepObd ../BmwDeepObd.xsd">
-	<page name="!PAGE_NAME" display-mode="grid" fontsize="large" gauges-portrait="1" gauges-landscape="2" logfile="MSS52DS1.log">
+	<page name="!PAGE_NAME" display-mode="grid" fontsize="large" gauges-portrait="2" gauges-landscape="2" logfile="MSS52DS1-misc.{D}.log">
 		<strings>
 			<string name="!PAGE_NAME">DME misc</string>
 
@@ -23,10 +23,10 @@
 				<display name="!JOB#STATUS_RF#STAT_RF_WERT" result="STAT_RF_WERT" grid-type="simple-gauge-square" min-value="0" max-value="120" log_tag="STAT_RF_WERT" />
 			</job>
 			<job name="STATUS_TZ1">
-				<display name="!JOB#STATUS_TZ1#STAT_TZ1_WERT" result="STAT_TZ1_WERT" grid-type="simple-gauge-square" min-value="-60" max-value="60" log_tag="STAT_TZ1_WERT" />
+				<display name="!JOB#STATUS_TZ1#STAT_TZ1_WERT" result="STAT_TZ1_WERT" grid-type="simple-gauge-square" min-value="-20" max-value="50" log_tag="STAT_TZ1_WERT" />
 			</job>
 			<job name="STATUS_KUEHLW_AUSL_TEMPERATUR">
-				<display name="!JOB#STATUS_KUEHLW_AUSL_TEMPERATUR#STAT_KUEHLW_AUSL_TEMPERATUR_WERT" result="STAT_KUEHLW_AUSL_TEMPERATUR_WERT" grid-type="simple-gauge-square" min-value="0" max-value="100" log_tag="STAT_KUEHLW_AUSL_TEMPERATUR_WERT" />
+				<display name="!JOB#STATUS_KUEHLW_AUSL_TEMPERATUR#STAT_KUEHLW_AUSL_TEMPERATUR_WERT" result="STAT_KUEHLW_AUSL_TEMPERATUR_WERT" grid-type="simple-gauge-square" min-value="-10" max-value="100" log_tag="STAT_KUEHLW_AUSL_TEMPERATUR_WERT" />
 			</job>
 
 		</jobs>
