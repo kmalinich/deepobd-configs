@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fragment xmlns="http://www.holeschak.de/BmwDeepObd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.holeschak.de/BmwDeepObd ../../../BmwDeepObd.xsd">
+	<job name="STATUS_INT_2">
+		<display name="!JOB#STATUS_INT_2#STAT_INT_2_WERT" result="STAT_INT_2_WERT" grid-type="simple-gauge-square" min-value="0.75" max-value="1.25" log_tag="STAT_INT_2_WERT" />
+	</job>
+</fragment>

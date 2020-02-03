@@ -396,6 +396,7 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="job" type="job-type" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="include" type="include-type" />
 		</xs:sequence>
 		<xs:attribute name="sgbd" type="string1-type" use="optional">
 			<xs:annotation>

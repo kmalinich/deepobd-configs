@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<fragment xmlns="http://www.holeschak.de/BmwDeepObd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.holeschak.de/BmwDeepObd ../BmwDeepObd.xsd">
+<fragment xmlns="http://www.holeschak.de/BmwDeepObd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.holeschak.de/BmwDeepObd ../../BmwDeepObd.xsd">
 <code show_warnings="true">
 <![CDATA[
 class PageClass {
@@ -45,11 +45,18 @@ class PageClass {
 
 
 		switch (resultName) {
-			case "STATUS_TZ1#STAT_TZ1_WERT": // Ignition timing
+			case "STATUS_TZ1#STAT_TZ1_WERT":
+			case "STATUS_TZ2#STAT_TZ2_WERT":
+			case "STATUS_TZ3#STAT_TZ3_WERT":
+			case "STATUS_TZ4#STAT_TZ4_WERT":
+			case "STATUS_TZ5#STAT_TZ5_WERT":
+			case "STATUS_TZ6#STAT_TZ6_WERT":
+			case "STATUS_TZ7#STAT_TZ7_WERT":
+			case "STATUS_TZ8#STAT_TZ8_WERT": // Ignition timing
 				value = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
 				if (!found) break;
 
-				if (value > 64) value = value - 6553.5;
+				if (value > 64) value = value - 6553.4;
 
 				result    = string.Format(ActivityMain.Culture, "{0,4:0.0}", value);
 				textColor = val2Rgb(value, 50, 20);
