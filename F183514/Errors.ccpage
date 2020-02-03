@@ -9,7 +9,6 @@
 			<string name="!ECU#EGS">EGS</string>
 			<string name="!ECU#EKP">EKP</string>
 			<string name="!ECU#FAS">FAS</string>
-			<string name="!ECU#FBI">FBI</string>
 			<string name="!ECU#FRM">FRM</string>
 			<string name="!ECU#FZD">FZD</string>
 			<string name="!ECU#JBBF">JBBF</string>
@@ -19,7 +18,6 @@
 			<string name="!ECU#RAD">RAD</string>
 			<string name="!ECU#RAD/GW">RAD/GW</string>
 			<string name="!ECU#RAD/SAT">RAD/SAT</string>
-			<string name="!ECU#RDC">RDC</string>
 			<string name="!ECU#TEL">TEL/MULF</string>
 		</strings>
 		<read_errors sgbd_functional="e89x">
@@ -29,7 +27,6 @@
 			<ecu name="!ECU#EGS"     sgbd="GS19D" />
 			<ecu name="!ECU#EKP"     sgbd="EKP360" />
 			<ecu name="!ECU#FAS"     sgbd="FAS_PLX" />
-			<ecu name="!ECU#FBI"     sgbd="CECALLR" />
 			<ecu name="!ECU#FRM"     sgbd="FRM_70" />
 			<ecu name="!ECU#FZD"     sgbd="FZD_87" />
 			<ecu name="!ECU#JBBF"    sgbd="JBBF70" />
@@ -39,7 +36,6 @@
 			<ecu name="!ECU#RAD"     sgbd="RAD2" />
 			<ecu name="!ECU#RAD/GW"  sgbd="RAD2_GW" />
 			<ecu name="!ECU#RAD/SAT" sgbd="SAT_RAD2" />
-			<ecu name="!ECU#RDC"     sgbd="RDCKWP" />
 			<ecu name="!ECU#TEL"     sgbd="CMEDIAR" />
 		</read_errors>
 	</page>

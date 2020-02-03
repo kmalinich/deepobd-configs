@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <fragment xmlns="http://www.holeschak.de/BmwDeepObd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.holeschak.de/BmwDeepObd ../BmwDeepObd.xsd">
-	<page name="!PAGE_NAME" display-mode="list" fontsize="large" gauges-portrait="2" gauges-landscape="4" logfile="KOMBI.log">
+	<page name="!PAGE_NAME" display-mode="list" fontsize="large" gauges-portrait="2" gauges-landscape="4" logfile="KOMBI.{D}.log">
 		<strings>
 			<string name="!PAGE_NAME">KOMBI</string>
 			<string name="!JOB#STATUS_TANKINHALT#STAT_HEBELGEBER1_WERT">HEBELGEBER1</string>

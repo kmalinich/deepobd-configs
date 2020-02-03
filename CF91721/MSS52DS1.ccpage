@@ -1,160 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
 <fragment xmlns="http://www.holeschak.de/BmwDeepObd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.holeschak.de/BmwDeepObd ../BmwDeepObd.xsd">
-  <page name="!PAGE_NAME" display-mode="grid" fontsize="large" gauges-portrait="3" gauges-landscape="6" logfile="MSS52DS1.log">
-    <strings>
-      <string name="!PAGE_NAME">DME</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_BA_EIN">STAT_BA_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_SA_EIN">STAT_SA_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_LSHV1_EIN">STAT_LSHV1_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_LSHV2_EIN">STAT_LSHV2_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_LSHN1_EIN">STAT_LSHN1_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_LSHN2_EIN">STAT_LSHN2_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_ZUENDUNG1_EIN">STAT_ZUENDUNG1_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_ZUENDUNG2_EIN">STAT_ZUENDUNG2_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_ZUENDUNG3_EIN">STAT_ZUENDUNG3_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_ZUENDUNG4_EIN">STAT_ZUENDUNG4_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_ZUENDUNG5_EIN">STAT_ZUENDUNG5_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_ZUENDUNG6_EIN">STAT_ZUENDUNG6_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_ZUENDUNG7_EIN">STAT_ZUENDUNG7_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_ZUENDUNG8_EIN">STAT_ZUENDUNG8_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_AKL_EIN">STAT_AKL_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_SLP_EIN">STAT_SLP_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_SLV_EIN">STAT_SLV_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_ELU_EIN">STAT_ELU_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_EKP_EIN">STAT_EKP_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_NOISE_EIN">STAT_NOISE_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_SCHUTZ_EIN">STAT_SCHUTZ_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_KLOPFREGELUNG_EIN">STAT_KLOPFREGELUNG_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_KLOPFREG_EIN">STAT_KLOPFREG_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_KRAFTSCHLUSS_EIN">STAT_KRAFTSCHLUSS_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_KO_EIN">STAT_KO_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STATUS_KO_EIN">STATUS_KO_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STATUS_AC_EIN">STATUS_AC_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_AC_EIN">STAT_AC_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_KL15_EIN">STAT_KL15_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_KL50_EIN">STAT_KL50_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_LDP_EIN">STAT_LDP_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_REEDSWITCH_EIN">STAT_REEDSWITCH_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_MOTOR_STEHT">STAT_MOTOR_STEHT</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_MOTOR_START">STAT_MOTOR_START</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_LL_EIN">STAT_LL_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STATUS_LL_EIN">STATUS_LL_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_VL_EIN">STAT_VL_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STATUS_VL_EIN">STATUS_VL_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_TL_EIN">STAT_TL_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_MOTOR_NACHLAUF">STAT_MOTOR_NACHLAUF</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_KATHEIZEN_EIN">STAT_KATHEIZEN_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_KUP_EIN">STAT_KUP_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_BLS_EIN">STAT_BLS_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_BLTS_EIN">STAT_BLTS_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_EWS3_FREIGABE">STAT_EWS3_FREIGABE</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_FDYN_EIN">STAT_FDYN_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_MIL_EIN">STAT_MIL_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_MFL1_EIN">STAT_MFL1_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_MFL2_EIN">STAT_MFL2_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_MFL3_EIN">STAT_MFL3_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_MFL4_EIN">STAT_MFL4_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_LLR_EIN">STAT_LLR_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_LDR1_EIN">STAT_LDR1_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_LDR2_EIN">STAT_LDR2_EIN</string>
-      <string name="!JOB#STATUS_DIGITAL#STAT_FGRA_EIN">STAT_FGRA_EIN</string>
-      <string name="!JOB#STATUS_ADD#STAT_ADD_WERT">O2 Add 1</string>
-      <string name="!JOB#STATUS_ADD_2#STAT_ADD_2_WERT">O2 Add 2</string>
-      <string name="!JOB#STATUS_AQREL#STAT_AQREL_WERT">AQREL</string>
-      <string name="!JOB#STATUS_INT#STATUS_INT_WERT">STATUS_INT_WERT</string>
-      <string name="!JOB#STATUS_INT#STAT_INT_WERT">O2 Int 1</string>
-      <string name="!JOB#STATUS_INT_2#STAT_INT_2_WERT">O2 Int 2</string>
-      <string name="!JOB#STATUS_LAMBDA_MUL_1#STAT_LAMBDA_MUL_1_WERT">O2 Mul 1</string>
-      <string name="!JOB#STATUS_LAMBDA_MUL_2#STAT_LAMBDA_MUL_2_WERT">O2 Mul 2</string>
-      <string name="!JOB#STATUS_RF#STAT_RF_WERT">RF %</string>
-      <string name="!JOB#STATUS_KUEHLW_AUSL_TEMPERATUR#STAT_KUEHLW_AUSL_TEMPERATUR_WERT">Rad</string>
-    </strings>
-    <jobs sgbd="mss52ds1">
-      <job name="STATUS_DIGITAL">
-        <display name="!JOB#STATUS_DIGITAL#STAT_BA_EIN" result="STAT_BA_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_BA_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_SA_EIN" result="STAT_SA_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_SA_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_LSHV1_EIN" result="STAT_LSHV1_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_LSHV1_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_LSHV2_EIN" result="STAT_LSHV2_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_LSHV2_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_LSHN1_EIN" result="STAT_LSHN1_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_LSHN1_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_LSHN2_EIN" result="STAT_LSHN2_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_LSHN2_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_ZUENDUNG1_EIN" result="STAT_ZUENDUNG1_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_ZUENDUNG1_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_ZUENDUNG2_EIN" result="STAT_ZUENDUNG2_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_ZUENDUNG2_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_ZUENDUNG3_EIN" result="STAT_ZUENDUNG3_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_ZUENDUNG3_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_ZUENDUNG4_EIN" result="STAT_ZUENDUNG4_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_ZUENDUNG4_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_ZUENDUNG5_EIN" result="STAT_ZUENDUNG5_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_ZUENDUNG5_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_ZUENDUNG6_EIN" result="STAT_ZUENDUNG6_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_ZUENDUNG6_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_ZUENDUNG7_EIN" result="STAT_ZUENDUNG7_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_ZUENDUNG7_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_ZUENDUNG8_EIN" result="STAT_ZUENDUNG8_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_ZUENDUNG8_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_AKL_EIN" result="STAT_AKL_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_AKL_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_SLP_EIN" result="STAT_SLP_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_SLP_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_SLV_EIN" result="STAT_SLV_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_SLV_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_ELU_EIN" result="STAT_ELU_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_ELU_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_EKP_EIN" result="STAT_EKP_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_EKP_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_NOISE_EIN" result="STAT_NOISE_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_NOISE_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_SCHUTZ_EIN" result="STAT_SCHUTZ_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_SCHUTZ_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_KLOPFREGELUNG_EIN" result="STAT_KLOPFREGELUNG_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_KLOPFREGELUNG_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_KLOPFREG_EIN" result="STAT_KLOPFREG_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_KLOPFREG_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_KRAFTSCHLUSS_EIN" result="STAT_KRAFTSCHLUSS_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_KRAFTSCHLUSS_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_KO_EIN" result="STAT_KO_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_KO_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STATUS_KO_EIN" result="STATUS_KO_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STATUS_KO_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STATUS_AC_EIN" result="STATUS_AC_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STATUS_AC_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_AC_EIN" result="STAT_AC_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_AC_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_KL15_EIN" result="STAT_KL15_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_KL15_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_KL50_EIN" result="STAT_KL50_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_KL50_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_LDP_EIN" result="STAT_LDP_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_LDP_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_REEDSWITCH_EIN" result="STAT_REEDSWITCH_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_REEDSWITCH_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_MOTOR_STEHT" result="STAT_MOTOR_STEHT" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_MOTOR_STEHT" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_MOTOR_START" result="STAT_MOTOR_START" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_MOTOR_START" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_LL_EIN" result="STAT_LL_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_LL_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STATUS_LL_EIN" result="STATUS_LL_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STATUS_LL_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_VL_EIN" result="STAT_VL_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_VL_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STATUS_VL_EIN" result="STATUS_VL_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STATUS_VL_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_TL_EIN" result="STAT_TL_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_TL_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_MOTOR_NACHLAUF" result="STAT_MOTOR_NACHLAUF" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_MOTOR_NACHLAUF" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_KATHEIZEN_EIN" result="STAT_KATHEIZEN_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_KATHEIZEN_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_KUP_EIN" result="STAT_KUP_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_KUP_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_BLS_EIN" result="STAT_BLS_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_BLS_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_BLTS_EIN" result="STAT_BLTS_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_BLTS_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_EWS3_FREIGABE" result="STAT_EWS3_FREIGABE" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_EWS3_FREIGABE" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_FDYN_EIN" result="STAT_FDYN_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_FDYN_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_MIL_EIN" result="STAT_MIL_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_MIL_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_MFL1_EIN" result="STAT_MFL1_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_MFL1_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_MFL2_EIN" result="STAT_MFL2_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_MFL2_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_MFL3_EIN" result="STAT_MFL3_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_MFL3_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_MFL4_EIN" result="STAT_MFL4_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_MFL4_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_LLR_EIN" result="STAT_LLR_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_LLR_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_LDR1_EIN" result="STAT_LDR1_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_LDR1_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_LDR2_EIN" result="STAT_LDR2_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_LDR2_EIN" />
-        <display name="!JOB#STATUS_DIGITAL#STAT_FGRA_EIN" result="STAT_FGRA_EIN" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_FGRA_EIN" />
-      </job>
-      <job name="STATUS_ADD">
-        <display name="!JOB#STATUS_ADD#STAT_ADD_WERT" result="STAT_ADD_WERT" format=".3R" display-order="0" grid-type="simple-gauge-square" min-value="0" max-value="132" log_tag="STAT_ADD_WERT" />
-      </job>
-      <job name="STATUS_ADD_2">
-        <display name="!JOB#STATUS_ADD_2#STAT_ADD_2_WERT" result="STAT_ADD_2_WERT" format=".3R" display-order="0" grid-type="simple-gauge-square" min-value="0" max-value="132" log_tag="STAT_ADD_2_WERT" />
-      </job>
-      <job name="STATUS_AQREL">
-        <display name="!JOB#STATUS_AQREL#STAT_AQREL_WERT" result="STAT_AQREL_WERT" format="1.3R" display-order="0" grid-type="simple-gauge-square" min-value="0" max-value="1" log_tag="STAT_AQREL_WERT" />
-      </job>
-      <job name="STATUS_INT">
-        <display name="!JOB#STATUS_INT#STATUS_INT_WERT" result="STATUS_INT_WERT" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STATUS_INT_WERT" />
-        <display name="!JOB#STATUS_INT#STAT_INT_WERT" result="STAT_INT_WERT" format="1.2R" display-order="0" grid-type="simple-gauge-square" min-value="0.5" max-value="1.5" log_tag="STAT_INT_WERT" />
-      </job>
-      <job name="STATUS_INT_2">
-        <display name="!JOB#STATUS_INT_2#STAT_INT_2_WERT" result="STAT_INT_2_WERT" format="1.2R" display-order="0" grid-type="simple-gauge-square" min-value="0.5" max-value="1.5" log_tag="STAT_INT_2_WERT" />
-      </job>
-      <job name="STATUS_LAMBDA_MUL_1">
-        <display name="!JOB#STATUS_LAMBDA_MUL_1#STAT_LAMBDA_MUL_1_WERT" result="STAT_LAMBDA_MUL_1_WERT" format="1.3R" display-order="0" grid-type="simple-gauge-square" min-value="0.75" max-value="1.25" log_tag="STAT_LAMBDA_MUL_1_WERT" />
-      </job>
-      <job name="STATUS_LAMBDA_MUL_2">
-        <display name="!JOB#STATUS_LAMBDA_MUL_2#STAT_LAMBDA_MUL_2_WERT" result="STAT_LAMBDA_MUL_2_WERT" format="1.3R" display-order="0" grid-type="simple-gauge-square" min-value="0.75" max-value="1.25" log_tag="STAT_LAMBDA_MUL_2_WERT" />
-      </job>
-      <job name="STATUS_RF">
-        <display name="!JOB#STATUS_RF#STAT_RF_WERT" result="STAT_RF_WERT" format="3.1R" display-order="0" grid-type="simple-gauge-square" min-value="0" max-value="160" log_tag="STAT_RF_WERT" />
-      </job>
-      <job name="STATUS_KUEHLW_AUSL_TEMPERATUR">
-        <display name="!JOB#STATUS_KUEHLW_AUSL_TEMPERATUR#STAT_KUEHLW_AUSL_TEMPERATUR_WERT" result="STAT_KUEHLW_AUSL_TEMPERATUR_WERT" format="3.0L" display-order="0" grid-type="simple-gauge-square" min-value="0" max-value="100" log_tag="Rad" />
-      </job>
-    </jobs>
-  </page>
+	<page name="!PAGE_NAME" display-mode="grid" fontsize="large" gauges-portrait="3" gauges-landscape="6" logfile="CF91721-MSS52.{D}.log">
+		<strings>
+			<string name="!PAGE_NAME">MSS52</string>
+
+			<string name="!JOB#STATUS_DIGITAL#STAT_BA_EIN">Acceleration enrichment</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_SA_EIN">Fuel cut</string>
+
+			<string name="!JOB#STATUS_DIGITAL#STAT_LSHV1_EIN">O2 heat P 1</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_LSHV2_EIN">O2 heat P 2</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_LSHN1_EIN">O2 heat S 1</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_LSHN2_EIN">O2 heat S 2</string>
+
+			<string name="!JOB#STATUS_DIGITAL#STAT_ZUENDUNG1_EIN">Ign 1</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_ZUENDUNG2_EIN">Ign 2</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_ZUENDUNG3_EIN">Ign 3</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_ZUENDUNG4_EIN">Ign 4</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_ZUENDUNG5_EIN">Ign 5</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_ZUENDUNG6_EIN">Ign 6</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_ZUENDUNG7_EIN">Ign 7</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_ZUENDUNG8_EIN">Ign 8</string>
+
+			<string name="!JOB#STATUS_DIGITAL#STAT_ELU_EIN">Electic fan</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_EKP_EIN">Fuel pump</string>
+
+			<string name="!JOB#STATUS_DIGITAL#STAT_SLP_EIN">Secondary air pump</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_SLV_EIN">Secondary air valve</string>
+
+			<string name="!JOB#STATUS_DIGITAL#STAT_AC_EIN">Air conditioning</string>
+
+			<string name="!JOB#STATUS_DIGITAL#STAT_BLS_EIN">Brake light switch</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_KUP_EIN">Clutch</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_LDP_EIN">Leak detection pump</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_LLR_EIN">Idle regulation</string>
+
+			<string name="!JOB#STATUS_DIGITAL#STAT_MIL_EIN">MIL</string>
+
+			<string name="!JOB#STATUS_DIGITAL#STAT_KLOPFREGELUNG_EIN">KLOPFREGELUNG</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_KLOPFREG_EIN"     >KLOPFREG</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_KRAFTSCHLUSS_EIN" >KRAFTSCHLUSS</string>
+
+			<string name="!JOB#STATUS_DIGITAL#STAT_REEDSWITCH_EIN">Reed switch</string>
+
+			<string name="!JOB#STATUS_DIGITAL#STAT_BLTS_EIN">Brake light test switch</string>
+
+			<string name="!JOB#STATUS_DIGITAL#STAT_FDYN_EIN">FDYN</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_FGRA_EIN">FGRA</string>
+
+			<string name="!JOB#STATUS_DIGITAL#STAT_KL15_EIN">KL15</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_KL50_EIN">KL50</string>
+
+			<string name="!JOB#STATUS_DIGITAL#STAT_MFL1_EIN">MFL1</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_MFL2_EIN">MFL2</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_MFL3_EIN">MFL3</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_MFL4_EIN">MFL4</string>
+
+			<string name="!JOB#STATUS_DIGITAL#STAT_KATHEIZEN_EIN">Cat heating</string>
+
+			<string name="!JOB#STATUS_DIGITAL#STAT_LL_EIN">Low load</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_TL_EIN">T.. load</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_VL_EIN">Full load</string>
+
+			<string name="!JOB#STATUS_DIGITAL#STAT_MOTOR_NACHLAUF">Motor nachlauf</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_MOTOR_START"   >Motor start</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_MOTOR_STEHT"   >Motor steht</string>
+
+			<string name="!JOB#STATUS_DIGITAL#STAT_EWS3_FREIGABE">EWS3 release</string>
+
+			<string name="!JOB#STATUS_AQREL#STAT_AQREL_WERT">AQREL</string>
+
+			<!-- TODO: Look these ones up -->
+			<string name="!JOB#STATUS_DIGITAL#STAT_AKL_EIN">AKL</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_KO_EIN">KO</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_LDR1_EIN">LDR1</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_LDR2_EIN">LDR2</string>
+
+			<string name="!JOB#STATUS_DIGITAL#STAT_NOISE_EIN" >Noise</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_SCHUTZ_EIN">Schutz</string>
+		</strings>
+
+		<jobs sgbd="mss52ds1">
+			<job name="STATUS_DIGITAL">
+				<display name="!JOB#STATUS_DIGITAL#STAT_BA_EIN"            result="STAT_BA_EIN"            grid-type="text" min-value="0" max-value="100" log_tag="BA" />
+				<display name="!JOB#STATUS_DIGITAL#STAT_SA_EIN"            result="STAT_SA_EIN"            grid-type="text" min-value="0" max-value="100" log_tag="SA" />
+				<display name="!JOB#STATUS_DIGITAL#STAT_LSHV1_EIN"         result="STAT_LSHV1_EIN"         grid-type="text" min-value="0" max-value="100" log_tag="LSHV1" />
+				<display name="!JOB#STATUS_DIGITAL#STAT_LSHV2_EIN"         result="STAT_LSHV2_EIN"         grid-type="text" min-value="0" max-value="100" log_tag="LSHV2" />
+				<display name="!JOB#STATUS_DIGITAL#STAT_LSHN1_EIN"         result="STAT_LSHN1_EIN"         grid-type="text" min-value="0" max-value="100" log_tag="LSHN1" />
+				<display name="!JOB#STATUS_DIGITAL#STAT_LSHN2_EIN"         result="STAT_LSHN2_EIN"         grid-type="text" min-value="0" max-value="100" log_tag="LSHN2" />
+				<display name="!JOB#STATUS_DIGITAL#STAT_ZUENDUNG1_EIN"     result="STAT_ZUENDUNG1_EIN"     grid-type="text" min-value="0" max-value="100" log_tag="ZUENDUNG1" />
+				<display name="!JOB#STATUS_DIGITAL#STAT_ZUENDUNG2_EIN"     result="STAT_ZUENDUNG2_EIN"     grid-type="text" min-value="0" max-value="100" log_tag="ZUENDUNG2" />
+				<display name="!JOB#STATUS_DIGITAL#STAT_ZUENDUNG3_EIN"     result="STAT_ZUENDUNG3_EIN"     grid-type="text" min-value="0" max-value="100" log_tag="ZUENDUNG3" />
+				<display name="!JOB#STATUS_DIGITAL#STAT_ZUENDUNG4_EIN"     result="STAT_ZUENDUNG4_EIN"     grid-type="text" min-value="0" max-value="100" log_tag="ZUENDUNG4" />
+				<display name="!JOB#STATUS_DIGITAL#STAT_ZUENDUNG5_EIN"     result="STAT_ZUENDUNG5_EIN"     grid-type="text" min-value="0" max-value="100" log_tag="ZUENDUNG5" />
+				<display name="!JOB#STATUS_DIGITAL#STAT_ZUENDUNG6_EIN"     result="STAT_ZUENDUNG6_EIN"     grid-type="text" min-value="0" max-value="100" log_tag="ZUENDUNG6" />
+				<display name="!JOB#STATUS_DIGITAL#STAT_ZUENDUNG7_EIN"     result="STAT_ZUENDUNG7_EIN"     grid-type="text" min-value="0" max-value="100" log_tag="ZUENDUNG7" />
+				<display name="!JOB#STATUS_DIGITAL#STAT_ZUENDUNG8_EIN"     result="STAT_ZUENDUNG8_EIN"     grid-type="text" min-value="0" max-value="100" log_tag="ZUENDUNG8" />
+				<display name="!JOB#STATUS_DIGITAL#STAT_AKL_EIN"           result="STAT_AKL_EIN"           grid-type="text" min-value="0" max-value="100" log_tag="AKL" />
+				<display name="!JOB#STATUS_DIGITAL#STAT_SLP_EIN"           result="STAT_SLP_EIN"           grid-type="text" min-value="0" max-value="100" log_tag="SLP" />
+				<display name="!JOB#STATUS_DIGITAL#STAT_SLV_EIN"           result="STAT_SLV_EIN"           grid-type="text" min-value="0" max-value="100" log_tag="SLV" />
+				<display name="!JOB#STATUS_DIGITAL#STAT_ELU_EIN"           result="STAT_ELU_EIN"           grid-type="text" min-value="0" max-value="100" log_tag="ELU" />
+				<display name="!JOB#STATUS_DIGITAL#STAT_EKP_EIN"           result="STAT_EKP_EIN"           grid-type="text" min-value="0" max-value="100" log_tag="EKP" />
+				<display name="!JOB#STATUS_DIGITAL#STAT_NOISE_EIN"         result="STAT_NOISE_EIN"         grid-type="text" min-value="0" max-value="100" log_tag="NOISE" />
+				<display name="!JOB#STATUS_DIGITAL#STAT_SCHUTZ_EIN"        result="STAT_SCHUTZ_EIN"        grid-type="text" min-value="0" max-value="100" log_tag="SCHUTZ" />
+				<display name="!JOB#STATUS_DIGITAL#STAT_KLOPFREGELUNG_EIN" result="STAT_KLOPFREGELUNG_EIN" grid-type="text" min-value="0" max-value="100" log_tag="KLOPFREGELUNG" />
+				<display name="!JOB#STATUS_DIGITAL#STAT_KLOPFREG_EIN"      result="STAT_KLOPFREG_EIN"      grid-type="text" min-value="0" max-value="100" log_tag="KLOPFREG" />
+				<display name="!JOB#STATUS_DIGITAL#STAT_KRAFTSCHLUSS_EIN"  result="STAT_KRAFTSCHLUSS_EIN"  grid-type="text" min-value="0" max-value="100" log_tag="KRAFTSCHLUSS" />
+				<display name="!JOB#STATUS_DIGITAL#STAT_KO_EIN"            result="STAT_KO_EIN"            grid-type="text" min-value="0" max-value="100" log_tag="KO" />
+				<display name="!JOB#STATUS_DIGITAL#STAT_AC_EIN"            result="STAT_AC_EIN"            grid-type="text" min-value="0" max-value="100" log_tag="AC" />
+				<display name="!JOB#STATUS_DIGITAL#STAT_KL15_EIN"          result="STAT_KL15_EIN"          grid-type="text" min-value="0" max-value="100" log_tag="KL15" />
+				<display name="!JOB#STATUS_DIGITAL#STAT_KL50_EIN"          result="STAT_KL50_EIN"          grid-type="text" min-value="0" max-value="100" log_tag="KL50" />
+				<display name="!JOB#STATUS_DIGITAL#STAT_LDP_EIN"           result="STAT_LDP_EIN"           grid-type="text" min-value="0" max-value="100" log_tag="LDP" />
+				<display name="!JOB#STATUS_DIGITAL#STAT_REEDSWITCH_EIN"    result="STAT_REEDSWITCH_EIN"    grid-type="text" min-value="0" max-value="100" log_tag="REEDSWITCH" />
+				<display name="!JOB#STATUS_DIGITAL#STAT_LL_EIN"            result="STAT_LL_EIN"            grid-type="text" min-value="0" max-value="100" log_tag="LL" />
+				<display name="!JOB#STATUS_DIGITAL#STAT_VL_EIN"            result="STAT_VL_EIN"            grid-type="text" min-value="0" max-value="100" log_tag="VL" />
+				<display name="!JOB#STATUS_DIGITAL#STAT_TL_EIN"            result="STAT_TL_EIN"            grid-type="text" min-value="0" max-value="100" log_tag="TL" />
+				<display name="!JOB#STATUS_DIGITAL#STAT_KATHEIZEN_EIN"     result="STAT_KATHEIZEN_EIN"     grid-type="text" min-value="0" max-value="100" log_tag="KATHEIZEN" />
+				<display name="!JOB#STATUS_DIGITAL#STAT_KUP_EIN"           result="STAT_KUP_EIN"           grid-type="text" min-value="0" max-value="100" log_tag="KUP" />
+				<display name="!JOB#STATUS_DIGITAL#STAT_BLS_EIN"           result="STAT_BLS_EIN"           grid-type="text" min-value="0" max-value="100" log_tag="BLS" />
+				<display name="!JOB#STATUS_DIGITAL#STAT_BLTS_EIN"          result="STAT_BLTS_EIN"          grid-type="text" min-value="0" max-value="100" log_tag="BLTS" />
+				<display name="!JOB#STATUS_DIGITAL#STAT_EWS3_FREIGABE"     result="STAT_EWS3_FREIGABE"     grid-type="text" min-value="0" max-value="100" log_tag="EWS3_FREIGABE" />
+				<display name="!JOB#STATUS_DIGITAL#STAT_FDYN_EIN"          result="STAT_FDYN_EIN"          grid-type="text" min-value="0" max-value="100" log_tag="FDYN" />
+				<display name="!JOB#STATUS_DIGITAL#STAT_MIL_EIN"           result="STAT_MIL_EIN"           grid-type="text" min-value="0" max-value="100" log_tag="MIL" />
+				<display name="!JOB#STATUS_DIGITAL#STAT_MFL1_EIN"          result="STAT_MFL1_EIN"          grid-type="text" min-value="0" max-value="100" log_tag="MFL1" />
+				<display name="!JOB#STATUS_DIGITAL#STAT_MFL2_EIN"          result="STAT_MFL2_EIN"          grid-type="text" min-value="0" max-value="100" log_tag="MFL2" />
+				<display name="!JOB#STATUS_DIGITAL#STAT_MFL3_EIN"          result="STAT_MFL3_EIN"          grid-type="text" min-value="0" max-value="100" log_tag="MFL3" />
+				<display name="!JOB#STATUS_DIGITAL#STAT_MFL4_EIN"          result="STAT_MFL4_EIN"          grid-type="text" min-value="0" max-value="100" log_tag="MFL4" />
+				<display name="!JOB#STATUS_DIGITAL#STAT_LLR_EIN"           result="STAT_LLR_EIN"           grid-type="text" min-value="0" max-value="100" log_tag="LLR" />
+				<display name="!JOB#STATUS_DIGITAL#STAT_LDR1_EIN"          result="STAT_LDR1_EIN"          grid-type="text" min-value="0" max-value="100" log_tag="LDR1" />
+				<display name="!JOB#STATUS_DIGITAL#STAT_LDR2_EIN"          result="STAT_LDR2_EIN"          grid-type="text" min-value="0" max-value="100" log_tag="LDR2" />
+				<display name="!JOB#STATUS_DIGITAL#STAT_FGRA_EIN"          result="STAT_FGRA_EIN"          grid-type="text" min-value="0" max-value="100" log_tag="FGRA" />
+
+				<display name="!JOB#STATUS_DIGITAL#STAT_MOTOR_STEHT"       result="STAT_MOTOR_STEHT"       grid-type="text" min-value="0" max-value="100" log_tag="MOTOR_STEHT" />
+				<display name="!JOB#STATUS_DIGITAL#STAT_MOTOR_START"       result="STAT_MOTOR_START"       grid-type="text" min-value="0" max-value="100" log_tag="MOTOR_START" />
+				<display name="!JOB#STATUS_DIGITAL#STAT_MOTOR_NACHLAUF"    result="STAT_MOTOR_NACHLAUF"    grid-type="text" min-value="0" max-value="100" log_tag="MOTOR_NACHLAUF" />
+			</job>
+
+			<job name="STATUS_AQREL">
+				<display name="!JOB#STATUS_AQREL#STAT_AQREL_WERT" result="STAT_AQREL_WERT" format="1.3R" display-order="0" grid-type="simple-gauge-square" min-value="0" max-value="1" log_tag="AQREL" />
+			</job>
+		</jobs>
+	</page>
 </fragment>

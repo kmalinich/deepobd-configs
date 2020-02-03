@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fragment xmlns="http://www.holeschak.de/BmwDeepObd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.holeschak.de/BmwDeepObd ../../../BmwDeepObd.xsd">
+	<job name="STATUS_KUEHLW_AUSL_TEMPERATUR">
+		<display name="!JOB#STATUS_KUEHLW_AUSL_TEMPERATUR#STAT_KUEHLW_AUSL_TEMPERATUR_WERT" result="STAT_KUEHLW_AUSL_TEMPERATUR_WERT" grid-type="simple-gauge-square" min-value="-10" max-value="100" log_tag="STAT_KUEHLW_AUSL_TEMPERATUR_WERT" />
+	</job>
+</fragment>
