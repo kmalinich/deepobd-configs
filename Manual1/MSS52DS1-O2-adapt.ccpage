@@ -106,19 +106,13 @@
 		</strings>
 
 		<jobs sgbd="mss52ds1">
-			<include filename="./MSS52DS1/jobs/STATUS_L_SONDE.ccpage" />
-				<!-- <include filename="./MSS52DS1/jobs/STATUS_L_SONDE_2.ccpage" /> -->
+			<include filename="./MSS52DS1/jobs/STATUS_ADD.ccpage" />
+			<include filename="./MSS52DS1/jobs/STATUS_ADD_2.ccpage" />
 
-				<include filename="./MSS52DS1/jobs/STATUS_INT.ccpage" />
-					<!-- <include filename="./MSS52DS1/jobs/STATUS_INT_2.ccpage" /> -->
+			<include filename="./MSS52DS1/jobs/STATUS_LAMBDA_MUL_1.ccpage" />
+			<include filename="./MSS52DS1/jobs/STATUS_LAMBDA_MUL_2.ccpage" />
+		</jobs>
 
-					<include filename="./MSS52DS1/jobs/STATUS_ADD.ccpage" />
-						<!-- <include filename="./MSS52DS1/jobs/STATUS_ADD_2.ccpage" /> -->
-
-						<include filename="./MSS52DS1/jobs/STATUS_LAMBDA_MUL_1.ccpage" />
-							<!-- <include filename="./MSS52DS1/jobs/STATUS_LAMBDA_MUL_2.ccpage" /> -->
-						</jobs>
-
-						<include filename="./MSS52DS1/code.cs" />
-					</page>
-				</fragment>
+		<include filename="./MSS52DS1/code.cs" />
+	</page>
+</fragment>
