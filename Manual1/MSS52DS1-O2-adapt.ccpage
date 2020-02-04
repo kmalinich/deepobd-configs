@@ -28,22 +28,97 @@
 			<string name="!JOB#STATUS_TZ8#STAT_TZ8_WERT">Ign ° 8</string>
 
 			<string name="!JOB#STATUS_KUEHLW_AUSL_TEMPERATUR#STAT_KUEHLW_AUSL_TEMPERATUR_WERT">Rad outlet</string>
+
+			<string name="!JOB#STATUS_DIGITAL#STAT_BA_EIN">Acceleration enrichment</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_SA_EIN">Fuel cut</string>
+
+			<string name="!JOB#STATUS_DIGITAL#STAT_LSHV1_EIN">O2 heat P 1</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_LSHV2_EIN">O2 heat P 2</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_LSHN1_EIN">O2 heat S 1</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_LSHN2_EIN">O2 heat S 2</string>
+
+			<string name="!JOB#STATUS_DIGITAL#STAT_ZUENDUNG1_EIN">Ign 1</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_ZUENDUNG2_EIN">Ign 2</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_ZUENDUNG3_EIN">Ign 3</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_ZUENDUNG4_EIN">Ign 4</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_ZUENDUNG5_EIN">Ign 5</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_ZUENDUNG6_EIN">Ign 6</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_ZUENDUNG7_EIN">Ign 7</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_ZUENDUNG8_EIN">Ign 8</string>
+
+			<string name="!JOB#STATUS_DIGITAL#STAT_ELU_EIN">Electic fan</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_EKP_EIN">Fuel pump</string>
+
+			<string name="!JOB#STATUS_DIGITAL#STAT_SLP_EIN">Secondary air pump</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_SLV_EIN">Secondary air valve</string>
+
+			<string name="!JOB#STATUS_DIGITAL#STAT_AC_EIN">Air conditioning</string>
+
+			<string name="!JOB#STATUS_DIGITAL#STAT_BLS_EIN">Brake light switch</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_KUP_EIN">Clutch</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_LDP_EIN">Leak detection pump</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_LLR_EIN">Idle regulation</string>
+
+			<string name="!JOB#STATUS_DIGITAL#STAT_MIL_EIN">MIL</string>
+
+			<string name="!JOB#STATUS_DIGITAL#STAT_KLOPFREGELUNG_EIN">KLOPFREGELUNG</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_KLOPFREG_EIN"     >KLOPFREG</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_KRAFTSCHLUSS_EIN" >KRAFTSCHLUSS</string>
+
+			<string name="!JOB#STATUS_DIGITAL#STAT_REEDSWITCH_EIN">Reed switch</string>
+
+			<string name="!JOB#STATUS_DIGITAL#STAT_BLTS_EIN">Brake light test switch</string>
+
+			<string name="!JOB#STATUS_DIGITAL#STAT_FDYN_EIN">FDYN</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_FGRA_EIN">FGRA</string>
+
+			<string name="!JOB#STATUS_DIGITAL#STAT_KL15_EIN">KL15</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_KL50_EIN">KL50</string>
+
+			<string name="!JOB#STATUS_DIGITAL#STAT_MFL1_EIN">Cruise btn 1</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_MFL2_EIN">Cruise btn 2</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_MFL3_EIN">Cruise btn 3</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_MFL4_EIN">Cruise btn 4</string>
+
+			<string name="!JOB#STATUS_DIGITAL#STAT_KATHEIZEN_EIN">Cat heating</string>
+
+			<string name="!JOB#STATUS_DIGITAL#STAT_LL_EIN">Low load</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_TL_EIN">T.. load</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_VL_EIN">Full load</string>
+
+			<string name="!JOB#STATUS_DIGITAL#STAT_MOTOR_NACHLAUF">Motor over-run</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_MOTOR_START"   >Motor start</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_MOTOR_STEHT"   >Motor standstill</string>
+
+			<string name="!JOB#STATUS_DIGITAL#STAT_EWS3_FREIGABE">EWS3 release</string>
+
+			<string name="!JOB#STATUS_DIGITAL#STAT_SCHUTZ_EIN">Protection</string>
+
+			<string name="!JOB#STATUS_AQREL#STAT_AQREL_WERT">AQREL</string>
+
+			<!-- TODO: Look these ones up -->
+			<string name="!JOB#STATUS_DIGITAL#STAT_AKL_EIN">AKL</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_KO_EIN">KO</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_LDR1_EIN">LDR1</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_LDR2_EIN">LDR2</string>
+
+			<string name="!JOB#STATUS_DIGITAL#STAT_NOISE_EIN" >Noise</string>
 		</strings>
 
 		<jobs sgbd="mss52ds1">
 			<include filename="./MSS52DS1/jobs/STATUS_L_SONDE.ccpage" />
-			<!-- <include filename="./MSS52DS1/jobs/STATUS_L_SONDE_2.ccpage" /> -->
+				<!-- <include filename="./MSS52DS1/jobs/STATUS_L_SONDE_2.ccpage" /> -->
 
-			<include filename="./MSS52DS1/jobs/STATUS_INT.ccpage" />
-			<!-- <include filename="./MSS52DS1/jobs/STATUS_INT_2.ccpage" /> -->
+				<include filename="./MSS52DS1/jobs/STATUS_INT.ccpage" />
+					<!-- <include filename="./MSS52DS1/jobs/STATUS_INT_2.ccpage" /> -->
 
-			<include filename="./MSS52DS1/jobs/STATUS_ADD.ccpage" />
-			<!-- <include filename="./MSS52DS1/jobs/STATUS_ADD_2.ccpage" /> -->
+					<include filename="./MSS52DS1/jobs/STATUS_ADD.ccpage" />
+						<!-- <include filename="./MSS52DS1/jobs/STATUS_ADD_2.ccpage" /> -->
 
-			<include filename="./MSS52DS1/jobs/STATUS_LAMBDA_MUL_1.ccpage" />
-			<!-- <include filename="./MSS52DS1/jobs/STATUS_LAMBDA_MUL_2.ccpage" /> -->
-		</jobs>
+						<include filename="./MSS52DS1/jobs/STATUS_LAMBDA_MUL_1.ccpage" />
+							<!-- <include filename="./MSS52DS1/jobs/STATUS_LAMBDA_MUL_2.ccpage" /> -->
+						</jobs>
 
-		<include filename="./MSS52DS1/code.cs" />
-	</page>
-</fragment>
+						<include filename="./MSS52DS1/code.cs" />
+					</page>
+				</fragment>

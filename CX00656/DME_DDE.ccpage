@@ -45,45 +45,45 @@
 		</strings>
 		<jobs sgbd="MSD80">
 			<job name="ECU_CONFIG">
-				<display name="!JOB#ECU_CONFIG#STAT_AT" result="STAT_AT" format="" log_tag="STAT_AT" />
-				<display name="!JOB#ECU_CONFIG#STAT_AC" result="STAT_AC" format="" log_tag="STAT_AC" />
-				<display name="!JOB#ECU_CONFIG#STAT_AMT" result="STAT_AMT" format="" log_tag="STAT_AMT" />
-				<display name="!JOB#ECU_CONFIG#STAT_ARS" result="STAT_ARS" format="" log_tag="STAT_ARS" />
-				<display name="!JOB#ECU_CONFIG#STAT_ASR" result="STAT_ASR" format="" log_tag="STAT_ASR" />
-				<display name="!JOB#ECU_CONFIG#STAT_BN" result="STAT_BN" format="" log_tag="STAT_BN" />
-				<display name="!JOB#ECU_CONFIG#STAT_BN_MSW" result="STAT_BN_MSW" format="" log_tag="STAT_BN_MSW" />
-				<display name="!JOB#ECU_CONFIG#STAT_DCC" result="STAT_DCC" format="" log_tag="STAT_DCC" />
-				<display name="!JOB#ECU_CONFIG#STAT_EBOX_CFA" result="STAT_EBOX_CFA" format="" log_tag="STAT_EBOX_CFA" />
-				<display name="!JOB#ECU_CONFIG#STAT_ETCU" result="STAT_ETCU" format="" log_tag="STAT_ETCU" />
-				<display name="!JOB#ECU_CONFIG#STAT_ICL" result="STAT_ICL" format="" log_tag="STAT_ICL" />
-				<display name="!JOB#ECU_CONFIG#STAT_MSW" result="STAT_MSW" format="" log_tag="STAT_MSW" />
-				<display name="!JOB#ECU_CONFIG#STAT_PSTE" result="STAT_PSTE" format="" log_tag="STAT_PSTE" />
-				<display name="!JOB#ECU_CONFIG#STAT_SOF" result="STAT_SOF" format="" log_tag="STAT_SOF" />
-				<display name="!JOB#ECU_CONFIG#STAT_SOF_SWI" result="STAT_SOF_SWI" format="" log_tag="STAT_SOF_SWI" />
-				<display name="!JOB#ECU_CONFIG#STAT_GEAR" result="STAT_GEAR" format="" log_tag="STAT_GEAR" />
-				<display name="!JOB#ECU_CONFIG#STAT_VEH" result="STAT_VEH" format="" log_tag="STAT_VEH" />
-				<display name="!JOB#ECU_CONFIG#STAT_EF" result="STAT_EF" format="" log_tag="STAT_EF" />
-				<display name="!JOB#ECU_CONFIG#STAT_ECRAS_UP" result="STAT_ECRAS_UP" format="" log_tag="STAT_ECRAS_UP" />
-				<display name="!JOB#ECU_CONFIG#STAT_RLY_ACCOUT" result="STAT_RLY_ACCOUT" format="" log_tag="STAT_RLY_ACCOUT" />
-				<display name="!JOB#ECU_CONFIG#STAT_RLY_ST" result="STAT_RLY_ST" format="" log_tag="STAT_RLY_ST" />
-				<display name="!JOB#ECU_CONFIG#STAT_ASR3" result="STAT_ASR3" format="" log_tag="STAT_ASR3" />
-				<display name="!JOB#ECU_CONFIG#STAT_BN_LDM" result="STAT_BN_LDM" format="" log_tag="STAT_BN_LDM" />
-				<display name="!JOB#ECU_CONFIG#STAT_BN_LTG_HDLP_L" result="STAT_BN_LTG_HDLP_L" format="" log_tag="STAT_BN_LTG_HDLP_L" />
-				<display name="!JOB#ECU_CONFIG#STAT_LSH_DOWN" result="STAT_LSH_DOWN" format="" log_tag="STAT_LSH_DOWN" />
-				<display name="!JOB#ECU_CONFIG#STAT_LSH_UP" result="STAT_LSH_UP" format="" log_tag="STAT_LSH_UP" />
-				<display name="!JOB#ECU_CONFIG#STAT_ASR_4" result="STAT_ASR_4" format="" log_tag="STAT_ASR_4" />
-				<display name="!JOB#ECU_CONFIG#STAT_MAF" result="STAT_MAF" format="" log_tag="STAT_MAF" />
-				<display name="!JOB#ECU_CONFIG#STAT_PSTE_2" result="STAT_PSTE_2" format="" log_tag="STAT_PSTE_2" />
-				<display name="!JOB#ECU_CONFIG#STAT_BN_EFP" result="STAT_BN_EFP" format="" log_tag="STAT_BN_EFP" />
-				<display name="!JOB#ECU_CONFIG#STAT_SENS_BAT_SMT_DET" result="STAT_SENS_BAT_SMT_DET" format="" log_tag="STAT_SENS_BAT_SMT_DET" />
-				<display name="!JOB#ECU_CONFIG#STAT_BN_TRL" result="STAT_BN_TRL" format="" log_tag="STAT_BN_TRL" />
-				<display name="!JOB#ECU_CONFIG#STAT_ECRAS_DOWN" result="STAT_ECRAS_DOWN" format="" log_tag="STAT_ECRAS_DOWN" />
-				<display name="!JOB#ECU_CONFIG#STAT_NOX" result="STAT_NOX" format="" log_tag="STAT_NOX" />
-				<display name="!JOB#ECU_CONFIG#STAT_STST" result="STAT_STST" format="" log_tag="STAT_STST" />
-				<display name="!JOB#ECU_CONFIG#STAT_ETCU_SPT" result="STAT_ETCU_SPT" format="" log_tag="STAT_ETCU_SPT" />
-				<display name="!JOB#ECU_CONFIG#STAT_TCT" result="STAT_TCT" format="" log_tag="STAT_TCT" />
-				<display name="!JOB#ECU_CONFIG#STAT_AEB" result="STAT_AEB" format="" log_tag="STAT_AEB" />
-				<display name="!JOB#ECU_CONFIG#STAT_EMF" result="STAT_EMF" format="" log_tag="STAT_EMF" />
+				<display name="!JOB#ECU_CONFIG#STAT_AT" result="STAT_AT" log_tag="STAT_AT" />
+				<display name="!JOB#ECU_CONFIG#STAT_AC" result="STAT_AC" log_tag="STAT_AC" />
+				<display name="!JOB#ECU_CONFIG#STAT_AMT" result="STAT_AMT" log_tag="STAT_AMT" />
+				<display name="!JOB#ECU_CONFIG#STAT_ARS" result="STAT_ARS" log_tag="STAT_ARS" />
+				<display name="!JOB#ECU_CONFIG#STAT_ASR" result="STAT_ASR" log_tag="STAT_ASR" />
+				<display name="!JOB#ECU_CONFIG#STAT_BN" result="STAT_BN" log_tag="STAT_BN" />
+				<display name="!JOB#ECU_CONFIG#STAT_BN_MSW" result="STAT_BN_MSW" log_tag="STAT_BN_MSW" />
+				<display name="!JOB#ECU_CONFIG#STAT_DCC" result="STAT_DCC" log_tag="STAT_DCC" />
+				<display name="!JOB#ECU_CONFIG#STAT_EBOX_CFA" result="STAT_EBOX_CFA" log_tag="STAT_EBOX_CFA" />
+				<display name="!JOB#ECU_CONFIG#STAT_ETCU" result="STAT_ETCU" log_tag="STAT_ETCU" />
+				<display name="!JOB#ECU_CONFIG#STAT_ICL" result="STAT_ICL" log_tag="STAT_ICL" />
+				<display name="!JOB#ECU_CONFIG#STAT_MSW" result="STAT_MSW" log_tag="STAT_MSW" />
+				<display name="!JOB#ECU_CONFIG#STAT_PSTE" result="STAT_PSTE" log_tag="STAT_PSTE" />
+				<display name="!JOB#ECU_CONFIG#STAT_SOF" result="STAT_SOF" log_tag="STAT_SOF" />
+				<display name="!JOB#ECU_CONFIG#STAT_SOF_SWI" result="STAT_SOF_SWI" log_tag="STAT_SOF_SWI" />
+				<display name="!JOB#ECU_CONFIG#STAT_GEAR" result="STAT_GEAR" log_tag="STAT_GEAR" />
+				<display name="!JOB#ECU_CONFIG#STAT_VEH" result="STAT_VEH" log_tag="STAT_VEH" />
+				<display name="!JOB#ECU_CONFIG#STAT_EF" result="STAT_EF" log_tag="STAT_EF" />
+				<display name="!JOB#ECU_CONFIG#STAT_ECRAS_UP" result="STAT_ECRAS_UP" log_tag="STAT_ECRAS_UP" />
+				<display name="!JOB#ECU_CONFIG#STAT_RLY_ACCOUT" result="STAT_RLY_ACCOUT" log_tag="STAT_RLY_ACCOUT" />
+				<display name="!JOB#ECU_CONFIG#STAT_RLY_ST" result="STAT_RLY_ST" log_tag="STAT_RLY_ST" />
+				<display name="!JOB#ECU_CONFIG#STAT_ASR3" result="STAT_ASR3" log_tag="STAT_ASR3" />
+				<display name="!JOB#ECU_CONFIG#STAT_BN_LDM" result="STAT_BN_LDM" log_tag="STAT_BN_LDM" />
+				<display name="!JOB#ECU_CONFIG#STAT_BN_LTG_HDLP_L" result="STAT_BN_LTG_HDLP_L" log_tag="STAT_BN_LTG_HDLP_L" />
+				<display name="!JOB#ECU_CONFIG#STAT_LSH_DOWN" result="STAT_LSH_DOWN" log_tag="STAT_LSH_DOWN" />
+				<display name="!JOB#ECU_CONFIG#STAT_LSH_UP" result="STAT_LSH_UP" log_tag="STAT_LSH_UP" />
+				<display name="!JOB#ECU_CONFIG#STAT_ASR_4" result="STAT_ASR_4" log_tag="STAT_ASR_4" />
+				<display name="!JOB#ECU_CONFIG#STAT_MAF" result="STAT_MAF" log_tag="STAT_MAF" />
+				<display name="!JOB#ECU_CONFIG#STAT_PSTE_2" result="STAT_PSTE_2" log_tag="STAT_PSTE_2" />
+				<display name="!JOB#ECU_CONFIG#STAT_BN_EFP" result="STAT_BN_EFP" log_tag="STAT_BN_EFP" />
+				<display name="!JOB#ECU_CONFIG#STAT_SENS_BAT_SMT_DET" result="STAT_SENS_BAT_SMT_DET" log_tag="STAT_SENS_BAT_SMT_DET" />
+				<display name="!JOB#ECU_CONFIG#STAT_BN_TRL" result="STAT_BN_TRL" log_tag="STAT_BN_TRL" />
+				<display name="!JOB#ECU_CONFIG#STAT_ECRAS_DOWN" result="STAT_ECRAS_DOWN" log_tag="STAT_ECRAS_DOWN" />
+				<display name="!JOB#ECU_CONFIG#STAT_NOX" result="STAT_NOX" log_tag="STAT_NOX" />
+				<display name="!JOB#ECU_CONFIG#STAT_STST" result="STAT_STST" log_tag="STAT_STST" />
+				<display name="!JOB#ECU_CONFIG#STAT_ETCU_SPT" result="STAT_ETCU_SPT" log_tag="STAT_ETCU_SPT" />
+				<display name="!JOB#ECU_CONFIG#STAT_TCT" result="STAT_TCT" log_tag="STAT_TCT" />
+				<display name="!JOB#ECU_CONFIG#STAT_AEB" result="STAT_AEB" log_tag="STAT_AEB" />
+				<display name="!JOB#ECU_CONFIG#STAT_EMF" result="STAT_EMF" log_tag="STAT_EMF" />
 			</job>
 		</jobs>
 	</page>

@@ -12,6 +12,14 @@ pull() {
 }
 
 push() {
+	# TODO: Yeah, there's a better way, I know
+	adb shell "find ${DIR_DEVICE} -type f -iname '*.cccfg'   -exec rm {} \\;"
+	adb shell "find ${DIR_DEVICE} -type f -iname '*.ccpage'  -exec rm {} \\;"
+	adb shell "find ${DIR_DEVICE} -type f -iname '*.ccpages' -exec rm {} \\;"
+	adb shell "find ${DIR_DEVICE} -type f -iname '*.cs'      -exec rm {} \\;"
+	adb shell "find ${DIR_DEVICE} -type f -iname '*.xml'     -exec rm {} \\;"
+	adb shell "find ${DIR_DEVICE} -type f -iname '*.xsd'     -exec rm {} \\;"
+
 	for FILE in "${ARRAY_FILES[@]}"; do
 		adb push "${FILE}" "${DIR_DEVICE}/${FILE}"
 	done
