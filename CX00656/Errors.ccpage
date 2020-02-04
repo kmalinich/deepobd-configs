@@ -1,92 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
 <fragment xmlns="http://www.holeschak.de/BmwDeepObd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.holeschak.de/BmwDeepObd ../BmwDeepObd.xsd">
-  <page name="!PAGE_NAME">
-    <strings>
-      <string name="!PAGE_NAME">Errors</string>
-      <string name="!ECU#AMP">AMP</string>
-      <string name="!ECU#ANTTU">ANTTU</string>
-      <string name="!ECU#ASK">ASK</string>
-      <string name="!ECU#BFS">BFS</string>
-      <string name="!ECU#BZM/SZM">BZM/SZM</string>
-      <string name="!ECU#CAS">CAS</string>
-      <string name="!ECU#CCC">CCC</string>
-      <string name="!ECU#CID">CID</string>
-      <string name="!ECU#DME/DDE">DME/DDE</string>
-      <string name="!ECU#DSC">DSC</string>
-      <string name="!ECU#DWA">DWA</string>
-      <string name="!ECU#EGS">EGS</string>
-      <string name="!ECU#EHC">EHC</string>
-      <string name="!ECU#EKP">EKP</string>
-      <string name="!ECU#FAS">FAS</string>
-      <string name="!ECU#FLA">FLA</string>
-      <string name="!ECU#GWS">GWS</string>
-      <string name="!ECU#HKL">HKL</string>
-      <string name="!ECU#HUD">HUD</string>
-      <string name="!ECU#KBM">KBM</string>
-      <string name="!ECU#KLIMA">KLIMA</string>
-      <string name="!ECU#KOMBI">KOMBI</string>
-      <string name="!ECU#LM">LM</string>
-      <string name="!ECU#MMI/CCC">MMI/CCC</string>
-      <string name="!ECU#MOSTGW">MOSTGW</string>
-      <string name="!ECU#NVC">NVC</string>
-      <string name="!ECU#NVE">NVE</string>
-      <string name="!ECU#PDC">PDC</string>
-      <string name="!ECU#PGS">PGS</string>
-      <string name="!ECU#RADIO">RADIO</string>
-      <string name="!ECU#RDC">RDC</string>
-      <string name="!ECU#RLS">RLS</string>
-      <string name="!ECU#SHD/MDS">SHD/MDS</string>
-      <string name="!ECU#SIM/SGM">SIM/SGM</string>
-      <string name="!ECU#SINE">SINE</string>
-      <string name="!ECU#SZL">SZL</string>
-      <string name="!ECU#TEL/MULF">TEL/MULF</string>
-      <string name="!ECU#TLC/KAFAS">TLC/KAFAS</string>
-      <string name="!ECU#VGSG">VGSG</string>
-      <string name="!ECU#ZBE">ZBE</string>
-      <string name="!ECU#ZGM">ZGM</string>
-    </strings>
-    <read_errors sgbd_functional="e60">
-      <ecu name="!ECU#AMP" sgbd="AMP_60" />
-      <ecu name="!ECU#ANTTU" sgbd="ANT_60" />
-      <ecu name="!ECU#ASK" sgbd="ASK_60" />
-      <ecu name="!ECU#BFS" sgbd="BFS_PLX" />
-      <ecu name="!ECU#BZM/SZM" sgbd="SZM_60" />
-      <ecu name="!ECU#CAS" sgbd="CAS" />
-      <ecu name="!ECU#CCC" sgbd="CCCA60" />
-      <ecu name="!ECU#CID" sgbd="CID_60" />
-      <ecu name="!ECU#DME/DDE" sgbd="MSD80" />
-      <ecu name="!ECU#DSC" sgbd="DSC_60PP" />
-      <ecu name="!ECU#DWA" sgbd="DWA_E65" />
-      <ecu name="!ECU#EGS" sgbd="GS19D" />
-      <ecu name="!ECU#EHC" sgbd="EHC_E65" />
-      <ecu name="!ECU#EKP" sgbd="EKPM60_3" />
-      <ecu name="!ECU#FAS" sgbd="FAS_PLX" />
-      <ecu name="!ECU#FLA" sgbd="FLA_65" />
-      <ecu name="!ECU#GWS" sgbd="GWS_60" />
-      <ecu name="!ECU#HKL" sgbd="HKL_65_2" />
-      <ecu name="!ECU#HUD" sgbd="HUD_60" />
-      <ecu name="!ECU#KBM" sgbd="KBM_60" />
-      <ecu name="!ECU#KLIMA" sgbd="IHKA60_2" />
-      <ecu name="!ECU#KOMBI" sgbd="KOMB60" />
-      <ecu name="!ECU#LM" sgbd="LM_AHL_2" />
-      <ecu name="!ECU#MMI/CCC" sgbd="CCC_60" />
-      <ecu name="!ECU#MOSTGW" sgbd="CCCG60" />
-      <ecu name="!ECU#NVC" sgbd="NVC_65" />
-      <ecu name="!ECU#NVE" sgbd="NVE_65" />
-      <ecu name="!ECU#PDC" sgbd="PDC_65_2" />
-      <ecu name="!ECU#PGS" sgbd="PGS_65_2" />
-      <ecu name="!ECU#RADIO" sgbd="SAT_60" />
-      <ecu name="!ECU#RDC" sgbd="RDC_CAN" />
-      <ecu name="!ECU#RLS" sgbd="RLS_E65" />
-      <ecu name="!ECU#SHD/MDS" sgbd="SD_KWP" />
-      <ecu name="!ECU#SIM/SGM" sgbd="ACSM60" />
-      <ecu name="!ECU#SINE" sgbd="SINE_65" />
-      <ecu name="!ECU#SZL" sgbd="SZL_60" />
-      <ecu name="!ECU#TEL/MULF" sgbd="TELE60_3" />
-      <ecu name="!ECU#TLC/KAFAS" sgbd="TLC_60" />
-      <ecu name="!ECU#VGSG" sgbd="VGSG90" />
-      <ecu name="!ECU#ZBE" sgbd="ECL60" />
-      <ecu name="!ECU#ZGM" sgbd="KGM_60" />
-    </read_errors>
-  </page>
+	<page name="!PAGE_NAME">
+		<strings>
+			<string name="!PAGE_NAME">Errors</string>
+
+			<string name="!ECU#AMP">AMP</string>
+			<string name="!ECU#ANTTU">ANTTU</string>
+			<string name="!ECU#ASK">ASK</string>
+			<string name="!ECU#BFS">BFS</string>
+			<string name="!ECU#BZM/SZM">BZM/SZM</string>
+			<string name="!ECU#CAS">CAS</string>
+			<string name="!ECU#CCC">CCC</string>
+			<string name="!ECU#CID">CID</string>
+			<string name="!ECU#DME/DDE">DME/DDE</string>
+			<string name="!ECU#DSC">DSC</string>
+			<string name="!ECU#DWA">DWA</string>
+			<string name="!ECU#EGS">EGS</string>
+			<string name="!ECU#EHC">EHC</string>
+			<string name="!ECU#EKP">EKP</string>
+			<string name="!ECU#FAS">FAS</string>
+			<string name="!ECU#FLA">FLA</string>
+			<string name="!ECU#GWS">GWS</string>
+			<string name="!ECU#HKL">HKL</string>
+			<string name="!ECU#HUD">HUD</string>
+			<string name="!ECU#KBM">KBM</string>
+			<string name="!ECU#KLIMA">KLIMA</string>
+			<string name="!ECU#KOMBI">KOMBI</string>
+			<string name="!ECU#LM">LM</string>
+			<string name="!ECU#MMI/CCC">MMI/CCC</string>
+			<string name="!ECU#MOSTGW">MOSTGW</string>
+			<string name="!ECU#NVC">NVC</string>
+			<string name="!ECU#NVE">NVE</string>
+			<string name="!ECU#PDC">PDC</string>
+			<string name="!ECU#PGS">PGS</string>
+			<string name="!ECU#RADIO">RADIO</string>
+			<string name="!ECU#RDC">RDC</string>
+			<string name="!ECU#RLS">RLS</string>
+			<string name="!ECU#SHD/MDS">SHD/MDS</string>
+			<string name="!ECU#SIM/SGM">SIM/SGM</string>
+			<string name="!ECU#SINE">SINE</string>
+			<string name="!ECU#SZL">SZL</string>
+			<string name="!ECU#TEL/MULF">TEL/MULF</string>
+			<string name="!ECU#TLC/KAFAS">TLC/KAFAS</string>
+			<string name="!ECU#VGSG">VGSG</string>
+			<string name="!ECU#ZBE">ZBE</string>
+			<string name="!ECU#ZGM">ZGM</string>
+		</strings>
+
+		<read_errors sgbd_functional="e60">
+			<ecu name="!ECU#AMP" sgbd="AMP_60" />
+			<ecu name="!ECU#ANTTU" sgbd="ANT_60" />
+			<ecu name="!ECU#ASK" sgbd="ASK_60" />
+			<ecu name="!ECU#BFS" sgbd="BFS_PLX" />
+			<ecu name="!ECU#BZM/SZM" sgbd="SZM_60" />
+			<ecu name="!ECU#CAS" sgbd="CAS" />
+			<ecu name="!ECU#CCC" sgbd="CCCA60" />
+			<ecu name="!ECU#CID" sgbd="CID_60" />
+			<ecu name="!ECU#DME/DDE" sgbd="MSD80" />
+			<ecu name="!ECU#DSC" sgbd="DSC_60PP" />
+			<ecu name="!ECU#DWA" sgbd="DWA_E65" />
+			<ecu name="!ECU#EGS" sgbd="GS19D" />
+			<ecu name="!ECU#EHC" sgbd="EHC_E65" />
+			<ecu name="!ECU#EKP" sgbd="EKPM60_3" />
+			<ecu name="!ECU#FAS" sgbd="FAS_PLX" />
+			<ecu name="!ECU#FLA" sgbd="FLA_65" />
+			<ecu name="!ECU#GWS" sgbd="GWS_60" />
+			<ecu name="!ECU#HKL" sgbd="HKL_65_2" />
+			<ecu name="!ECU#HUD" sgbd="HUD_60" />
+			<ecu name="!ECU#KBM" sgbd="KBM_60" />
+			<ecu name="!ECU#KLIMA" sgbd="IHKA60_2" />
+			<ecu name="!ECU#KOMBI" sgbd="KOMB60" />
+			<ecu name="!ECU#LM" sgbd="LM_AHL_2" />
+			<ecu name="!ECU#MMI/CCC" sgbd="CCC_60" />
+			<ecu name="!ECU#MOSTGW" sgbd="CCCG60" />
+			<ecu name="!ECU#NVC" sgbd="NVC_65" />
+			<ecu name="!ECU#NVE" sgbd="NVE_65" />
+			<ecu name="!ECU#PDC" sgbd="PDC_65_2" />
+			<ecu name="!ECU#PGS" sgbd="PGS_65_2" />
+			<ecu name="!ECU#RADIO" sgbd="SAT_60" />
+			<ecu name="!ECU#RDC" sgbd="RDC_CAN" />
+			<ecu name="!ECU#RLS" sgbd="RLS_E65" />
+			<ecu name="!ECU#SHD/MDS" sgbd="SD_KWP" />
+			<ecu name="!ECU#SIM/SGM" sgbd="ACSM60" />
+			<ecu name="!ECU#SINE" sgbd="SINE_65" />
+			<ecu name="!ECU#SZL" sgbd="SZL_60" />
+			<ecu name="!ECU#TEL/MULF" sgbd="TELE60_3" />
+			<ecu name="!ECU#TLC/KAFAS" sgbd="TLC_60" />
+			<ecu name="!ECU#VGSG" sgbd="VGSG90" />
+			<ecu name="!ECU#ZBE" sgbd="ECL60" />
+			<ecu name="!ECU#ZGM" sgbd="KGM_60" />
+		</read_errors>
+	</page>
 </fragment>

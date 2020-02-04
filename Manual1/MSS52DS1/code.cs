@@ -56,7 +56,7 @@ class PageClass {
 				value = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
 				if (!found) break;
 
-				if (value > 64) value = value - 6553.4;
+				if (value > 64) value = value - 6553.6;
 
 				result    = string.Format(ActivityMain.Culture, "{0,4:0.0}", value);
 				textColor = val2Rgb(value, 50, 20);
