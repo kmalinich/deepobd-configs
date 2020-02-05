@@ -2,7 +2,7 @@
 <fragment xmlns="http://www.holeschak.de/BmwDeepObd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.holeschak.de/BmwDeepObd ../BmwDeepObd.xsd">
 	<page name="!PAGE_NAME" display-mode="grid" fontsize="large" gauges-portrait="2" gauges-landscape="4" logfile="MSS52DS1-O2-adapt.{D}.log">
 		<strings>
-			<string name="!PAGE_NAME">DME O2 adapt</string>
+			<string name="!PAGE_NAME">O2 adapt</string>
 
 			<string name="!JOB#STATUS_ADD#STAT_ADD_WERT"    >O2 Add 1</string>
 			<string name="!JOB#STATUS_ADD_2#STAT_ADD_2_WERT">O2 Add 2</string>
