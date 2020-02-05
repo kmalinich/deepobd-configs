@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <fragment xmlns="http://www.holeschak.de/BmwDeepObd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.holeschak.de/BmwDeepObd ../BmwDeepObd.xsd">
-	<page name="!PAGE_NAME" display-mode="list" fontsize="large" gauges-portrait="2" gauges-landscape="4" logfile="KOMBI.{D}.log">
+	<page name="!PAGE_NAME" display-mode="list" fontsize="large" gauges-portrait="2" gauges-landscape="4" logfile="A778780-KOMBI.{D}.log">
 		<strings>
 			<string name="!PAGE_NAME">KOMBI</string>
-			<string name="!JOB#STATUS_TANKINHALT#STAT_HEBELGEBER1_WERT">HEBELGEBER1</string>
-			<string name="!JOB#STATUS_TANKINHALT#STAT_HEBELGEBER2_WERT">HEBELGEBER2</string>
-			<string name="!JOB#STATUS_TANKINHALT#STAT_SUMMENWERT_WERT">SUMMENWERT</string>
-			<string name="!JOB#STATUS_TANKINHALT#STAT_GEDAEMPFT_ANZ_WERT">GEDAEMPFT_ANZ</string>
+
+			<string name="!JOB#CALC_KL30_H_OFFSET#KL30_H_OFFSET_WERT">KL30_H_OFFSET</string>
 			<string name="!JOB#STATUS_A_TEMP_LESEN#STAT_A_TEMP_ANZEIGE_WERT">A_TEMP_ANZEIGE</string>
 			<string name="!JOB#STATUS_A_TEMP_LESEN#STAT_A_TEMP_ROHWERT_WERT">A_TEMP_ROHWERT</string>
-			<string name="!JOB#STATUS_TACHO_LESEN#STAT_GESCHWINDIGKEIT_WERT">GESCHWINDIGKEIT</string>
 			<string name="!JOB#STATUS_DREHZAHL_LESEN#STAT_DREHZAHL_WERT">DREHZAHL</string>
-			<string name="!JOB#CALC_KL30_H_OFFSET#KL30_H_OFFSET_WERT">KL30_H_OFFSET</string>
 			<string name="!JOB#STATUS_GLOBAL_KM#STAT_GWSZ_CAS">GWSZ CAS</string>
 			<string name="!JOB#STATUS_GLOBAL_KM#STAT_GWSZ_EEPROM">GWSZ EEPROM</string>
 			<string name="!JOB#STATUS_GLOBAL_KM#STAT_GWSZ_RAM">GWSZ RAM</string>
+			<string name="!JOB#STATUS_TACHO_LESEN#STAT_GESCHWINDIGKEIT_WERT">GESCHWINDIGKEIT</string>
+			<string name="!JOB#STATUS_TANKINHALT#STAT_GEDAEMPFT_ANZ_WERT">GEDAEMPFT_ANZ</string>
+			<string name="!JOB#STATUS_TANKINHALT#STAT_HEBELGEBER1_WERT">HEBELGEBER1</string>
+			<string name="!JOB#STATUS_TANKINHALT#STAT_HEBELGEBER2_WERT">HEBELGEBER2</string>
+			<string name="!JOB#STATUS_TANKINHALT#STAT_SUMMENWERT_WERT">SUMMENWERT</string>
 		</strings>
+
 		<jobs sgbd="KOMB87">
 			<job name="STATUS_TANKINHALT">
 				<display name="!JOB#STATUS_TANKINHALT#STAT_HEBELGEBER1_WERT" result="STAT_HEBELGEBER1_WERT" log_tag="STAT_HEBELGEBER1_WERT" />

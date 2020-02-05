@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fragment xmlns="http://www.holeschak.de/BmwDeepObd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.holeschak.de/BmwDeepObd ../../../BmwDeepObd.xsd">
+	<job name="STATUS_MESSWERTBLOCK_LESEN" args_first="JA;IUBAT2;OBD_PID05_CEngDsT_tSens;ITMOT;ITOEL;ITKRS;OBD_PID10_AFS_dmSens;ILMMG;SLMMG;ITUMG;IPLAD;SPLAD;ITLAL;IPUMG;IPRDR;SPRDR;ITAVO;ITAVP1;IPDIP;IDSLRE;PFltRgn_numRgn;CoEOM_stOpModeAct;ISRBF;ISOED;PCBS_lDistanceOut" args="NEIN;IUBAT2;OBD_PID05_CEngDsT_tSens;ITMOT;ITOEL;ITKRS;OBD_PID10_AFS_dmSens;ILMMG;SLMMG;ITUMG;IPLAD;SPLAD;ITLAL;IPUMG;IPRDR;SPRDR;ITAVO;ITAVP1;IPDIP;IDSLRE;PFltRgn_numRgn;CoEOM_stOpModeAct;ISRBF;ISOED;PCBS_lDistanceOut">
+		<display name="label_motor_temp"                  result="STAT_MOTORTEMPERATUR_WERT"                         grid-type="simple-gauge-square" min-value="0"    max-value="100"    />
+		<display name="label_motor_intake_air_temp"       result="STAT_LADELUFTTEMPERATUR_WERT"                      grid-type="simple-gauge-square" min-value="0"    max-value="50"     />
+		<display name="label_motor_ambient_temp"          result="STAT_UMGEBUNGSTEMPERATUR_WERT"                     grid-type="simple-gauge-square" min-value="0"    max-value="50"     />
+		<display name="label_motor_fuel_temp"             result="STAT_KRAFTSTOFFTEMPERATUR_WERT"                    grid-type="simple-gauge-square" min-value="0"    max-value="50"     />
+
+		<display name="label_motor_boost_press_act"       result="STAT_LADEDRUCK_WERT"                               grid-type="simple-gauge-square" min-value="500"  max-value="4045"   />
+		<display name="label_motor_boost_press_set"       result="STAT_LADEDRUCK_SOLL_WERT"                          grid-type="simple-gauge-square" min-value="500"  max-value="4045"   />
+		<display name="label_motor_ambient_press"         result="STAT_UMGEBUNGSDRUCK_WERT"                          grid-type="simple-gauge-square" min-value="900"  max-value="1100"   />
+		<display name="label_motor_exhaust_press"         result="STAT_DIFFERENZDRUCK_UEBER_PARTIKELFILTER_WERT"     grid-type="simple-gauge-square" min-value="500"  max-value="3045"   />
+
+		<display name="label_motor_rail_press_act"        result="STAT_RAILDRUCK_WERT"                               grid-type="simple-gauge-square" min-value="0"    max-value="500"    />
+		<display name="label_motor_rail_press_set"        result="STAT_RAILDRUCK_SOLL_WERT"                          grid-type="simple-gauge-square" min-value="0"    max-value="500"    />
+
+		<display name="label_motor_refrig_temp"           result="STAT_CEngDsT_tSens_WERT"                           grid-type="simple-gauge-square" min-value="0"    max-value="100"    />
+		<display name="label_motor_oil_temp"              result="STAT_MOTOROEL_TEMPERATUR_WERT"                     grid-type="simple-gauge-square" min-value="0"    max-value="100"    />
+		<display name="label_exhaust_temp_before_cat"     result="STAT_ABGASTEMPERATUR_VOR_KATALYSATOR_WERT"         grid-type="simple-gauge-square" min-value="0"    max-value="1000"   />
+		<display name="label_exhaust_temp_before_filter"  result="STAT_ABGASTEMPERATUR_VOR_PARTIKELFILTER_1_WERT"    grid-type="simple-gauge-square" min-value="0"    max-value="1000"   />
+
+		<display name="label_motor_air_mass"              result="STAT_AFS_dmSens_WERT"                              grid-type="simple-gauge-square" min-value="0"    max-value="2000"   />
+		<display name="label_motor_air_mass_act"          result="STAT_LUFTMASSE_PRO_HUB_WERT"                       grid-type="simple-gauge-square" min-value="0"    max-value="2000"   />
+		<display name="label_motor_air_mass_set"          result="STAT_LUFTMASSE_SOLL_WERT"                          grid-type="simple-gauge-square" min-value="0"    max-value="2000"   />
+
+		<display name="label_motor_oil_press_switch"      result="STAT_OELDRUCKSCHALTER_EIN_WERT"                    grid-type="simple-gauge-square" min-value="0"    max-value="1"      />
+
+		<display name="label_motor_part_filt_status"      result="STAT_CoEOM_stOpModeAct_WERT"                       grid-type="simple-gauge-square" min-value="0"    max-value="150000" />
+		<display name="label_motor_part_filt_request"     result="STAT_PFltRgn_numRgn_WERT"                          grid-type="simple-gauge-square" min-value="0"    max-value="150000" />
+		<display name="label_motor_part_filt_unblocked"   result="STAT_REGENERATION_BLOCKIERUNG_UND_FREIGABE_WERT"   grid-type="simple-gauge-square" min-value="0"    max-value="150000" />
+		<display name="label_motor_part_filt_dist_remain" result="STAT_PCBS_lDistanceOut_WERT"                       grid-type="simple-gauge-square" min-value="0"    max-value="150000" />
+		<display name="label_motor_part_filt_dist_since"  result="STAT_STRECKE_SEIT_ERFOLGREICHER_REGENERATION_WERT" grid-type="simple-gauge-square" min-value="0"    max-value="150000" />
+
+		<display name="label_motor_bat_voltage"           result="STAT_UBATT2_WERT"                                  grid-type="simple-gauge-square" min-value="9000" max-value="18000"  />
+	</job>
+</fragment>

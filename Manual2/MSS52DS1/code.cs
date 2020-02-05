@@ -30,7 +30,7 @@ class PageClass {
 	}
 
 
-	public string FormatResult(JobReader.PageInfo pageInfo, MultiMap<string, EdiabasNet.ResultData> resultDict, string resultName, ref Android.Graphics.Color? textColor) {
+	public string FormatResult(JobReader.PageInfo pageInfo, MultiMap<string, EdiabasNet.ResultData> resultDict, string resultName, ref Android.Graphics.Color? textColor, ref double? dataValue) {
 		bool found;
 		double value;
 		string result = string.Empty;
@@ -56,13 +56,15 @@ class PageClass {
 				value = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
 				if (!found) break;
 
-				if (value > 64) value = value - 6553.4;
+				if (value > 64) value = value - 6553.6;
+				dataValue = (double) value;
 
 				result    = string.Format(ActivityMain.Culture, "{0,4:0.0}", value);
 				textColor = val2Rgb(value, 50, 20);
 				break;
 
 
+			case "STATUS_AQREL#STAT_AQREL_WERT": // Throttle body actual cross section
 			case "STATUS_RF#STAT_RF_WERT": // RF %
 				value = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
 				if (!found) break;
@@ -87,6 +89,7 @@ class PageClass {
 				if (!found) break;
 
 				if (value > 64) value = value - 131.072;
+				dataValue = (double) value;
 
 				result    = string.Format(ActivityMain.Culture, "{0,5:0.000}", value);
 				textColor = val2Rgb(value, 10, 10);
@@ -150,6 +153,7 @@ class PageClass {
 				if (!found) break;
 
 				value = value * bar2psi;
+				dataValue = (double) value;
 
 				result    = string.Format(ActivityMain.Culture, "{0,4:0}", value);
 				textColor = val2Rgb(value, 400, 0);
@@ -162,6 +166,7 @@ class PageClass {
 				if (!found) break;
 
 				value = (value - ambient_offset) * hpa2psi;
+				dataValue = (double) value;
 
 				result    = string.Format(ActivityMain.Culture, "{0,5:0.00}", value);
 				textColor = val2Rgb(value, 40, 0);
@@ -172,22 +177,11 @@ class PageClass {
 				if (!found) break;
 
 				value = value / 1000;
+				dataValue = (double) value;
 
 				result    = string.Format(ActivityMain.Culture, "{0,5:0.00}", value);
 				textColor = val2Rgb(value, 16, 0);
 				break;
-
-			case "STATUS_MESSWERTBLOCK_LESEN#STAT_OELDRUCKSCHALTER_EIN_WERT": // Oil pressure switch
-				result = ((ActivityMain.GetResultDouble(resultDict, resultName, 0, out found) > 0.5) && found) ? "1" : "0";
-				if (!found) break;
-
-				switch (result) {
-					case "1" : textColor = Android.Graphics.Color.Red;    break;
-					case "0" : textColor = Android.Graphics.Color.Green;  break;
-					default  : textColor = Android.Graphics.Color.Yellow; break;
-				}
-				break;
-
 
 			case "STATUS_MESSWERTBLOCK_LESEN#STAT_STRECKE_SEIT_ERFOLGREICHER_REGENERATION_WERT": // DPF distance since regeneration
 				value = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
@@ -195,29 +189,108 @@ class PageClass {
 
 				// Convert km to mi
 				value = (value / 1000) * km2mi;
+				dataValue = (double) value;
 
 				result = string.Format(ActivityMain.Culture, "{0,6:0.0}", value);
+				break;
+
+
+			case "STATUS_MESSWERTBLOCK_LESEN#STAT_OELDRUCKSCHALTER_EIN_WERT": // Oil pressure switch
+			case "STATUS_DIGITAL#STAT_AC_EIN":
+			case "STATUS_DIGITAL#STAT_AKL_EIN":
+			case "STATUS_DIGITAL#STAT_BA_EIN":
+			case "STATUS_DIGITAL#STAT_BLS_EIN":
+			case "STATUS_DIGITAL#STAT_BLTS_EIN":
+			case "STATUS_DIGITAL#STAT_EKP_EIN":
+			case "STATUS_DIGITAL#STAT_ELU_EIN":
+			case "STATUS_DIGITAL#STAT_EWS3_FREIGABE":
+			case "STATUS_DIGITAL#STAT_FDYN_EIN":
+			case "STATUS_DIGITAL#STAT_FGRA_EIN":
+			case "STATUS_DIGITAL#STAT_KATHEIZEN_EIN":
+			case "STATUS_DIGITAL#STAT_KL15_EIN":
+			case "STATUS_DIGITAL#STAT_KL50_EIN":
+			case "STATUS_DIGITAL#STAT_KLOPFREGELUNG_EIN":
+			case "STATUS_DIGITAL#STAT_KLOPFREG_EIN":
+			case "STATUS_DIGITAL#STAT_KO_EIN":
+			case "STATUS_DIGITAL#STAT_KRAFTSCHLUSS_EIN":
+			case "STATUS_DIGITAL#STAT_KUP_EIN":
+			case "STATUS_DIGITAL#STAT_LDP_EIN":
+			case "STATUS_DIGITAL#STAT_LDR1_EIN":
+			case "STATUS_DIGITAL#STAT_LDR2_EIN":
+			case "STATUS_DIGITAL#STAT_LLR_EIN":
+			case "STATUS_DIGITAL#STAT_LL_EIN":
+			case "STATUS_DIGITAL#STAT_LSHN1_EIN":
+			case "STATUS_DIGITAL#STAT_LSHN2_EIN":
+			case "STATUS_DIGITAL#STAT_LSHV1_EIN":
+			case "STATUS_DIGITAL#STAT_LSHV2_EIN":
+			case "STATUS_DIGITAL#STAT_MFL1_EIN":
+			case "STATUS_DIGITAL#STAT_MFL2_EIN":
+			case "STATUS_DIGITAL#STAT_MFL3_EIN":
+			case "STATUS_DIGITAL#STAT_MFL4_EIN":
+			case "STATUS_DIGITAL#STAT_MIL_EIN":
+			case "STATUS_DIGITAL#STAT_MOTOR_NACHLAUF":
+			case "STATUS_DIGITAL#STAT_MOTOR_START":
+			case "STATUS_DIGITAL#STAT_MOTOR_STEHT":
+			case "STATUS_DIGITAL#STAT_NOISE_EIN":
+			case "STATUS_DIGITAL#STAT_REEDSWITCH_EIN":
+			case "STATUS_DIGITAL#STAT_SA_EIN":
+			case "STATUS_DIGITAL#STAT_SCHUTZ_EIN":
+			case "STATUS_DIGITAL#STAT_SLP_EIN":
+			case "STATUS_DIGITAL#STAT_SLV_EIN":
+			case "STATUS_DIGITAL#STAT_TL_EIN":
+			case "STATUS_DIGITAL#STAT_VL_EIN":
+			case "STATUS_DIGITAL#STAT_ZUENDUNG1_EIN":
+			case "STATUS_DIGITAL#STAT_ZUENDUNG2_EIN":
+			case "STATUS_DIGITAL#STAT_ZUENDUNG3_EIN":
+			case "STATUS_DIGITAL#STAT_ZUENDUNG4_EIN":
+			case "STATUS_DIGITAL#STAT_ZUENDUNG5_EIN":
+			case "STATUS_DIGITAL#STAT_ZUENDUNG6_EIN":
+			case "STATUS_DIGITAL#STAT_ZUENDUNG7_EIN":
+			case "STATUS_DIGITAL#STAT_ZUENDUNG8_EIN": // Boolean (1/0) values
+				result = (ActivityMain.GetResultDouble(resultDict, resultName, 0, out found) > 0.5) ? "On" : "Off";
+				if (!found) break;
+
+				switch (result) {
+					case "On"  : textColor = Android.Graphics.Color.Red;    break;
+					case "Off" : textColor = Android.Graphics.Color.Green;  break;
+					default    : textColor = Android.Graphics.Color.Yellow; break;
+				}
+				break;
+
+
+			case "STATUS_MESSWERTBLOCK_LESEN#STAT_REGENERATION_BLOCKIERUNG_UND_FREIGABE_WERT": // DPF unblocked (actually DPF blocked, which is why the result logic is inverted)
+				value = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
+				if (!found) break;
+
+				result = (value < 0.5) ? "1" : "0";
 				break;
 
 			case "STATUS_MESSWERTBLOCK_LESEN#STAT_PFltRgn_numRgn_WERT": // DPF regeneration request
 				value = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
 				if (!found) break;
 
-				result = ((value > 3.5) && (value < 6.5) && found) ? "1" : "0";
+				result = ((value > 3.5) && (value < 6.5)) ? "1" : "0";
 				break;
 
 			case "STATUS_MESSWERTBLOCK_LESEN#STAT_CoEOM_stOpModeAct_WERT": // DPF regeneration status
 				value = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
 				if (!found) break;
 
-				result = ((((int) (value + 0.5) & 0x02) != 0) && found) ? "1" : "0";
+				result = (((int) (value + 0.5) & 0x02) != 0) ? "1" : "0";
 				break;
+		}
 
-			case "STATUS_MESSWERTBLOCK_LESEN#STAT_REGENERATION_BLOCKIERUNG_UND_FREIGABE_WERT": // DPF unblocked
-				value = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
-				if (!found) break;
 
-				result = ((value < 0.5) && found) ? "1" : "0";
+		// textColor formatting for boolean (1/0)
+		switch (resultName) {
+			case "STATUS_MESSWERTBLOCK_LESEN#STAT_CoEOM_stOpModeAct_WERT":
+			case "STATUS_MESSWERTBLOCK_LESEN#STAT_PFltRgn_numRgn_WERT":
+			case "STATUS_MESSWERTBLOCK_LESEN#STAT_REGENERATION_BLOCKIERUNG_UND_FREIGABE_WERT":
+				switch (result) {
+					case "1" : textColor = Android.Graphics.Color.Red;    break;
+					case "0" : textColor = Android.Graphics.Color.Green;  break;
+					default  : textColor = Android.Graphics.Color.Yellow; break;
+				}
 				break;
 		}
 
