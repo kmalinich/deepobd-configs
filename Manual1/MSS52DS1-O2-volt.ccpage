@@ -46,7 +46,7 @@
 			<string name="!JOB#STATUS_DIGITAL#STAT_ZUENDUNG7_EIN">Ign 7</string>
 			<string name="!JOB#STATUS_DIGITAL#STAT_ZUENDUNG8_EIN">Ign 8</string>
 
-			<string name="!JOB#STATUS_DIGITAL#STAT_ELU_EIN">Electic fan</string>
+			<string name="!JOB#STATUS_DIGITAL#STAT_ELU_EIN">Electric fan</string>
 			<string name="!JOB#STATUS_DIGITAL#STAT_EKP_EIN">Fuel pump</string>
 
 			<string name="!JOB#STATUS_DIGITAL#STAT_SLP_EIN">Secondary air pump</string>
