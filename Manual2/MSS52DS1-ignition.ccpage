@@ -41,6 +41,6 @@
 			<include filename="./MSS52DS1/jobs/STATUS_TZ8.ccpage" />
 		</jobs>
 
-		<include filename="./MSS52DS1/code.cs" />
+		<include filename="../code/DME-DDE.ccpage" />
 	</page>
 </fragment>

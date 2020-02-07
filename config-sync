@@ -1,29 +1,72 @@
 #!/usr/bin/env bash
 
 DIR_DEVICE="/sdcard/Android/data/de.holeschak.bmw_deep_obd/files/Configurations"
+COMM_DELIMIT="                                "
 
-mapfile -t ARRAY_FILES < <(find . -type f -iname '*.cccfg' -o -iname '*.ccpage' -o -iname '*.ccpages' -o -iname '*.cs' -o -iname '*.xsd' -o -iname '*.xml' | sort | sed 's/^\.\///g')
 
+compare() {
+	# Declare vars as local
+	local DIR_TEMP
+	local FILE_LIST_LOCAL FILE_LIST_REMOTE
+
+	DIR_TEMP="$(mktemp -d)"
+
+	FILE_LIST_LOCAL="${DIR_TEMP}/files-local.txt"
+	FILE_LIST_REMOTE="${DIR_TEMP}/files-remote.txt"
+
+
+	# These have extra extensions from older files that aren't used anymore
+	find . -type f -iname '*.cccfg' -o -type f -iname '*.ccpage' -o -type f -iname '*.ccpages' -o -type f -iname '*.cs' -o -type f -iname '*.xml' -o -type f -iname '*.xsd' | sort | sed 's/^\.\///g' >> "${FILE_LIST_LOCAL}"
+
+	adb shell "find ${DIR_DEVICE} -type f -iname '*.cccfg' -o -type f -iname '*.ccpage' -o -type f -iname '*.ccpages' -o -type f -iname '*.cs' -o -type f -iname '*.xml' -o -type f -iname '*.xsd'" | sort | sed "s|^${DIR_DEVICE}\/||g" >> "${FILE_LIST_REMOTE}"
+
+	echo "Column 1 : local"
+	echo -e "${COMM_DELIMIT}Column 2 : remote\n\n\n"
+
+	comm -3 "--output-delimiter=${COMM_DELIMIT}" "${FILE_LIST_LOCAL}" "${FILE_LIST_REMOTE}"
+
+	rm -rf "${DIR_TEMP}"
+}
 
 pull() {
-	for FILE in "${ARRAY_FILES[@]}"; do
+	# Declare vars as local
+	local ARRAY_FILES_REMOTE
+
+	mapfile -t ARRAY_FILES_REMOTE < <(adb shell "find ${DIR_DEVICE} -type f -iname '*.cccfg' -o -type f -iname '*.ccpage' -o -type f -iname '*.ccpages' -o -type f -iname '*.xml' -o -type f -iname '*.xsd'" | sort | sed "s|^${DIR_DEVICE}\/||g")
+
+	for FILE in "${ARRAY_FILES_REMOTE[@]}"; do
 		adb pull "${DIR_DEVICE}/${FILE}" "${FILE}"
 	done
 }
 
 push() {
+	# Declare vars as local
+	local ARRAY_FILES_LOCAL
+
+	mapfile -t ARRAY_FILES_LOCAL < <(find . -type f -iname '*.cccfg' -o -type f -iname '*.ccpage' -o -type f -iname '*.ccpages' -o -type f -iname '*.xml' -o -type f -iname '*.xsd' | sort | sed 's/^\.\///g')
+
+	# Remove existing files on the device before pushing
 	# TODO: Yeah, there's a better way, I know
 	adb shell "find ${DIR_DEVICE} -type f -iname '*.cccfg'   -exec rm {} \\;"
 	adb shell "find ${DIR_DEVICE} -type f -iname '*.ccpage'  -exec rm {} \\;"
 	adb shell "find ${DIR_DEVICE} -type f -iname '*.ccpages' -exec rm {} \\;"
-	adb shell "find ${DIR_DEVICE} -type f -iname '*.cs'      -exec rm {} \\;"
 	adb shell "find ${DIR_DEVICE} -type f -iname '*.xml'     -exec rm {} \\;"
 	adb shell "find ${DIR_DEVICE} -type f -iname '*.xsd'     -exec rm {} \\;"
 
-	for FILE in "${ARRAY_FILES[@]}"; do
+	for FILE in "${ARRAY_FILES_LOCAL[@]}"; do
 		adb push "${FILE}" "${DIR_DEVICE}/${FILE}"
 	done
 }
 
 
-"${1-pull}"
+case "${1}" in
+	compare) compare ;;
+
+	pull) pull ;;
+	push) push ;;
+
+	*)
+		echo "Usage: ./config-sync <compare|pull|push>"
+		exit 254
+		;;
+esac

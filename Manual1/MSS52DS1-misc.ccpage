@@ -111,6 +111,6 @@
 			<include filename="./MSS52DS1/jobs/STATUS_KUEHLW_AUSL_TEMPERATUR.ccpage" />
 		</jobs>
 
-		<include filename="./MSS52DS1/code.cs" />
+		<include filename="../code/DME-DDE.ccpage" />
 	</page>
 </fragment>

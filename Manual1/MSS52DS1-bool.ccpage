@@ -109,6 +109,6 @@
 			<include filename="./MSS52DS1/jobs/STATUS_DIGITAL.ccpage" />
 		</jobs>
 
-		<include filename="./MSS52DS1/code.cs" />
+		<include filename="../code/DME-DDE.ccpage" />
 	</page>
 </fragment>

@@ -3,30 +3,25 @@
 <code show_warnings="true">
 <![CDATA[
 class PageClass {
-	public static Android.Graphics.Color val2Rgb(double value, double max, double offset) {
-		if (value < 0) value = 0;
-
-		// Add offset or RGB calculations so min is 0 and max is (max + offset)
-		max   += offset;
-		value += offset;
-
+	public static Android.Graphics.Color val2Rgb(double value, double max, double min) {
+		if (value < min) value = min;
 		if (value > max) value = max;
 
 		// RGB multiplier calculation
-		value = value * (255 / max);
+		double rgb_pct = 100 * ((value - min) / (max - min));
 
-		double value1 = value * 2;
-		double value2 = 255 - value1;
+		double value1 = (510 * ((value - min) / ((max - min)))) - 255;
+		double value2 = 255 * ((value - min) / ((max - min)));
+		double value3 = Math.Abs(value1);
+		double value4 = 255 - value3;
 
-		if (value >= 255.0) { return Android.Graphics.Color.Rgb(255,   0,   0); }
-		if (value == 127.5) { return Android.Graphics.Color.Rgb(0,   255,   0); }
-		if (value <=   0.0) { return Android.Graphics.Color.Rgb(0,     0, 255); }
-
-		if (value < 127.5) {
-			return Android.Graphics.Color.Rgb(0, (int) value1, (int) value2);
+		// More red, less blue
+		if (rgb_pct > 49.9) {
+			return Android.Graphics.Color.Rgb((int) value1, (int) value4, 0);
 		}
 
-		return Android.Graphics.Color.Rgb((int) value1, (int) value2, 0);
+		// More blue, less red
+		return Android.Graphics.Color.Rgb(0, (int) value4, (int) value3);
 	}
 
 
@@ -60,7 +55,7 @@ class PageClass {
 				dataValue = (double) value;
 
 				result    = string.Format(ActivityMain.Culture, "{0,4:0.0}", value);
-				textColor = val2Rgb(value, 50, 20);
+				textColor = val2Rgb(value, 45, -5);
 				break;
 
 
@@ -92,7 +87,7 @@ class PageClass {
 				dataValue = (double) value;
 
 				result    = string.Format(ActivityMain.Culture, "{0,5:0.000}", value);
-				textColor = val2Rgb(value, 10, 10);
+				textColor = val2Rgb(value, 0.1, -0.1);
 				break;
 
 			case "STATUS_INT#STAT_INT_WERT":
@@ -103,7 +98,7 @@ class PageClass {
 				if (!found) break;
 
 				result    = string.Format(ActivityMain.Culture, "{0,5:0.000}", value);
-				textColor = val2Rgb(value, 1.25, 0.25);
+				textColor = val2Rgb(value, 1.25, 0.75);
 				break;
 
 
@@ -114,8 +109,8 @@ class PageClass {
 				value = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
 				if (!found) break;
 
-				result    = string.Format(ActivityMain.Culture, "{0,3:0}", value);
-				textColor = val2Rgb(value, 100, 10);
+				result    = string.Format(ActivityMain.Culture, "{0,2:0}", value);
+				textColor = val2Rgb(value, 90, 0);
 				break;
 
 			case "STATUS_MESSWERTBLOCK_LESEN#STAT_KRAFTSTOFFTEMPERATUR_WERT":
@@ -125,7 +120,7 @@ class PageClass {
 				if (!found) break;
 
 				result    = string.Format(ActivityMain.Culture, "{0,3:0}", value);
-				textColor = val2Rgb(value, 40, 10);
+				textColor = val2Rgb(value, 40, 0);
 				break;
 
 			case "STATUS_MESSWERTBLOCK_LESEN#STAT_ABGASTEMPERATUR_VOR_KATALYSATOR_WERT":
@@ -247,14 +242,11 @@ class PageClass {
 			case "STATUS_DIGITAL#STAT_ZUENDUNG6_EIN":
 			case "STATUS_DIGITAL#STAT_ZUENDUNG7_EIN":
 			case "STATUS_DIGITAL#STAT_ZUENDUNG8_EIN": // Boolean (1/0) values
-				result = (ActivityMain.GetResultDouble(resultDict, resultName, 0, out found) > 0.5) ? "On" : "Off";
+				value = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
 				if (!found) break;
 
-				switch (result) {
-					case "On"  : textColor = Android.Graphics.Color.Red;    break;
-					case "Off" : textColor = Android.Graphics.Color.Green;  break;
-					default    : textColor = Android.Graphics.Color.Yellow; break;
-				}
+				result = (value > 0.5) ? 1 : 0;
+				dataValue = (double) result;
 				break;
 
 

@@ -36,6 +36,6 @@
 			<!-- <include filename="./MSS52DS1/jobs/STATUS_L_SONDE_2.ccpage" /> -->
 		</jobs>
 
-		<include filename="./MSS52DS1/code.cs" />
+		<include filename="../code/DME-DDE.ccpage" />
 	</page>
 </fragment>

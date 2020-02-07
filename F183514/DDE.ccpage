@@ -41,6 +41,6 @@
 			<include filename="./D_MOTOR/jobs/STATUS_MESSWERTBLOCK_LESEN.ccpage" />
 		</jobs>
 
-		<include filename="./D_MOTOR/code.cs" />
+		<include filename="../code/DME-DDE.ccpage" />
 	</page>
 </fragment>
