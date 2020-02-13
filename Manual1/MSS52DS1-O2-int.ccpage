@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <fragment xmlns="http://www.holeschak.de/BmwDeepObd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.holeschak.de/BmwDeepObd ../BmwDeepObd.xsd">
-	<page name="!PAGE_NAME" display-mode="grid" fontsize="large" gauges-portrait="2" gauges-landscape="4" logfile="MSS52DS1-ignition.{D}.log">
+	<page name="!PAGE_NAME" display-mode="grid" fontsize="large" gauges-portrait="1" gauges-landscape="2" logfile="MSS52DS1-O2-volt.{D}.log">
 		<strings>
-			<string name="!PAGE_NAME">Ignition</string>
+			<string name="!PAGE_NAME">O2 int</string>
 
 			<string name="!JOB#STATUS_ADD#STAT_ADD_WERT"    >O2 Add 1</string>
 			<string name="!JOB#STATUS_ADD_2#STAT_ADD_2_WERT">O2 Add 2</string>
@@ -105,19 +105,12 @@
 			<string name="!JOB#STATUS_DIGITAL#STAT_NOISE_EIN" >Noise</string>
 		</strings>
 
-		<jobs sgbd="mss52ds1">
-			<include filename="./MSS52DS1/jobs/STATUS_TZ1.ccpage" />
-			<!--
-			<include filename="./MSS52DS1/jobs/STATUS_TZ2.ccpage" />
-			<include filename="./MSS52DS1/jobs/STATUS_TZ3.ccpage" />
-			<include filename="./MSS52DS1/jobs/STATUS_TZ4.ccpage" />
-			<include filename="./MSS52DS1/jobs/STATUS_TZ5.ccpage" />
-			<include filename="./MSS52DS1/jobs/STATUS_TZ6.ccpage" />
-			<include filename="./MSS52DS1/jobs/STATUS_TZ7.ccpage" />
-			<include filename="./MSS52DS1/jobs/STATUS_TZ8.ccpage" />
-			-->
-		</jobs>
 
-		<include filename="../code/DME-DDE.ccpage" />
-	</page>
-</fragment>
+		<jobs sgbd="mss52ds1">
+			<include filename="./MSS52DS1/jobs/STATUS_INT.ccpage" />
+			<!-- <include filename="./MSS52DS1/jobs/STATUS_INT_2.ccpage" /> -->
+			</jobs>
+
+			<include filename="../code/DME-DDE.ccpage" />
+		</page>
+	</fragment>
