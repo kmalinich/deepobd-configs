@@ -11,17 +11,16 @@ class PageClass {
 		double rgb_pct = 100 * ((value - min) / (max - min));
 
 		double value1 = (510 * ((value - min) / ((max - min)))) - 255;
-		double value2 = 255 * ((value - min) / ((max - min)));
-		double value3 = Math.Abs(value1);
-		double value4 = 255 - value3;
+		double value2 = Math.Abs(value1);
+		double value3 = 255 - value2;
 
 		// More red, less blue
 		if (rgb_pct > 49.9) {
-			return Android.Graphics.Color.Rgb((int) value1, (int) value4, 0);
+			return Android.Graphics.Color.Rgb((int) value1, (int) value3, 0);
 		}
 
 		// More blue, less red
-		return Android.Graphics.Color.Rgb(0, (int) value4, (int) value3);
+		return Android.Graphics.Color.Rgb(0, (int) value3, (int) value2);
 	}
 
 
