@@ -7,6 +7,7 @@
 		<include filename="MSS52DS1-O2-adapt.ccpage" />
 		<include filename="MSS52DS1-O2-volt.ccpage" />
 		<include filename="MSS52DS1-O2-int.ccpage" />
+		<include filename="MSS52DS1-load.ccpage" />
 		<include filename="MSS52DS1-bool.ccpage" />
 	</pages>
 </fragment>

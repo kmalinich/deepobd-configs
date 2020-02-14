@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fragment xmlns="http://www.holeschak.de/BmwDeepObd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.holeschak.de/BmwDeepObd ../../../BmwDeepObd.xsd">
+	<job name="STATUS_LAST">
+		<display name="!JOB#STATUS_LAST#STAT_LAST_WERT" result="STAT_LAST_WERT" min-value="0" max-value="120" log_tag="STAT_LAST_WERT" />
+	</job>
+</fragment>

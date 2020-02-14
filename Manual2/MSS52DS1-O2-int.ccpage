@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <fragment xmlns="http://www.holeschak.de/BmwDeepObd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.holeschak.de/BmwDeepObd ../BmwDeepObd.xsd">
-	<page name="!PAGE_NAME" display-mode="grid" fontsize="large" gauges-portrait="1" gauges-landscape="2" logfile="MSS52DS1-O2-volt.{D}.log">
+	<page name="!PAGE_NAME" display-mode="grid" fontsize="large" gauges-portrait="1" gauges-landscape="2" logfile="MSS52DS1-O2-int.{D}.log">
 		<strings>
 			<string name="!PAGE_NAME">O2 int</string>
 
@@ -96,6 +96,8 @@
 
 			<string name="!JOB#STATUS_AQREL#STAT_AQREL_WERT">AQREL</string>
 
+			<string name="!JOB#STATUS_LAST#STAT_LAST_WERT">Load</string>
+
 			<!-- TODO: Look these ones up -->
 			<string name="!JOB#STATUS_DIGITAL#STAT_AKL_EIN">AKL</string>
 			<string name="!JOB#STATUS_DIGITAL#STAT_KO_EIN">KO</string>
@@ -109,8 +111,8 @@
 		<jobs sgbd="mss52ds1">
 			<include filename="./MSS52DS1/jobs/STATUS_INT.ccpage" />
 			<!-- <include filename="./MSS52DS1/jobs/STATUS_INT_2.ccpage" /> -->
-			</jobs>
+		</jobs>
 
-			<include filename="../code/DME-DDE.ccpage" />
-		</page>
-	</fragment>
+		<include filename="../code/DME-DDE.ccpage" />
+	</page>
+</fragment>

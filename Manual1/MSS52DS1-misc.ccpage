@@ -96,6 +96,8 @@
 
 			<string name="!JOB#STATUS_AQREL#STAT_AQREL_WERT">AQREL</string>
 
+			<string name="!JOB#STATUS_LAST#STAT_LAST_WERT">Load</string>
+
 			<!-- TODO: Look these ones up -->
 			<string name="!JOB#STATUS_DIGITAL#STAT_AKL_EIN">AKL</string>
 			<string name="!JOB#STATUS_DIGITAL#STAT_KO_EIN">KO</string>

@@ -30,7 +30,7 @@ class PageClass {
 		string result = string.Empty;
 
 		// Adjustments/offsets
-		double ambient_offset = 1000; // Unit: hPa
+		double ambient_offset = 1007; // Unit: hPa
 
 		// Conversion multipliers
 		double km2mi   =  0.621371192;
@@ -57,13 +57,13 @@ class PageClass {
 				textColor = val2Rgb(value, 45, -5);
 				break;
 
-
 			case "STATUS_AQREL#STAT_AQREL_WERT": // Throttle body actual cross section
-			case "STATUS_RF#STAT_RF_WERT": // RF %
+			case "STATUS_LAST#STAT_LAST_WERT":   // Engine load
+			case "STATUS_RF#STAT_RF_WERT":       // RF %
 				value = ActivityMain.GetResultDouble(resultDict, resultName, 0, out found);
 				if (!found) break;
 
-				result    = string.Format(ActivityMain.Culture, "{0,3:0.0}", value);
+				result    = string.Format(ActivityMain.Culture, "{0,5:0.0}", value);
 				textColor = val2Rgb(value, 120, 0);
 				break;
 
@@ -106,7 +106,7 @@ class PageClass {
 				value     = value * 100;
 				dataValue = (double) value;
 
-				result    = string.Format(ActivityMain.Culture, "{0,5:000.0}", value);
+				result    = string.Format(ActivityMain.Culture, "{0,5:0.0}", value);
 				textColor = val2Rgb(value, 115, 85);
 				break;
 
