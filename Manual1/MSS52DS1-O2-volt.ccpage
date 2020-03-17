@@ -111,8 +111,6 @@
 		<jobs sgbd="mss52ds1">
 			<include filename="./MSS52DS1/jobs/STATUS_L_SONDE.ccpage" />
 			<!-- <include filename="./MSS52DS1/jobs/STATUS_L_SONDE_2.ccpage" /> -->
-			<include filename="./MSS52DS1/jobs/STATUS_INT.ccpage" />
-			<!-- <include filename="./MSS52DS1/jobs/STATUS_INT_2.ccpage" /> -->
 		</jobs>
 
 		<include filename="../code/DME-DDE.ccpage" />

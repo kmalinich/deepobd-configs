@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<fragment xmlns="http://www.holeschak.de/BmwDeepObd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.holeschak.de/BmwDeepObd ../BmwDeepObd.xsd">
+	<page name="!PAGE_NAME" display-mode="grid" fontsize="small" gauges-portrait="2" gauges-landscape="4" logfile="LCM_IV.log">
+		<strings>
+			<string name="!PAGE_NAME">LCM</string>
+
+			<string name="!JOB#2000001210186#STAT_AUSGANG_LWR_EIN">Headlight vertical aim control</string>
+			<string name="!JOB#2000001210190#STAT_EINGANGSSPANNUNG_LWR_POTI_WERT">Pot, headlight level</string>
+			<string name="!JOB#STATUS_LESEN_LSS#STAT_SPANNUNG_DIMMER_POTI_BEI_PU_LTG_LOW_WERT">Pot, dimmer</string>
+		</strings>
+
+		<jobs sgbd="lcm_iv">
+			<job name="2000001210186" fixed_func_struct_id="2000001210186">
+				<display name="!JOB#2000001210186#STAT_AUSGANG_LWR_EIN" result="STAT_AUSGANG_LWR_EIN" ecu_job_id="2000001353497" ecu_job_result_id="2000001447788" format="" display-order="0" grid-type="text" min-value="0" max-value="100" log_tag="STAT_AUSGANG_LWR_EIN" />
+			</job>
+			<job name="2000001210190" fixed_func_struct_id="2000001210190">
+				<display name="!JOB#2000001210190#STAT_EINGANGSSPANNUNG_LWR_POTI_WERT" result="STAT_EINGANGSSPANNUNG_LWR_POTI_WERT" ecu_job_id="2000001353498" ecu_job_result_id="2000001447791" format="" display-order="0" grid-type="simple-gauge-round" min-value="0" max-value="5" log_tag="STAT_EINGANGSSPANNUNG_LWR_POTI_WERT" />
+			</job>
+			<job name="STATUS_LESEN_LSS">
+				<display name="!JOB#STATUS_LESEN_LSS#STAT_SPANNUNG_DIMMER_POTI_BEI_PU_LTG_LOW_WERT" result="STAT_SPANNUNG_DIMMER_POTI_BEI_PU_LTG_LOW_WERT" format="1.2R" display-order="0" grid-type="simple-gauge-round" min-value="0" max-value="5" log_tag="STAT_SPANNUNG_DIMMER_POTI_BEI_PU_LTG_LOW_WERT" />
+			</job>
+		</jobs>
+	</page>
+</fragment>
