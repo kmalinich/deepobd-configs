@@ -66,17 +66,15 @@ function formatRGB(r, g, b, data) {
 	};
 }
 
-function runRGB() {
-	const min = Number(process.argv[2]);
-	const max = Number(process.argv[3]);
 
+function runRGBForward() {
 	for (let value = min; value <= max; value++) {
 		if (value % 2 !== 0) continue;
 		displayRGB(min, max, value);
 	}
+}
 
-	console.log();
-
+function runRGBReverse() {
 	for (let value = max; value >= min; value--) {
 		if (value % 2 !== 0) continue;
 		displayRGB(min, max, value);
@@ -84,4 +82,9 @@ function runRGB() {
 }
 
 
-runRGB();
+const min = Number(process.argv[2]);
+const max = Number(process.argv[3]);
+
+runRGBForward();
+console.log();
+runRGBReverse();
