@@ -69,22 +69,23 @@ function formatRGB(r, g, b, data) {
 
 function runRGBForward() {
 	for (let value = min; value <= max; value++) {
-		if (value % 2 !== 0) continue;
+		if (value % mod !== 0) continue;
 		displayRGB(min, max, value);
 	}
 }
 
 function runRGBReverse() {
 	for (let value = max; value >= min; value--) {
-		if (value % 2 !== 0) continue;
+		if (value % mod !== 0) continue;
 		displayRGB(min, max, value);
 	}
 }
 
 
-const min = Number(process.argv[2]);
-const max = Number(process.argv[3]);
+const min = Number(process.argv[2]) || 0;
+const max = Number(process.argv[3]) || 255;
+const mod = Number(process.argv[4]) || 2;
 
 runRGBForward();
-console.log();
-runRGBReverse();
+// console.log();
+// runRGBReverse();
